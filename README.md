@@ -13,7 +13,7 @@
 
 1. **Default Behavior**: URLs are generated using the filename by default. For example:
 
-      * `datadrive-app.md` -\> `https://docs.glows.ai/`
+      * `datadrive-app.md` -\> `https://docs.glows.ai/datadrive-app`
       * `Data Drive app.md` -\> `https://docs.glows.ai/docs/Data%20Drive%20app`
 
 2. **Custom URLs**: You can customize the URL by adding an `id` attribute within the document.
