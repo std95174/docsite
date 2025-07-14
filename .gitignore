@@ -1,0 +1,34 @@
+# Docusaurus build output
+.docusaurus/
+build/
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# macOS 系統檔案
+.DS_Store
+
+# VSCode 設定
+.vscode/
+
+# 其他常見忽略檔案
+.env
+.env.local
+.env.*.local
+
+# log 檔案
+*.log
+
+# 產生的 lock 檔
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# 其他暫存或快取
+.cache/
+dist/
+coverage/

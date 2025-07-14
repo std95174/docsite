@@ -1,0 +1,716 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  src: url("/static/fonts/InterVariable.woff2")
+      format("woff2 supports variations"),
+    url("/static/fonts/InterVariable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: "Inter";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter";
+}
+
+@layer components {
+  .card {
+    @apply p-8 shadow-card-100 rounded-[32px];
+  }
+
+  .card-gray {
+    @apply p-8 rounded-[32px] bg-panel-gray-100 hover:shadow-card-100 hover:bg-panel-white transition-all;
+  }
+
+  .icon-btn {
+    @apply flex items-center justify-center rounded-lg bg-panel-gray-100 hover:bg-panel-gray-200 text-secondary cursor-pointer;
+  }
+}
+
+.btn,
+.btn-sm,
+.btn-lg,
+.btn-text {
+  @apply text-sm font-medium inline-flex items-center justify-center rounded-full whitespace-nowrap transition duration-150 ease-in-out;
+  font-family: "Inter";
+}
+
+.btn {
+  @apply px-4 py-1.5;
+}
+/* You can override the default Infima variables here. */
+:root {
+  --color-amber-100: #fef3c6;
+  --color-amber-200: #fee685;
+  --color-amber-300: #ffd230;
+  --color-amber-400: #ffba00;
+  --color-amber-50: #fffbeb;
+  --color-amber-500: #fd9a00;
+  --color-amber-600: #e17100;
+  --color-amber-700: #bb4d00;
+  --color-amber-800: #973c00;
+  --color-amber-900: #7b3306;
+  --color-amber-950: #461901;
+  --color-basic-black: #000000;
+  --color-basic-white: #ffffff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bedbff;
+  --color-blue-300: #8ec5ff;
+  --color-blue-400: #51a2ff;
+  --color-blue-50: #eff6ff;
+  --color-blue-500: #2b7fff;
+  --color-blue-600: #155dfc;
+  --color-blue-700: #1447e6;
+  --color-blue-800: #193cb8;
+  --color-blue-900: #1c398e;
+  --color-blue-950: #162456;
+  --color-cyan-100: #cefafe;
+  --color-cyan-200: #a2f4fd;
+  --color-cyan-300: #53eafd;
+  --color-cyan-400: #00d3f2;
+  --color-cyan-50: #ecfeff;
+  --color-cyan-500: #00b8db;
+  --color-cyan-600: #0092b8;
+  --color-cyan-700: #007595;
+  --color-cyan-800: #005f78;
+  --color-cyan-900: #104e64;
+  --color-cyan-950: #053345;
+  --color-emerald-100: #d0fae5;
+  --color-emerald-200: #a4f4cf;
+  --color-emerald-300: #5ee9b5;
+  --color-emerald-400: #00d492;
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-500: #00bc7d;
+  --color-emerald-600: #009966;
+  --color-emerald-700: #007a55;
+  --color-emerald-800: #006045;
+  --color-emerald-900: #004f3b;
+  --color-emerald-950: #002c22;
+  --color-fuchsia-100: #fae8ff;
+  --color-fuchsia-200: #f6cfff;
+  --color-fuchsia-300: #f4a8ff;
+  --color-fuchsia-400: #ed6bff;
+  --color-fuchsia-50: #fdf4ff;
+  --color-fuchsia-500: #e12afb;
+  --color-fuchsia-600: #c800de;
+  --color-fuchsia-700: #a800b7;
+  --color-fuchsia-800: #8a0194;
+  --color-fuchsia-900: #721378;
+  --color-fuchsia-950: #4b004f;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5dc;
+  --color-gray-400: #99a1af;
+  --color-gray-50: #f9fafb;
+  --color-gray-500: #6a7282;
+  --color-gray-600: #4a5565;
+  --color-gray-700: #364153;
+  --color-gray-800: #1e2939;
+  --color-gray-900: #101828;
+  --color-gray-950: #030712;
+  --color-green-100: #dcfce7;
+  --color-green-200: #b9f8cf;
+  --color-green-300: #7bf1a8;
+  --color-green-400: #05df72;
+  --color-green-50: #f0fdf4;
+  --color-green-500: #00c951;
+  --color-green-600: #00a63e;
+  --color-green-700: #008236;
+  --color-green-800: #016630;
+  --color-green-900: #0d542b;
+  --color-green-950: #032e15;
+  --color-indigo-100: #e0e7ff;
+  --color-indigo-200: #c6d2ff;
+  --color-indigo-300: #a3b3ff;
+  --color-indigo-400: #7c86ff;
+  --color-indigo-50: #eef2ff;
+  --color-indigo-500: #615fff;
+  --color-indigo-600: #4f39f6;
+  --color-indigo-700: #432dd7;
+  --color-indigo-800: #372aac;
+  --color-indigo-900: #312c85;
+  --color-indigo-950: #1e1a4d;
+  --color-lime-100: #ecfcca;
+  --color-lime-200: #d8f999;
+  --color-lime-300: #bbf451;
+  --color-lime-400: #9ae600;
+  --color-lime-50: #f7fee7;
+  --color-lime-500: #7ccf00;
+  --color-lime-600: #5ea500;
+  --color-lime-700: #497d00;
+  --color-lime-800: #3d6300;
+  --color-lime-900: #35530e;
+  --color-lime-950: #192e03;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a1a1a1;
+  --color-neutral-50: #fafafa;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+  --color-orange-100: #ffedd4;
+  --color-orange-200: #ffd6a8;
+  --color-orange-300: #ffb86a;
+  --color-orange-400: #ff8904;
+  --color-orange-50: #fff7ed;
+  --color-orange-500: #ff6900;
+  --color-orange-600: #f54a00;
+  --color-orange-700: #ca3500;
+  --color-orange-800: #9f2d00;
+  --color-orange-900: #7e2a0c;
+  --color-orange-950: #441306;
+  --color-pink-100: #fce7f3;
+  --color-pink-200: #fccee8;
+  --color-pink-300: #fda5d5;
+  --color-pink-400: #fb64b6;
+  --color-pink-50: #fdf2f8;
+  --color-pink-500: #f6339a;
+  --color-pink-600: #e60076;
+  --color-pink-700: #c6005c;
+  --color-pink-800: #a3004c;
+  --color-pink-900: #861043;
+  --color-pink-950: #510424;
+  --color-purple-100: #f3e8ff;
+  --color-purple-200: #e9d4ff;
+  --color-purple-300: #dab2ff;
+  --color-purple-400: #c27aff;
+  --color-purple-50: #faf5ff;
+  --color-purple-500: #ad46ff;
+  --color-purple-600: #9810fa;
+  --color-purple-700: #8200db;
+  --color-purple-800: #6e11b0;
+  --color-purple-900: #59168b;
+  --color-purple-950: #3c0366;
+  --color-red-100: #ffe2e2;
+  --color-red-200: #ffc9c9;
+  --color-red-300: #ffa2a2;
+  --color-red-400: #ff6467;
+  --color-red-50: #fef2f2;
+  --color-red-500: #fb2c36;
+  --color-red-600: #e7000b;
+  --color-red-700: #c10007;
+  --color-red-800: #9f0712;
+  --color-red-900: #82181a;
+  --color-red-950: #460809;
+  --color-rose-100: #ffe4e6;
+  --color-rose-200: #ffccd3;
+  --color-rose-300: #ffa1ad;
+  --color-rose-400: #ff637e;
+  --color-rose-50: #fff1f2;
+  --color-rose-500: #ff2056;
+  --color-rose-600: #ec003f;
+  --color-rose-700: #c70036;
+  --color-rose-800: #a50036;
+  --color-rose-900: #8b0836;
+  --color-rose-950: #4d0218;
+  --color-sky-100: #dff2fe;
+  --color-sky-200: #b8e6fe;
+  --color-sky-300: #74d4ff;
+  --color-sky-400: #00bcff;
+  --color-sky-50: #f0f9ff;
+  --color-sky-500: #00a6f4;
+  --color-sky-600: #0084d1;
+  --color-sky-700: #0069a8;
+  --color-sky-800: #00598a;
+  --color-sky-900: #024a70;
+  --color-sky-950: #052f4a;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cad5e2;
+  --color-slate-400: #90a1b9;
+  --color-slate-50: #f8fafc;
+  --color-slate-500: #62748e;
+  --color-slate-600: #45556c;
+  --color-slate-700: #314158;
+  --color-slate-800: #1d293d;
+  --color-slate-900: #0f172b;
+  --color-slate-950: #020618;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-300: #d6d3d1;
+  --color-stone-400: #a6a09b;
+  --color-stone-50: #fafaf9;
+  --color-stone-500: #79716b;
+  --color-stone-600: #57534d;
+  --color-stone-700: #44403b;
+  --color-stone-800: #292524;
+  --color-stone-900: #1c1917;
+  --color-stone-950: #0c0a09;
+  --color-teal-100: #cbfbf1;
+  --color-teal-200: #96f7e4;
+  --color-teal-300: #46ecd5;
+  --color-teal-400: #00d5be;
+  --color-teal-50: #f0fdfa;
+  --color-teal-500: #00bba7;
+  --color-teal-600: #009689;
+  --color-teal-700: #00786f;
+  --color-teal-800: #005f5a;
+  --color-teal-900: #0b4f4a;
+  --color-teal-950: #022f2e;
+  --color-violet-100: #ede9fe;
+  --color-violet-200: #ddd6ff;
+  --color-violet-300: #c4b4ff;
+  --color-violet-400: #a684ff;
+  --color-violet-50: #f5f3ff;
+  --color-violet-500: #8e51ff;
+  --color-violet-600: #7f22fe;
+  --color-violet-700: #7008e7;
+  --color-violet-800: #5d0ec0;
+  --color-violet-900: #4d179a;
+  --color-violet-950: #2f0d68;
+  --color-yellow-100: #fef9c2;
+  --color-yellow-200: #fff085;
+  --color-yellow-300: #ffdf20;
+  --color-yellow-400: #fcc800;
+  --color-yellow-50: #fefce8;
+  --color-yellow-500: #efb100;
+  --color-yellow-600: #d08700;
+  --color-yellow-700: #a65f00;
+  --color-yellow-800: #894b00;
+  --color-yellow-900: #733e0a;
+  --color-yellow-950: #432004;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #9f9fa9;
+  --color-zinc-50: #fafafa;
+  --color-zinc-500: #71717b;
+  --color-zinc-600: #52525c;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-zinc-950: #09090b;
+
+  --base-color-text-header: var(--color-slate-200);
+  --base-color-text-primary: var(--color-slate-300);
+  --base-color-text-secondary: var(--color-slate-400);
+  --base-color-text-bold: var(--color-slate-50);
+  --base-color-text-link: var(--color-purple-500);
+  --base-color-text-accent: var(--color-purple-500);
+  --base-color-text-post: var(--color-blue-500);
+  --base-color-text-get: var(--color-green-500);
+  --base-color-text-del: var(--color-red-500);
+  --base-color-text-warn: var(--color-orange-500);
+
+  --ifm-color-primary: var(--color-purple-500);
+  --ifm-color-primary-dark: var(--color-purple-400);
+  --ifm-color-primary-darker: var(--color-purple-300);
+  --ifm-color-primary-darkest: var(--color-purple-200);
+  --ifm-color-primary-light: var(--color-purple-400);
+  --ifm-color-primary-lighter: var(--color-purple-300);
+  --ifm-color-primary-lightest: var(--color-purple-200);
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-navbar-background-color: var(--color-slate-900);
+  --ifm-background-color: var(--color-slate-900);
+  --ifm-font-color-base: var(--color-slate-200);
+  --ifm-font-color-primary: var(--color-slate-900);
+  --ifm-font-color-secondary: var(--color-slate-800);
+  --ifm-dropdown-link-color: var(--color-slate-900);
+
+  --ifm-hr-border-color: var(--color-slate-800);
+  --ifm-toc-border-color: rgba(202, 213, 226, 0.08);
+  --doc-sidebar-width: 274px;
+
+  --ifm-h1-font-size: 44px;
+  --ifm-h2-font-size: 30px;
+  --ifm-h3-font-size: 20px;
+  --ifm-h4-font-size: 16px;
+  --ifm-h5-font-size: 12px;
+  --ifm-h6-font-size: 10px;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #4f73f3;
+  --ifm-color-primary-dark: #4569e9;
+  --ifm-color-primary-darker: #3b5fdf;
+  --ifm-color-primary-darkest: #274bcb;
+  --ifm-color-primary-light: #597dfd;
+  --ifm-color-primary-lighter: #6387ff;
+  --ifm-color-primary-lightest: #779bff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+#__docusaurus::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-image: url("/img/bg-top.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1000;
+  pointer-events: none;
+  max-width: 58vw;
+  width: 100%;
+  aspect-ratio: 837 / 376;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+#__docusaurus::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  max-width: 100vw;
+  width: 100%;
+  aspect-ratio: 1441 / 413;
+  background-image: url("/img/bg-bottom.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+#__docusaurus {
+  div[class*="announcementBar_"] {
+    border: none;
+    background-image: url("/img/bg-announcement-bar.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button[class*="announcementBarClose_"] {
+      color: white;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        padding: 4px;
+        background-color: rgba(0, 0, 0, 0.32);
+        border-radius: 999px;
+      }
+    }
+  }
+
+  .announcement-bar-button {
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: radial-gradient(
+      96.59% 138.97% at 0% -32.14%,
+      #ebe0fa 0%,
+      #ffffff 100%
+    );
+    border: 0.69px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.56);
+    color: var(--color-purple-500);
+    background-color: white;
+    text-decoration: none;
+  }
+
+  .navbar {
+    border-bottom: 1px solid rgba(202, 213, 226, 0.08);
+
+    .dropdown__link {
+      color: var(--ifm-dropdown-link-color) !important;
+
+      a {
+        color: var(--ifm-dropdown-link-color) !important;
+      }
+    }
+  }
+
+  div[class*="sidebar_"] nav {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .navbar__link--active {
+    color: var(--base-color-text-accent);
+  }
+
+  .theme-doc-sidebar-item-category-level-1 {
+    .menu__list-item-collapsible {
+      position: relative;
+      padding: 6px 32px;
+
+      a {
+        padding: 0px;
+        color: var(--base-color-text-header);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.25px;
+      }
+    }
+
+    ul {
+      position: relative; /* 为伪元素定位做准备 */
+    }
+
+    ul::before {
+      content: ""; /* 伪元素内容为空 */
+      position: absolute; /* 绝对定位 */
+      left: 12px; /* 将伪元素定位到 ul 元素的左侧 12px 处 */
+      top: 0;
+      bottom: 0;
+      width: 1px; /* 伪元素的宽度为 1px */
+      background-color: var(--color-slate-800); /* 伪元素的背景颜色为边框颜色 */
+    }
+  }
+
+  .menu__list-item--collapsed {
+    display: flex;
+    align-items: center;
+    position: relative; /* 讓絕對定位的圓點以這裡為基準 */
+    &::before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background-color: var(--color-slate-50);
+      opacity: 0.32;
+      border-radius: 50%;
+    }
+  }
+
+  .theme-doc-sidebar-item-category-level-1:not(.menu__list-item--collapsed)
+    .menu__list-item-collapsible::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 4px;
+    background-image: linear-gradient(to top, #334155, #94a3b8);
+
+    background-origin: border-box;
+    mask-image: linear-gradient(white, white), linear-gradient(white, white);
+    mask-clip: padding-box, border-box;
+    mask-composite: exclude, add;
+  }
+
+  .theme-doc-sidebar-item-category-level-1:not(.menu__list-item--collapsed)
+    .menu__list-item-collapsible {
+    position: relative;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background: radial-gradient(
+      99.75% 99.75% at 50% 99.75%,
+      rgba(168, 85, 247, 0.64) 0%,
+      rgba(15, 23, 42, 0.0001) 100%
+    );
+  }
+
+  .menu__link--sublist-caret:after {
+    display: none;
+  }
+
+  .theme-doc-sidebar-item-link {
+    a {
+      padding: 0px 24px;
+      color: var(--base-color-text-secondary);
+      font-family: Inter;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0px;
+
+      &:hover {
+        color: var(--base-color-text-primary);
+      }
+
+      &.menu__link--active {
+        color: var(--base-color-text-accent);
+      }
+    }
+  }
+
+  .navbar__logo {
+    width: 143px;
+    height: 28px;
+  }
+
+  .theme-doc-markdown {
+    hr {
+      background-color: var(--ifm-hr-border-color);
+      height: 1px;
+    }
+  }
+
+  .table-of-contents strong {
+    font-weight: normal;
+  }
+
+  .table-of-contents > li {
+    a {
+      color: var(--base-color-text-secondary);
+      font-family: Inter;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0px;
+
+      position: relative;
+
+      &:hover {
+        color: var(--base-color-text-primary);
+      }
+
+      &.table-of-contents__link--active {
+        color: var(--base-color-text-accent);
+
+        ::before {
+          content: "";
+          position: absolute;
+          left: -18px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 3px;
+          height: 16px;
+
+          background: radial-gradient(
+            2210.56% 1503.12% at 151.98% 156.31%,
+            #e9d5ff 0%,
+            #a855f7 22.35%,
+            rgba(15, 23, 42, 0.0001) 100%
+          );
+        }
+      }
+    }
+  }
+
+  .table-of-contents
+    > li
+    > ul
+    > li
+    > a.table-of-contents__link--active
+    > strong::before {
+    left: -34px;
+  }
+
+  .pagination-nav__link {
+    border: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    .pagination-nav__sublabel {
+      color: var(--base-color-text-accent);
+      font-family: Inter;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 22px;
+      letter-spacing: 0px;
+      text-transform: uppercase;
+    }
+
+    .pagination-nav__label {
+      color: var(--base-color-text-header);
+      font-family: Inter;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.22px;
+    }
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.25px;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.25px;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.25px;
+  }
+
+  li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: var(--color-slate-400);
+  }
+
+  a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    color: var(--color-slate-200);
+  }
+
+  img {
+    border-radius: 8px;
+  }
+
+  code {
+    padding: 2px 4px;
+    color: var(--ifm-font-color-primary);
+    background-color: var(--color-neutral-50);
+    border: 1px solid var(--color-neutral-200);
+    gap: 8px;
+    border-radius: 4px;
+  }
+
+  .half-emoji-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 0px;
+  }
+}
