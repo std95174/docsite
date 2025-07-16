@@ -93,4 +93,5 @@ When you click the **New Deploy** button, a form will appear where you need to f
 
 ---
 
-This is a complete guide to Auto Deploy. For more detailed explanations, please refer to the following sections.
+This is a complete guide to Auto Deploy. For more detailed instructions and examples, please refer to the
+[**Glows.ai Auto Deploy User Guide**](https://docs.glows.ai/docs/auto-deploy-usage).

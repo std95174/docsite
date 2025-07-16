@@ -93,4 +93,4 @@
 
 ---
 
-以上是關於 Auto Deploy 的完整指南，若需要更詳細的說明，請參考後續章節。
+**以上是關於 Auto Deploy 的完整指南，如需更詳細的操作步驟與案例，請參考 [**Glows.ai Auto Deploy 使用說明**](https://docs.glows.ai/docs/auto-deploy-usage)。**
