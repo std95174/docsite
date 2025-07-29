@@ -51,7 +51,7 @@ After navigating to the **Create New** page, the first step is to select the ins
    - **Snapshot**: Displays previously created instances saved as snapshots. Selecting a snapshot allows you to resume prior work environments and configurations, saving time on reconfiguration.
 
 2. Once selected, the information of the chosen item will be displayed on the right:
-   - **Selected Snapshot**: For example, `snp-7w9rgp6p - Test`.
+   - **Selected Snapshot**: For example, `img-6np5vq2x - DeepSeek-R1 70B_Q4`.
 
 ![Official Image](../docs-images/p03/03.Selected%20Image.jpg)
 
@@ -95,14 +95,14 @@ After completing your configuration, a summary of your selections will be displa
 
 Example:
 
-- **Price/h**: 6.500 Credits
+- **Price/h**: 1.600 Credits
 - **Instance Ordered**: 1
 
 ![Price and Detail](../docs-images/p03/06.Price%20and%20Detail.jpg)
 
 ---
 
-## **Step 7: Complete Checkout**
+## **Step 7: Create Instance**
 
 After confirming the instance details and pricing, click `Complete Checkout` to finalize the order and create the instance.
 
@@ -113,18 +113,14 @@ After confirming the instance details and pricing, click `Complete Checkout` to 
 ## **Notes**
 
 - **Mount Data Drive (Optional):**  
-  Mounting a data drive is not mandatory. You can configure it after creating the instance. The system will not provide options if you have not rented and configured data drive storage. It is recommended that you complete these steps first (refer to the "Storage Configuration" chapter).
+  If you have a large amount of local data or code that needs to be used in the cloud, we recommend setting up **Datadrive** first and uploading your files there. This allows you to avoid the time-consuming process of transferring data after launching an instance.
 
-  > **Tip:** Instances without mounted data drives can still operate normally. Drives can be added later in the instance settings.
+  👉 [Click here to view the Datadrive user guide](https://docs.glows.ai/zh-TW/docs/datadrive)
+
+  It’s recommended to store data-related files such as **models, datasets, and source code** in Datadrive. It supports **offline uploading and downloading**, so you can manage your files without launching any instance.
 
 - **Snapshot Selection Restrictions:**  
   Only options successfully stored in the snapshot area will be displayed. If no snapshots are available, ensure you have completed the storage configuration on the "Storage Configuration" page and saved previously created instances as snapshots on the "My Instances" page.
-
-- **Price Confirmation:**  
-  Before completing the checkout, carefully review the total price, selected resource configurations, and required credits to ensure they meet your needs and expectations.
-
-- **Data Permissions Setup:**  
-  If you have mounted a data drive, select appropriate permissions (read-only or read-write) based on your use case.
 
 ---
 
