@@ -25,7 +25,7 @@
   > 在 **Available** 中，刪除快照會將其移至 **Restorable** 標籤頁。
   > 在 **Restorable** 中，刪除快照會永久刪除，且無法恢復。
 
-## ![Snapshots list](../../../../../docs/docs-images/p08/01.Snapshots%20list.jpg)
+![Snapshots list](../../../../../docs/docs-images/p08/01.Snapshots%20list.jpg)
 
 ## **注意事項**
 

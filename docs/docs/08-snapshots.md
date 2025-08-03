@@ -25,7 +25,7 @@ On the **Snapshots** page, you can manage all created snapshots. The snapshot an
   - In **Available**, deleting a snapshot will move it to the **Restorable** tab.
   - In **Restorable**, deleting a snapshot will permanently remove it, and it cannot be restored.
 
-## ![Snapshots list](../docs-images/p08/01.Snapshots%20list.jpg)
+![Snapshots list](../docs-images/p08/01.Snapshots%20list.jpg)
 
 ## **Notes**
 

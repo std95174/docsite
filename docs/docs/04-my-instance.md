@@ -8,18 +8,18 @@ On the **My Instance** page, you can view and manage the status and configuratio
 
 On the **My Instance** page, you can see three instance statuses:
 
-1. **Running**: The instance is running, and you can access or manage it.
-2. **Snapshotting**: The instance is performing a snapshot operation, temporarily unavailable for other management operations.
-3. **Released**: The instance has been released, and resources have been reclaimed. Instances in this state cannot be restarted.
+1. **Running**: The instance is currently running and accessible for management or use. ⚠️ **Charges apply only when the instance is in this state**, so please manage your usage time carefully.
+2. **Snapshotting**: The instance is in the process of creating a snapshot and temporarily unavailable for other management actions. This state **does not incur additional charges**.
+3. **Released**: The instance has been released and its resources reclaimed. Instances in this state **cannot be restarted and will no longer incur charges**.
 
-**Each status has a list of instances with the following fields**:
+**Each status has an instance list with the following columns:**
 
 - **ID**: The unique identifier of each instance.
 - **Name**: The name of the instance, which helps users identify it.
 - **Cost**: The billing status and accumulated cost of the current instance.
 - **Action**: The operations that can be performed on the instance (see the operations section below).
 
-## ![Instance list](../docs-images/p04/01.Instance%20list.jpg)
+![Instance list](../docs-images/p04/01.Instance%20list.jpg)
 
 ## **Tabs**
 
@@ -29,153 +29,154 @@ Click on a row in the instance list to view and manage the corresponding instanc
 
 - **SSH Port 22**
 
-  - View information related to SSH connections:
+  - View SSH connection details:
+
     - **SSH Command**: `ssh -p <Service Port> root@<Access URL>`
-    - **Service Port**: The service port of the instance.
-    - **User**: The default username is `root`.
-    - **Password**: The initial password (displayed encrypted).
+    - **Service Port**: The service port for this instance.
+    - **User**: Default username is `root`.
+    - **Password**: Initial password (masked).
 
 - **HTTP Port 8888**
+  This port by default deploys the JupyterLab service. Click **Open** to directly access the instance.
 
-  - Provides the following actions:
-    - **Link**: Quickly jump to the HTTP address.
-    - **Open**: Open the link in a new tab.
+  - Available actions:
+
+    - **Link**: Quick link to the HTTP address.
+    - **Open**: Open the link in a new browser tab.
     - **Copy**: Copy the HTTP address.
-    - **Edit**: Edit the port settings (if available).
-    - **Delete**: Delete the configuration for this port.
+    - **Edit**: Edit port settings (if available).
+    - **Delete**: Remove the port configuration.
 
-- **New Port Forwarding**: Click this button to add a port forwarding rule, filling in the following information:
+- **New Port Forwarding**: Click this button to add a new port forwarding rule by filling in the following:
 
   - **Service Port**: Set the service port.
-  - **Protocol**: Choose the protocol type (currently supports only HTTPS).
+  - **Protocol**: Choose the service protocol type, default is TCP. If forwarding a web service (e.g., JupyterLab, Dashboard), check `HTTPS` to enable encrypted access (HTTPS) for browser connection security.
 
-## ![Access](../docs-images/p04/02.Access.jpg)
+![Access](../docs-images/p04/02.Access.jpg)
 
 ### **2. Monitor**
 
-View the real-time performance and resource usage of the instance.
+Real-time performance and resource usage monitoring of the instance.
 
-## ![Monitor](../docs-images/p04/03.Monitor.jpg)
+![Monitor](../docs-images/p04/03.Monitor.jpg)
 
 ### **3. Billing**
 
-Display all billing details related to the instance.
+Displays all billing details related to the instance.
 
-## ![Billing](../docs-images/p04/04.Billing.jpg)
+![Billing](../docs-images/p04/04.Billing.jpg)
 
 ### **4. Config**
 
-View the instance configuration, such as image-related parameter settings.
+View instance configuration, such as image-related parameter settings.
 
-## ![Config](../docs-images/p04/05.Config.jpg)
+![Config](../docs-images/p04/05.Config.jpg)
 
 ### **5. Hardware**
 
-Check the hardware configuration of the instance, including GPU or CPU models, memory, storage, etc.
+Check hardware configuration of the instance, including GPU/CPU models, memory, and storage.
 
-## ![Hardware](../docs-images/p04/06.Hardware.jpg)
+![Hardware](../docs-images/p04/06.Hardware.jpg)
 
 ### **6. Network Group**
 
-View the network group of the instance.
+View cluster network information of the instance. Glows.ai supports multi-node multi-GPU operations. You can add multiple instances into the same cluster within Mesh, enabling instances to communicate via internal IPs for more efficient collaborative computing.
 
-## ![Network Group](../docs-images/p04/07.Network%20Group.jpg)
+![Network Group](../docs-images/p04/07.Network%20Group.jpg)
 
 ---
 
-## **Actions Available When the Instance is Running**
+## **Actions Available When Instance Status is Running**
 
-In the action column, there are two buttons: `Take Snapshot` and `Release`.
+In the Action column, you will find two buttons: `Take Snapshot` and `Release`.
 
 ### **1. Take Snapshot**
 
-- **Function**: Take a snapshot of the current instance's basic configuration and storage.
+- **Function**: Create a snapshot of the current instance, saving all states and file changes except those in `/datadrive`, including installed packages, system settings, and other directory modifications.
 - **Use Cases**:
-  - Save important configurations or states for future use.
-  - Provide a reference base for creating subsequent instances.
 
-#### **Take Snapshot Detailed Steps**
+  - When you have made significant customizations (e.g., installed Python packages, Ubuntu software) and want to save the current state for quick restoration.
+  - To serve as a base template for creating new instances later, avoiding repetitive setup.
+
+#### **Detailed Take Snapshot Procedure**
 
 1. **Click the `Take Snapshot` button in the Action column to open the snapshot creation window.**
 
-## ![Take Snapshot](../docs-images/p04/08.Take%20Snapshot.jpg)
+![Take Snapshot](../docs-images/p04/08.Take%20Snapshot.jpg)
 
-2. **Fill in the snapshot information**:
+2. **Fill in snapshot details:**
 
-   - **Name**: Enter the snapshot name.
-   - **Automatic release of machine after successful saving**: If selected, the instance will be automatically released after the snapshot is saved.
+   - **Name**: Enter a name for the snapshot.
+   - **Automatic release of machine after successful saving**:
+     If selected, the instance will be automatically released after snapshot creation;
+     if not selected, the instance will automatically return to the **Running** state and remain available.
 
-3. **View the snapshot process**:
+3. **Monitor the snapshot progress:**
 
-   - During the saving process, the instance will appear under the **Snapshotting** tab, showing status changes:
+   - During saving, the instance will show under the **Snapshotting** tab with status changes:
 
-     - **Suspending** → **Paused** → Disappears from the list.
+     - **Suspending** → **Paused** → disappears from the list.
 
-     ## ![Snapshotting](../docs-images/p04/09.Suspending.jpg)
+     ![Snapshotting](../docs-images/p04/09.Suspending.jpg)
 
-     ## ![Snapshotting](../docs-images/p04/10.Paused.jpg)
+     ![Snapshotting](../docs-images/p04/10.Paused.jpg)
 
-   - After saving, the instance will no longer appear on the **My Instance** page and will be stored as a snapshot, viewable on the **Snapshots** page.
+   - After saving completes, the instance will no longer appear on the **My Instance** page and will be stored as a snapshot viewable in the **Snapshots** page.
 
-4. **Post-Snapshot Effects**:
+4. **Post-snapshot effects:**
 
-   - During the snapshot process, the instance will be paused and will either resume or be released after saving, depending on whether automatic release is selected.
+   - During snapshot saving, the instance is paused. After completion, it will either automatically resume or be released depending on the auto-release selection.
 
 #### **Notes**
 
-- The instance will be temporarily unavailable during the saving process and will automatically reconnect afterward.
-- Ensure sufficient personal storage space before saving a snapshot.
+- The instance is temporarily unavailable during snapshot saving and can only be operated again once the connection is restored.
+- Ensure you have sufficient personal storage space before creating snapshots.
 
 ---
 
 ### **2. Release**
 
-- **Function**: Release the instance resources, changing the instance status to **Released**.
-- **Use Cases**: When you no longer need the instance, you can choose to release it to reclaim resources and stop billing.
+- **Function**: Release the instance resources and change its status to **Released**.
+- **Use Case**: When you no longer need the instance, releasing it will reclaim resources and stop billing.
 
-#### **Release Detailed Steps**
+#### **Detailed Release Procedure**
 
-1. **Click the `Release` button in the Action column** to open the confirmation window.
+1. **Click the `Release` button in the Action column to open a confirmation dialog.**
 
-## ![Release](../docs-images/p04/11.Release.jpg)
+![Release](../docs-images/p04/11.Release.jpg)
 
-2. **Confirm the release**:
+2. **Confirm release:**
 
-   - The system will prompt related notices, such as data deletion and irreversibility.
-   - Click `Stop & Release` to confirm the release operation.
+   - The system will warn about data deletion and irreversibility.
+   - Click `Stop & Release` to confirm.
 
-3. **Status Updates During Release Process**:
+3. **Status updates during release:**
 
-   - The instance status will change to **Releasing** and eventually update to **Released**.
+   - The instance status will change to **Releasing** and eventually to **Released**.
 
-4. **Post-Release Effects**:
+4. **How to launch a new instance from a Snapshot:**
+   Select the Snapshot when creating a new instance, then start the instance.
 
-   - **Instances in Released status will appear under the Released tab.**
-   - Released instances cannot be restarted, and all unsaved data will be deleted.
+   - After snapshot creation:
+     If you did not select auto-release, the instance remains **Running** in the My Instance page; otherwise, it is automatically released.
 
-   ## ![Released](../docs-images/p04/12.Released%20list.jpg)
+   ![Released](../docs-images/p04/12.Released%20list.jpg)
 
-#### **Notes**
-
-- **Irreversible**: The release operation cannot be undone, so ensure the instance is no longer needed.
-- **Billing**: Resource usage costs for the instance will stop after release.
-- **Snapshot Recommendation**: If you need to retain data, take a **snapshot** before releasing the instance.
+#### **Note:** During snapshot creation, the instance is inaccessible and running programs are interrupted. It is generally recommended to create snapshots before releasing the machine after use.
 
 ---
 
-## **Summary of Notes**
+## **Summary of Important Notes**
 
-1. **Snapshotting and Released Restrictions**:
+1. **Restrictions in Snapshotting and Released States:**
 
-   - Only the **Config** and **Hardware** tabs are viewable in these two states; other operations are not allowed.
+   - In these states, only the **Config** and **Hardware** tabs are accessible; other operations are disabled.
 
-2. **Release and Snapshot Recommendations**:
+2. **Recommendations for Release and Snapshots:**
 
-   - Before choosing the release operation, ensure you need to retain the current data.
-   - Regular snapshots can help save critical data.
+   - Confirm if you need to retain data before releasing an instance.
+   - Regularly creating snapshots helps safeguard important data.
 
-3. **Operational Impact**:
+3. **Impact of Operations:**
 
-   - Some operations (like snapshot and release) may interrupt the normal use of the instance, so schedule them appropriately.
-
-This is the complete guide to instance management. For more detailed instructions, please refer to subsequent sections.
+   - Some actions (such as snapshotting and releasing) may interrupt normal instance use; please schedule accordingly.

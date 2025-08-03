@@ -8,9 +8,9 @@
 
 在 **My Instance** 頁面中，您可以看到三種實例狀態：
 
-1. **Running**：實例正在運行，您可以對其進行訪問或管理操作。
-2. **Snapshotting**：實例正在執行快照操作，暫時無法進行其他管理操作。
-3. **Released**：實例已被釋放，資源已回收，該狀態的實例無法再次啟動。
+1. **Running**：實例正在運行，您可以對其進行訪問或管理操作。⚠️**只有在此狀態下，實例才會產生計費**，請妥善管理使用時間。
+2. **Snapshotting**：實例正在執行快照操作，暫時無法進行其他管理操作。此狀態**不會產生額外計費**。
+3. **Released**：實例已被釋放，資源已回收，該狀態的實例無法再次啟動，**也不會再計費**。
 
 **每個狀態都有一個實例列表其欄位有**:
 
@@ -19,7 +19,7 @@
 - **Cost**：當前實例的計費狀態與累積費用。
 - **Action**：可對實例進行的操作（詳見下方操作介紹）。
 
-## ![Instance list](../../../../../docs/docs-images/p04/01.Instance%20list.jpg)
+![Instance list](../../../../../docs/docs-images/p04/01.Instance%20list.jpg)
 
 ## **選項卡（Tabs）**
 
@@ -36,6 +36,7 @@
     - **Password**：初始密碼（加密顯示）。
 
 - **HTTP Port 8888**
+  本端口預設部署的是 JupyterLab 服務，點擊 Open 即可直接訪問實例。
 
   - 提供以下操作：
     - **Link**：快速跳轉到 HTTP 地址。
@@ -47,39 +48,39 @@
 - **New Port Forwarding**：點擊此按鈕新增端口轉發規則，填入以下資訊：
 
   - **Service Port**：設定服務端口。
-  - **Protocol**：選擇協議類型（目前只支援 HTTPS）。
+  - **Protocol**：選擇服務協定類型，預設為 TCP。若您要轉發的是 Web 類型服務（如 JupyterLab、Dashboard 等），請勾選 `HTTPS` 來啟用加密訪問（HTTPS），確保瀏覽器連線安全性。
 
-## ![Access](../../../../../docs/docs-images/p04/02.Access.jpg)
+![Access](../../../../../docs/docs-images/p04/02.Access.jpg)
 
 ### **2. Monitor**
 
 即時查看實例的效能與資源使用狀況。
 
-## ![Monitor](../../../../../docs/docs-images/p04/03.Monitor.jpg)
+![Monitor](../../../../../docs/docs-images/p04/03.Monitor.jpg)
 
 ### **3. Billing**
 
 顯示與該實例相關的所有計費明細。
 
-## ![Billing](../../../../../docs/docs-images/p04/04.Billing.jpg)
+![Billing](../../../../../docs/docs-images/p04/04.Billing.jpg)
 
 ### **4. Config**
 
 查看實例的配置，如映像檔相關參數設置。
 
-## ![Config](../../../../../docs/docs-images/p04/05.Config.jpg)
+![Config](../../../../../docs/docs-images/p04/05.Config.jpg)
 
 ### **5. Hardware**
 
 檢查實例的硬件配置，包括 GPU 或 CPU 型號、內存、存儲等。
 
-## ![Hardware](../../../../../docs/docs-images/p04/06.Hardware.jpg)
+![Hardware](../../../../../docs/docs-images/p04/06.Hardware.jpg)
 
 ### **6. Network Group**
 
-查看實例的網絡集群。
+查看實例的集群網路資訊。Glows.ai 支援多機多卡運行，您可以在 Mesh 中將多個實例加入同一個集群，使集群內的實例透過內網 IP 互相連通，實現更高效的運算協作。
 
-## ![Network Group](../../../../../docs/docs-images/p04/07.Network%20Group.jpg)
+![Network Group](../../../../../docs/docs-images/p04/07.Network%20Group.jpg)
 
 ---
 
@@ -89,21 +90,22 @@
 
 ### **1. Take Snapshot**
 
-- **功能**：創建當前實例的快照，用於保存實例的狀態、配置與數據。
+- **功能**：建立當前實例的快照，保存實例中除 /datadrive 外的所有狀態與檔案變更，包括已安裝的套件、系統設定與其他目錄中的修改內容。
 - **使用情境**：
-  - 保存重要配置或狀態以供日後使用。
-  - 為後續創建實例提供參考基礎。
+  - 對實例環境進行了較多自定義設定（如安裝 Python 套件、Ubuntu 軟體等），希望保存當前狀態以便下次快速重現。
+  - 作為日後建立新實例的基礎模板，避免重複配置。
 
 #### **Take Snapshot 詳細操作流程**
 
 1. **點擊 Action 欄位中 `Take Snapshot` 按鈕，將彈出快照創建窗口。**
 
-## ![Take Snapshot](../../../../../docs/docs-images/p04/08.Take%20Snapshot.jpg)
+![Take Snapshot](../../../../../docs/docs-images/p04/08.Take%20Snapshot.jpg)
 
 2. **填寫快照資訊**：
 
    - **Name**：填寫快照名稱。
-   - **Automatic release of machine after successful saving**：若勾選此選項，保存完成後實例將自動釋放。
+   - **Automatic release of machine after successful saving**：若勾選此選項，快照製作完成後，實例將自動釋放；
+     若未勾選，快照完成後實例將自動恢復為 Running 狀態，您可繼續使用該實例。
 
 3. **查看快照進程**：
 
@@ -111,9 +113,9 @@
 
      - **Suspending** → **Paused** → 從列表中消失。
 
-     ## ![Snapshotting](../../../../../docs/docs-images/p04/09.Suspending.jpg)
+     ![Snapshotting](../../../../../docs/docs-images/p04/09.Suspending.jpg)
 
-     ## ![Snapshotting](../../../../../docs/docs-images/p04/10.Paused.jpg)
+     ![Snapshotting](../../../../../docs/docs-images/p04/10.Paused.jpg)
 
    - 實例保存完成後，不會再出現在 **My Instance** 頁面中，而是存儲為快照，可在 **Snapshots** 頁面中查看。
 
@@ -137,7 +139,7 @@
 
 1. **點擊 Action 欄位中 `Release` 按鈕**，將彈出確認窗口。
 
-## ![Release](../../../../../docs/docs-images/p04/11.Release.jpg)
+![Release](../../../../../docs/docs-images/p04/11.Release.jpg)
 
 2. **確認釋放**：
 
@@ -148,18 +150,13 @@
 
    - 實例狀態將變為 **Releasing**，並最終更新為 **Released**。
 
-4. **完成後的影響**：
+4. **如何從 Snapshot 啟動新實例：創建實例的時候選擇 Snapshot，然後啟動實例即可。**：
 
-   - **Released 狀態的實例將顯示於 Released 標籤頁中。**
-   - 被釋放的實例無法再次啟動，所有未保存的數據將被刪除。
+   - 實例快照創建完成後：如果您沒有勾選保存完成後釋放實例，則可在 My Instance 介面中 Running 下看到實例，否則實例將會自動釋放。
 
-   ## ![Released](../../../../../docs/docs-images/p04/12.Released%20list.jpg)
+   ![Released](../../../../../docs/docs-images/p04/12.Released%20list.jpg)
 
-#### **注意事項**
-
-- **無法復原**：釋放操作無法撤銷，請確保不再需要此實例。
-- **費用計算**：釋放後，該實例的資源使用費用將停止計算。
-- **快照建議**：若需保留數據，請在釋放前進行 **Take Snapshot** 操作。
+#### **注意**：快照創建期間，實例不可訪問，實例內運行程序會中斷，一般建議在使用完畢釋放機器之前進行快照創建。
 
 ---
 
