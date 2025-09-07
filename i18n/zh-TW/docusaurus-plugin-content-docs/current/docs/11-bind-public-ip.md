@@ -1,4 +1,4 @@
-# Bind Public IP 功能使用教學
+# Bind Public IP
 
 **Bind Public IP** 是 Glows.ai 最新上線的功能，目前處於內測階段。若您有使用需求，可透過文末聯繫方式申請開通。本文將介紹該功能的使用方法。
 

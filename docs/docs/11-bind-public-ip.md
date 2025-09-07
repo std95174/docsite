@@ -1,4 +1,4 @@
-# Bind Public IP User Guide
+# Bind Public IP
 
 **Bind Public IP** is a newly released feature on Glows.ai, currently in beta testing.
 If you would like to enable this feature, please contact us through the methods listed at the end of this document.

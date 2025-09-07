@@ -1,4 +1,4 @@
-# Datadrive Desktop App User Guide
+# Datadrive Desktop App
 
 This guide will help you get started with the **Glows.ai Datadrive Desktop App**, an extension of the **Datadrive** feature from the Glows.ai web platform.
 It provides a more flexible cloud data management experience, enabling you to upload, download, and sync files between your local machine and the cloud more efficiently and reliably.
