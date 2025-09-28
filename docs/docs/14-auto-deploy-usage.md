@@ -1,3 +1,8 @@
+---
+id: auto-deploy-usage
+sidebar_position: 16
+---
+
 # Auto Deploy Usage
 
 In a typical setup, using **GPU** deployment services often requires manually creating and releasing instances. For scenarios where **GPU** usage is sporadic or infrequent, this manual process can be inefficient and cumbersome.

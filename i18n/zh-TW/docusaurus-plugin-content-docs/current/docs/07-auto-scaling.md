@@ -1,3 +1,8 @@
+---
+id: auto-scaling
+sidebar_position: 9
+---
+
 # Auto Scaling 功能
 
 在 **Auto Scaling** 頁面，您可以管理和創建新的擴展規則，以自動調整資源的分配，根據系統負載動態擴展或縮減資源，優化運行效率。以下是功能介紹與操作指南：
@@ -43,7 +48,7 @@
 - 設定 **Protocol**（目前僅支持 **http**），並填入 **Port**。
 - 設定 **Start Command**：
 
-  - **Start Command**：在Auto Scaling 過程中，新的實例在啟動後所執行的內部命令，用於啟動實例內部的自定義服務或模型。如果不填，系統將使用預設的啟動命令。例如，Linux 系統可能使用 `systemctl start <service>` 或 `/etc/init.d/<service> start`。如果需要特定命令來啟動應用，請根據實際需求填寫。
+  - **Start Command**：在 Auto Scaling 過程中，新的實例在啟動後所執行的內部命令，用於啟動實例內部的自定義服務或模型。如果不填，系統將使用預設的啟動命令。例如，Linux 系統可能使用 `systemctl start <service>` 或 `/etc/init.d/<service> start`。如果需要特定命令來啟動應用，請根據實際需求填寫。
 
   ![New Scaling Rule](../../../../../docs/docs-images/p07/03.Scaling%20Target.jpg)
 

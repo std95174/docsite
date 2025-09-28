@@ -1,3 +1,8 @@
+---
+id: datadrive
+sidebar_position: 7
+---
+
 # Data Drive
 
 On the **Data Drive** page, you can manage your data files through an intuitive interface. The page displays different tabs for various areas, such as:

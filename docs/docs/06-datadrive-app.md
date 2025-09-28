@@ -1,3 +1,8 @@
+---
+id: datadrive-app
+sidebar_position: 6
+---
+
 # Datadrive Desktop App
 
 This guide will help you get started with the **Glows.ai Datadrive Desktop App**, an extension of the **Datadrive** feature from the Glows.ai web platform.

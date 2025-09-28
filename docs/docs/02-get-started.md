@@ -1,3 +1,8 @@
+---
+id: get-started
+sidebar_position: 2
+---
+
 # Get Started
 
 Welcome to **Glows.AI**! Here is a detailed guide to help you navigate the login and registration process, activate your account, and start using the platform with ease.

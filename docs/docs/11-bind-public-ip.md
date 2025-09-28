@@ -1,3 +1,8 @@
+---
+id: bind-public-ip
+sidebar_position: 13
+---
+
 # Bind Public IP
 
 **Bind Public IP** is a newly released feature on Glows.ai, currently in beta testing.

@@ -1,3 +1,8 @@
+---
+id: billing
+sidebar_position: 14
+---
+
 # Billing System
 
 On the **Billing** page, you can view and manage your expenses and balance.

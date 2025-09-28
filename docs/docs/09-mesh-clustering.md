@@ -1,3 +1,8 @@
+---
+id: mesh-clustering
+sidebar_position: 11
+---
+
 # Mesh Clustering
 
 On the **Mesh Clustering** page, you can manage and create different types of network resources, including Network Groups, Load Balancers, and Clusters. Currently, only **Network Groups** are supported for management. Below is an introduction to the page and the operation guide:

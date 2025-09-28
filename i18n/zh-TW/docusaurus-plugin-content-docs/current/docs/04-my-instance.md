@@ -1,3 +1,8 @@
+---
+id: my-instance
+sidebar_position: 4
+---
+
 # 管理實例
 
 在 **My Instance** 頁面，您可以查看並管理所有實例的狀態與配置。以下是詳細功能介紹：

@@ -1,3 +1,8 @@
+---
+id: my-instance
+sidebar_position: 4
+---
+
 # Instance Management
 
 On the **My Instance** page, you can view and manage the status and configuration of all instances. Below is a detailed introduction to the features:

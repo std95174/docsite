@@ -1,3 +1,8 @@
+---
+id: auto-scaling
+sidebar_position: 9
+---
+
 # Auto Scaling Feature
 
 On the **Auto Scaling** page, you can manage and create new scaling rules to automatically adjust resource allocation. This allows dynamic scaling up or down of resources based on system load, optimizing operational efficiency. Below is an introduction to the feature and a step-by-step guide:

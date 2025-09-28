@@ -1,3 +1,8 @@
+---
+id: snapshots
+sidebar_position: 10
+---
+
 # Snapshot Function
 
 On the **Snapshots** page, you can manage all created snapshots. The snapshot and restore features simplify your project's workflow. Below is an introduction and operation guide for these features:

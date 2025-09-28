@@ -1,6 +1,8 @@
 ---
 id: overview
+sidebar_position: 1
 ---
+
 # Overview
 
 Welcome to [**Glows.AI**](https://glows.ai/), a one-click AI platform designed to help you tackle AI training & inference, large-scale data processing, and multi-node collaboration. This tutorial will guide you through the platform’s core functionalities and advanced features, enabling you to make the most of its tools and services.

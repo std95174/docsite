@@ -1,3 +1,8 @@
+---
+id: auto-deploy
+sidebar_position: 5
+---
+
 # Auto Deploy
 
 On the **Auto Deploy** page, you can configure and automate the deployment process to ensure your application runs efficiently and securely. Below is a detailed feature introduction:

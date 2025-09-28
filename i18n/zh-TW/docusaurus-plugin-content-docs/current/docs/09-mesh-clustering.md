@@ -1,3 +1,8 @@
+---
+id: mesh-clustering
+sidebar_position: 11
+---
+
 # Mesh Clustering
 
 在 **Mesh Clustering** 頁面，您可以管理和創建不同類型的網絡資源，包括網絡群組 (Network Group)、負載平衡器 (Load Balancer)，以及集群 (Cluster)。目前僅支持 **Network Group** 的管理。以下是頁面介紹與操作指南：

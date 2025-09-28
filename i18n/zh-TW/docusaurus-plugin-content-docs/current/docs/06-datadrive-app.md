@@ -1,3 +1,8 @@
+---
+id: datadrive-app
+sidebar_position: 6
+---
+
 # Datadrive 桌面版
 
 本教學將帶您快速上手 **Glows.ai Datadrive 桌面版**，它是由 Glows.ai 網頁版的 **Datadrive** 功能延伸開發的桌面應用程式， 提供更靈活的雲端資料管理體驗，讓您在本機與雲端間的檔案上傳、下載、同步都能更高效穩定。

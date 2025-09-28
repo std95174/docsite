@@ -1,3 +1,8 @@
+---
+id: datadrive
+sidebar_position: 7
+---
+
 # Data Drive
 
 在 **Data Drive** 頁面，您可以透過直觀的操作介面管理您的數據文件。該頁面顯示不同區域的標籤頁，例如：

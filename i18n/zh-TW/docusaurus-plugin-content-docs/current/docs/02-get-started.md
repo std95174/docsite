@@ -1,3 +1,8 @@
+---
+id: get-started
+sidebar_position: 2
+---
+
 # Get Started
 
 歡迎使用 **Glows.AI**！以下是快速進入登入與註冊頁面的詳細指南，幫助您輕鬆啟用帳號並開始使用平台。

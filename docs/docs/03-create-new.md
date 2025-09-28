@@ -1,3 +1,8 @@
+---
+id: create-new
+sidebar_position: 3
+---
+
 # Creating a New Instance
 
 In this chapter, we will guide you on how to create a new instance on **Glows.AI**. Based on your project requirements, you can select either **GPU** or **CPU** models. Below are the detailed steps.

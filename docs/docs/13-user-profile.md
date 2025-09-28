@@ -1,3 +1,8 @@
+---
+id: user-profile
+sidebar_position: 15
+---
+
 # User Profile
 
 On the **User Profile** page, you can view and manage your account information.

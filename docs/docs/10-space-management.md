@@ -1,3 +1,8 @@
+---
+id: space-management
+sidebar_position: 12
+---
+
 # Space Management
 
 On the **Space Management** page, you have full control over your storage resources, allowing for flexible plan adjustments and space allocation to ensure optimal resource utilization. Below is an introduction and operation guide for these features:

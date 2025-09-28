@@ -1,3 +1,8 @@
+---
+id: auto-deploy
+sidebar_position: 5
+---
+
 # 自動部署
 
 在 **Auto Deploy** 頁面，您可以配置並自動化部署流程，使您的應用程式能夠高效、安全地運行。以下是詳細功能介紹：
