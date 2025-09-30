@@ -4,10 +4,6 @@ title: 'Glows.ai 上傳自定義 Docker 鏡像教學'
 date: '2025-09-28 19:00'
 sidebar_position: 8
 description: '本教學示範如何將本地 Docker 鏡像上傳到 Glows.ai 使用，包括製作鏡像、打包 tar、上傳與創建實例等步驟。'
-tags:
-  - Docker
-  - Glows.ai
-  - 教學
 ---
 
 # 在 Glows.ai 上傳自訂 Docker 鏡像
