@@ -725,6 +725,21 @@ h6 {
     border-radius: 4px;
   }
 
+  pre code {
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 8px 12px;
+    color: white;
+    border: none;
+
+    span {
+      color: white;
+    }
+  }
+
   .half-emoji-icon {
     width: 20px;
     height: 20px;
