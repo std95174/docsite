@@ -43,7 +43,6 @@ sidebar_position: 4
     - **Password（パスワード）**: 初期パスワード（暗号化表示）。
 
 - **HTTP Port 8888（HTTP ポート 8888）**
-  This port by default deploys the JupyterLab service. Click **Open** to directly access the instance.
   このポートにはデフォルトで JupyterLab サービスがデプロイされています。**Open** ボタンをクリックすると、直接インスタンスにアクセスできます。
 
   - 実行可能な操作：
