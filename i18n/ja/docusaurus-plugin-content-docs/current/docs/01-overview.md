@@ -5,33 +5,38 @@ sidebar_position: 1
 
 # 概要
 
-Welcome to [**Glows.AI**](https://glows.ai/), a one-click AI platform designed to help you tackle AI training & inference, large-scale data processing, and multi-node collaboration. This tutorial will guide you through the platform's core functionalities and advanced features, enabling you to make the most of its tools and services.
+ようこそ [**Glows.AI**](https://glows.ai/) へ。
+ 本プラットフォームは、AIトレーニングおよび推論（インフェレンス）、大規模データ処理、マルチノード協調などのニーズに対応できる ワンストップAIプラットフォーム です。
+ 本ガイドでは、プラットフォームの主要機能と高度な操作方法をわかりやすく解説し、ユーザーがニーズに合わせて柔軟にツールやサービスを構築できるようサポートします。
 
-## **Platform Highlights**
+## **プラットフォームの特長**
 
-1. **Compute Resource Management**
-   Create and monitor instances effortlessly, optimizing your GPU and CPU resources for any task.
-2. **Data Management**
-   Utilize snapshots and backups to streamline your workflow and reduce the risk of accidental deletions.
-3. **Storage Optimization**
-   Manage your storage with professional tools for maximum efficiency.
-4. **Cost Transparency**
-   Access detailed billing insights to control expenses and maximize value.
+1. **コンピューティングリソース管理**
+   インスタンスを迅速に作成・監視し、GPUおよびCPUリソースを効率的に割り当てることで、多様なニーズに柔軟に対応します。
+2. **データセキュリティ**
+   スナップショットおよびバックアップ機能を活用し、作業フローを簡素化するとともに、誤削除のリスクを最小限に抑えます。
+3. **ストレージ最適化**
+   ストレージ容量を管理し、リソースの利用効率を向上させます。
+4. **コストの透明性**
+   明確な請求システムにより、支出を正確に把握し、最小コストでの運用を実現します。
 
-## **What You'll Learn**
+## **学べる内容**
 
-Through this guide, you'll explore the following key areas:
+本チュートリアルでは、以下の主要機能について学ぶことができます：
 
-- **Get Started**: Quick account registration and basic setup.
-- **Create New**: Tailor your instances by selecting the right GPU and CPU configurations.
-- **My Instance**: Manage and monitor your resources effectively.
-- **Data Drive**: Upload and manage data seamlessly across instances.
-- **Snapshots**: Streamline your project workflows with point-in-time data capture and easy restoration.
-- **Mesh Clustering**: Set up multi-node collaboration for advanced workflows.
-- **Space Management**: Optimize your storage utilization with ease.
-- **Billing**: Review account balances and billing details transparently.
-- **User Profile**: Personalize your account settings for a better experience.
+- **クイックスタート**: アカウントを登録し、基本設定を完了して、プラットフォームの操作に素早く慣れましょう。
+- **新しいインスタンスの作成**: 最適な GPU・CPU 構成を設定し、用途に合わせた最良の計算環境を構築します。
+- **インスタンス管理**: リソースを柔軟に管理し、実行状況をリアルタイムで監視します。
+- **データドリブン運用**: データを自由にアップロードし、複数のインスタンス間で効率的に管理します。
+- **スナップショット機能**: リアルタイムのスナップショットと簡便な復元機能により、プロジェクトのワークフローを効率化します。
+- **クラスタ協調（Mesh Clustering）**: 複数ノードを構成して、高効率な共同作業とリソース配分を実現します。
+- **ストレージ管理**: ストレージ使用率を最適化し、リソース効率を最大化します。
+- **請求システム**: アカウント残高や詳細な請求情報を確認できます。
+- **パーソナライズ設定**: ユーザー設定を調整し、快適な利用体験を実現します。
 
-## **Learning Outcomes**
+## **学習成果**
 
-By the end of this guide, you'll confidently navigate [**Glows.AI**](https://glows.ai/), independently create and manage resources, safeguard your data, and optimize your workflow, whether you're a developer, business manager, or educator.
+- Glows.AI を独自に操作し、インスタンスを作成・管理して、主要機能を活用できるようになります。
+- データを効果的に保護し、マルチノード協調（Mesh Clustering）の技術を習得します。
+- コストおよびストレージ管理を最適化し、効率を向上させながら操作プロセスを簡素化します。
+開発者、企業管理者、または教育機関のメンバーであっても、Glows.AI はあなたのプロジェクトやサービスにおける信頼できるパートナーとなります。
