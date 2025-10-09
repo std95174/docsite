@@ -180,7 +180,7 @@ Action 列には `Take Snapshot` と `Release` の 2 つのボタンがありま
 
 1. **Snapshotting と Released の制限:**
 
-   - この 2 つの状態では、**Config** と **Hardware** タブのみ閲覧可能で、他の操作は実行できません。
+   - この 2 つの状態では、**Config** と **Hardware** タブのみ閲覧可能で、他の操作は実行できません。
 
 2. **リリースとスナップショットの推奨:**
 
