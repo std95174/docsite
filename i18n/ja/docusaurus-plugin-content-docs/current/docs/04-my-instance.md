@@ -23,7 +23,7 @@ sidebar_position: 4
 - **ID**: 各インスタンスを識別する一意な識別子。
 - **Name（名前）**: インスタンス名。ユーザーが識別しやすくするための名称です。
 - **Cost（コスト）**: 現在のインスタンスの課金状況および累積料金。
-- **Action（操作）**: インスタンスに対して実行可能な操作（詳細は次節参照）。
+- **Action（操作）**: インスタンスに対して実行可能な操作（詳細は次節参照）。
 
 ![Instance list](../../../../../docs/docs-images/p04/01.Instance%20list.jpg)
 
@@ -39,7 +39,7 @@ sidebar_position: 4
 
     - **SSH Command（SSH コマンド）**: `ssh -p <Service Port> root@<Access URL>`
     - **Service Port（サービスポート）**: インスタンスのサービスポート。
-    - **User（ユーザー）**: ▫デフォルトのユーザー名は `root`。
+    - **User（ユーザー）**: デフォルトのユーザー名は `root`。
     - **Password（パスワード）**: 初期パスワード（暗号化表示）。
 
 - **HTTP Port 8888（HTTP ポート 8888）**
