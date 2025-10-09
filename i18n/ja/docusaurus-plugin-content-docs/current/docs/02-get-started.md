@@ -5,63 +5,64 @@ sidebar_position: 2
 
 # はじめに
 
-Welcome to **Glows.AI**! Here is a detailed guide to help you navigate the login and registration process, activate your account, and start using the platform with ease.
-
+ようこそ **Glows.AI**へ!
+以下では、ログインおよび新規登録ページへのアクセス方法を詳しく説明します。
+このガイドに従うことで、アカウントを簡単に有効化し、プラットフォームの利用をすぐに開始することができます。
 ---
 
-## **Step 1: Go to the Login Page**
+## **ステップ 1: ログインページへアクセス**
 
-1. Open your browser and visit the [Glows.AI official website](https://glows.ai).
-2. You can access the **login page** through one of the following methods:
-   - Click the `Login` button in the top-right corner of the homepage.
-   - Click the `Get Started` button in the middle of the homepage.
+1. ブラウザを開き、Glows.AI の公式サイトにアクセスします。
+2. ログインページには、以下のいずれかの方法で移動できます。
+   - トップページ右上の `Login` ボタンをクリックします。
+   - トップページ中央の `Get Started` ボタンをクリックします。
 
 ![Home page](../../../../../docs/docs-images/p02/01.Home%20page.jpg)
 
 ---
 
-## **Step 2: Log in to Your Account**
+## **ステップ 2: アカウントにログイン**
 
-1. On the login page, you can choose one of the following methods to log in:
+1. ログインページでは、以下のいずれかの方法でログインできます。
 
-   - Click `Continue with Google` to log in using your Google account.
-   - Enter your **Email** and **Password**, then click the `Login` button to complete the login process.
+   - `Continue with Google` をクリックし、Google アカウントで直接ログインします。
+   - メールアドレス（Email） と パスワード（Password） を入力し、`Login` ボタンをクリックしてログインを完了します。
 
-2. If you do not have an account yet, click the `Sign up` button on the login page to proceed to the registration page.
-
+2. まだアカウントを登録していない場合は、ログインページ内の `Sign up` ボタンをクリックして登録ページへ進んでください。
+   
 ![Login page](../../../../../docs/docs-images/p02/02.Login%20page.jpg)
 
 ---
 
-## **Step 3: Register a New Account**
+## **ステップ 3: 新規アカウントの登録**
 
-1. On the **Sign-up page**, you will see the following registration options:
-   - **Google** account registration (currently the only available option).
-   - **GitHub** account registration (not yet available).
-2. Click `Continue with Google`. The system will redirect you to the Google authorization page. Once you complete the authorization, your registration will be successful.
+1. 登録ページ（Sign up） では、次の登録オプションが表示されます。
+   - **Google** アカウントで登録（現在は Google アカウントのみ対応しています）
+   - **GitHub** アカウントで登録（近日対応予定、現在は未対応です）
+2. `Continue with Google` をクリックすると、Google の認証ページにリダイレクトされます。認証が完了すると、アカウント登録が自動的に完了します。
 
 ![Sign-up page](../../../../../docs/docs-images/p02/03.Sign%20up%20page.jpg)
 
 ---
 
-## **Step 4: Complete Login and Get Started**
+## **ステップ 4:ログイン完了と利用開始**
 
-1. After completing the registration, the system will automatically log you in and redirect you to the **Create New page**, where you can start creating your first instance.
-2. If you already have an account, logging in will also take you to the **Create New page** to configure your computing resources.
+1. 登録が完了すると、システムは自動的にログインを行い、**Create New** ページに移動します。これにより、すぐに最初のインスタンスを作成することができます。
+2. すでにアカウントをお持ちの場合は、ログイン完了後に同様に **Create New** ページへ移動し、計算リソースの設定を開始します。
 
 ![Create New page](../../../../../docs/docs-images/p02/04.Create%20new%20page.jpg)
 
 ---
 
-## **Important Notes**
+## **注意事項**
 
-- **Login and Registration Options**:
-  - The login page includes a `Continue with Google` button for users with a Google account to log in quickly.
-  - Registration currently only supports Google accounts. A GitHub registration option will be available in the future.
-- **Login and Authorization Issues**:
-  - If Google authorization fails, check your Google account status or internet connection.
-  - If you cannot log in, try resetting your password or contacting the support team.
+- **ログインおよび登録オプション**:
+  - ログイン画面には `Continue with Google` ボタンがあり、既に Google アカウントをお持ちのユーザーは素早くログインすることができます。
+  - 現在、登録オプションは Google アカウントのみに対応していますが、将来的には GitHub アカウントでの登録機能 が追加される予定です。
+- **ログインおよび認証に関する問題**:
+  - Google 認証に失敗した場合は、Google アカウントの状態またはネットワーク接続を確認してください。
+  - ログインできない場合は、パスワードをリセットするか、サポートチームまでお問い合わせください。
 
 ---
-
-By following these steps, you can quickly complete the login and registration process and get ready to use the powerful features of **Glows.AI**! Next, let's learn how to use the **Create New** feature to set up your first instance.
+上記の手順に従うことで、すばやくログインと登録を完了し、**Glows.AI** の強力な機能を利用する準備が整います。
+ 次に、**Create New** の操作方法を学び、最初のインスタンスを作成してみましょう。
