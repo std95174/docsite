@@ -3,49 +3,45 @@ id: datadrive-app
 sidebar_position: 6
 ---
 
-# Datadriveデスクトップ版
+# Datadrive デスクトップ版
 
-This guide will help you get started with the **Glows.ai Datadrive Desktop App**, an extension of the **Datadrive** feature from the Glows.ai web platform.
-It provides a more flexible cloud data management experience, enabling you to upload, download, and sync files between your local machine and the cloud more efficiently and reliably.
-
-With the Datadrive Desktop App, you can easily browse, edit, and manage multiple Drives, and also import resources from external sources such as GitHub and Hugging Face, supporting faster project integration, deployment, and backup for individuals or teams.
+このチュートリアルでは、**Glows.ai Datadrive デスクトップ版** の使い方を素早く習得できます。これは Glows.ai Web版の **Datadrive** 機能 を拡張したデスクトップアプリケーションで、より柔軟なクラウドデータ管理体験を提供します。 ローカルとクラウド間でのファイルアップロード、ダウンロード、同期をより効率的かつ安定して行えます。
+Datadrive デスクトップ版 を利用することで、複数の Drives を簡単に閲覧、編集、管理できます。 また、外部リソース（GitHub や Hugging Face など）からのインポートもサポートし、チームや個人プロジェクトの迅速な統合、デプロイ、バックアップを支援します。
 
 ---
 
-## Step 1: Install the Datadrive Desktop App
+## ステップ 1：Datadrive デスクトップ版のインストール
 
-Visit the **Glows.ai** official website and click `Product` in the top navigation bar.
-In the dropdown menu, select `Datadrive` (as shown below) to go to the download page.
+**Glows.ai** 公式サイト にアクセスし、トップメニューの `Product` をクリックします。 ドロップダウンメニューから `Datadrive`（下図参照）を選択すると、ダウンロードページに移動します。
 
 ![OfficialWebsite](../../../../../docs/docs-images/p06App/01.OfficialWebsite.png)
 
-Or go directly to the download page:
+または、直接ダウンロードページにアクセス：
 👉 [https://glows.ai/datadrive](https://glows.ai/datadrive)
 
 ![Download](../../../../../docs/docs-images/p06App/02.png)
 
-Please download the version that matches your operating system.
-Currently, Windows and Mac are supported. More operating systems will be supported in the future — stay tuned!
+ご使用のOSに応じて対応するバージョンをダウンロードしてください。 現在は Windows と Mac をサポートしています。 今後、さらに多くのOSバージョンが順次サポートされる予定です。
 
 ---
 
-### Windows Version
+### Windows バージョン
 
-1. Download the installer and double-click to run it.
-2. Follow the on-screen instructions to complete the installation and launch the Datadrive Desktop App.
+1. インストーラーをダウンロード後、ダブルクリックして実行します。
+2. 画面の指示に従ってインストールを完了すると、Datadrive デスクトップ版 を起動できます。
 
 ---
 
-### Mac Version
+### Mac バージョン
 
-1. After downloading, drag the `Drive PC` application into your `Applications` folder (as shown below).
-2. Click the app in your `Dock` to launch it.
-
+1. 1.ダウンロード後、アプリケーション `Drive PC` を `Applications` フォルダにドラッグします（下図参照）。
+2. `Dock` からクリックしてアプリケーションを起動します。
+   
 ![Mac Download](../../../../../docs/docs-images/p06App/03.png)
 
-> If you see the error message
+> 起動時に以下のメッセージが表示された場合：
 > `"Drive PC" is damaged and can't be opened...`
-> open the `Terminal` and run the following command to remove the restriction:
+> `Terminal` を開き、以下のコマンドを実行して制限を解除してください：
 
 ```bash
 sudo xattr -rd com.apple.quarantine "/Applications/Drive PC.app"
@@ -55,64 +51,63 @@ sudo xattr -rd com.apple.quarantine "/Applications/Drive PC.app"
 
 ---
 
-## Step 2: Sign In to Your Account
+## ステップ 2：アカウントにログイン
 
-After launching the Datadrive Desktop App, you can log in using one of the following methods:
+Datadrive デスクトップ版 を起動後、以下の方法でログイン可能です：
 
-1. Click `Continue with Google` to sign in with your Google account.
-2. Enter your **Email** and **Password**, then click `Login`.
-3. If you don't have an account yet, click `Sign up` on the login page to create one.
+1. `Continue with Google` をクリックし、Google アカウント で素早くログイン。
+2. **Email** と **Password** を入力し、`Login` をクリック。
+3. まだアカウントを登録していない場合は、`Sign up` をクリックして登録ページへ移動。
 
 ![Sign In](../../../../../docs/docs-images/p06App/05.png)
 
 ---
 
-## Step 3: Manage Existing Data
+## ステップ 3：既存データの管理
 
-After logging in, you will see the `Dashboard`, where you can monitor the used and available storage for Drives in different regions.
-More management features such as `Instance` and `Snapshot` will be added in future updates.
+ログイン後、`Dashboard` にアクセスすると、各エリアの Drive の使用済み容量と残り容量をリアルタイムで確認できます。 今後、`Instance` や `Snapshot` などの管理機能も順次追加予定です。
 
 ![Dashboard](../../../../../docs/docs-images/p06App/06.png)
 
-Click the `Drive #0` menu in the bottom-left corner to expand and view all your Drives across different regions, as shown below:
+左下メニューの `Drive #0` をクリックすると、所有している各エリアの Drives を展開して確認できます（下図参照）：
 
 ![Drive #0](../../../../../docs/docs-images/p06App/07.png)
 
-After selecting a Drive, you'll see a list of files and folders. When you select an item, four action buttons will appear at the bottom of the screen:
+選択した Drive に入ると、ファイルとフォルダの一覧が表示されます。項目を選択すると、画面下部に4つの操作オプションが表示されます：
 
-- **Download**: Download files/folders to your local device
-- **Move**: Move items to another directory
-- **Rename**: Rename files/folders
-- **Delete**: Delete files/folders
+- **Download**: ローカルにダウンロード
+- **Move**: 別のディレクトリに移動
+- **Rename**: 名前を変更
+- **Delete**: ファイルを削除
 
 ![List](../../../../../docs/docs-images/p06App/08.png)
 
 ---
 
-### Download Progress
+### ダウンロード進捗
 
-Once you start downloading, you can check the progress under the `Transfer` tab.
+ダウンロード実行後、`Transfer` ページで進捗を確認できます。
 
 ![TransferDownload](../../../../../docs/docs-images/p06App/09.png)
 
 ---
 
-## Step 4: Upload or Import Files/Folders
+## ステップ 4：ファイル／フォルダのアップロードまたはインポート
 
-Click the `Upload or Import` button to upload or import files/folders to your cloud Drive in three ways:
+`Upload or Import` をクリックすると、以下の3つの方法でファイル／フォルダをクラウド Drive にアップロードできます：
 
 ![Upload](../../../../../docs/docs-images/p06App/10.png)
 
-### 1. Upload Directly
+### 1. 直接アップロード
 
-Select `Upload File` or `Upload Folder` to browse your local device and choose the files or folders you want to upload.
+`Upload File` または `Upload Folder` を選択し、ローカルからアップロードしたいファイルやフォルダを選択します。
 
 ---
 
-### 2. Import from GitHub
+### 2. GitHub からインポート
 
-- Click `Import from GitHub`, enter your project link, and click `View`.
-- In the GitHub file explorer, select the branch or files you want to import and click `Import` to start.
+- `Import from GitHub` をクリックし、プロジェクトリンクを入力後、`View` を押します。
+- GitHub ファイルブラウザで必要なファイルやブランチを選択し、`Import` を押してインポートを開始します。
 
 ![GitHub](../../../../../docs/docs-images/p06App/11.png)
 
@@ -120,10 +115,10 @@ Select `Upload File` or `Upload Folder` to browse your local device and choose t
 
 ---
 
-### 3. Import from Hugging Face
+### 3. Hugging Face からインポート
 
-- Click `Import from Hugging Face`, enter the project link, and click `View`.
-- Browse and select the files or folders you want to import from the Hugging Face file explorer, then click `Import` to proceed.
+- `Import from Hugging Face` をクリックし、プロジェクトリンクを入力後、`View` を押します。
+- Hugging Face ファイルブラウザで閲覧・選択し、`Import` を押してインポートを開始します。
 
 ![HuggingFace](../../../../../docs/docs-images/p06App/13.png)
 
@@ -131,48 +126,48 @@ Select `Upload File` or `Upload Folder` to browse your local device and choose t
 
 ---
 
-### Upload Progress
+### アップロード進捗
 
-You can check upload progress in the `Transfer` tab. Once complete, your files will appear in the selected Drive.
+`Transfer` 画面で進捗を確認可能で、完了後は対応する Drive にファイルが表示されます。
 
 ![TransferUploading](../../../../../docs/docs-images/p06App/15.png)
 
 ---
 
-## Step 5: Other Settings
+## ステップ 5：その他の設定
 
-Click your avatar icon in the top-right corner and select `Settings` to configure additional options.
+右上のアバターをクリックし、`Settings` を選択して、追加機能の設定を行います。
 
 ![Setting](../../../../../docs/docs-images/p06App/16.png)
 
 ---
 
-### Drive Setting
+### Drive 設定
 
-- Change language, time zone, or 12/24-hour format.
-- If you encounter any issues, click `Export Log File` to generate a log for the Glows.ai team to help troubleshoot.
-- If your download speed is slow or restricted by your network, you can set a `Proxy Server` and `Proxy Port` here. This allows the Datadrive Desktop App to connect via your local or corporate proxy server, improving upload and download performance.
-- Click `Check for Updates` to manually check for and install the latest version.
-
+- 言語、タイムゾーン、12/24時間表示の設定が可能です。
+- 問題が発生した場合は、`Export Log File` をクリックしてログファイルを出力し、Glows.ai に報告してトラブルシューティングを依頼できます。
+- ファイルのダウンロードが遅い場合やネットワーク制限を受ける場合は、`Proxy Server` および `Proxy Port` を設定できます。Datadrive デスクトップ版がローカルまたは社内のプロキシサーバー経由で転送を行うことで、ダウンロード・アップロードの効率を改善します。
+- `Check for Updates` をクリックすると、手動で最新版を確認・ダウンロードできます。
+  
 ![DriveSetting1](../../../../../docs/docs-images/p06App/17.png)
 
 ![DriveSetting2](../../../../../docs/docs-images/p06App/18.png)
 
 ---
 
-### Transfer Setting
+### 転送設定（Transfer Setting）
 
-- When uploading large files or folders, enable `Prevent Sleep When Cloud Drive is Active` to prevent your computer from sleeping and interrupting the transfer.
-- Use **Download Directory** to change the default location for downloaded files.
-- If you need to download Hugging Face resources that require authentication, you can set your **Hugging Face Token** here.
+- 大きなファイルをアップロードする際は、`Prevent Sleep When Cloud Drive is Active` にチェックを入れ、PC がスリープ状態になって転送が中断されるのを防ぎます。
+- **Download Directory** でファイルのデフォルト保存先をカスタマイズできます。
+- Hugging Face のデータをダウンロードする際に認証が必要な場合は、**Hugging Face Token** に設定します。
 
 ![TransferSetting](../../../../../docs/docs-images/p06App/19.png)
 
 ---
 
-## Contact Us
+## お問い合わせ
 
-If you have any questions or suggestions while using the Datadrive Desktop App, feel free to reach out to us:
+Datadrive デスクトップ版の使用中にご質問やご提案がある場合は、以下の方法でお問い合わせください：
 
 **Email:** [support@glows.ai](mailto:support@glows.ai)
 
