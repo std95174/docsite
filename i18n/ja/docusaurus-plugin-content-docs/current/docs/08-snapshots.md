@@ -5,44 +5,44 @@ sidebar_position: 10
 
 # スナップショット機能
 
-On the **Snapshots** page, you can manage all created snapshots. The snapshot and restore features simplify your project's workflow. Below is an introduction and operation guide for these features:
+**Snapshots** ページでは、作成済みのすべてのスナップショットを管理することができます。データスナップショットおよびリストア機能を通じて、プロジェクトの作業フローを簡素化できます。以下に機能の概要と操作手順を示します。
 
 ---
 
-## Two Tabs on the **Snapshots** Page:
+## Snapshots ページのタブ
 
-- **Available**: The list of all available snapshots that you can view and manage.
-- **Restorable**: The list of deleted snapshots that can still be restored within a certain period.
+- **Available**（利用可能）：利用可能なすべてのスナップショットが表示され、現在のスナップショット一覧を確認および管理できます。
+- **Restorable**（復元可能）：削除されたスナップショットが表示され、一定期間内であれば復元可能です。
 
-### **Snapshot List Fields**
+### **スナップショット一覧の項目**
 
-- **ID**: The unique identifier of the snapshot.
-- **Name**: The snapshot name, making it easy for users to identify.
-- **Size**: The storage space occupied by the snapshot.
-- **Status**: The current status of the snapshot (e.g., Available).
-- **Create Time**: The creation time of the snapshot.
-- **Action**: The executable operations (detailed below).
+- **ID**：スナップショットの一意な識別子。
+- **Name**（名前）：スナップショット名、ユーザーが識別しやすいように表示。
+- **Size**（サイズ）：スナップショットが占めるストレージ容量。
+- **Status**（状態）：スナップショットの現在の状態（例：Available）。
+- **Create Time**（作成日時）：スナップショットの作成時間。
+- **Action**（操作）：実行可能な操作（詳細は以下に記載）。
 
-### **Action Buttons**
+### **操作ボタン（Actions）**
 
-- **Edit**: Modify the name of the snapshot.
-- **Delete**:
-  - In **Available**, deleting a snapshot will move it to the **Restorable** tab.
-  - In **Restorable**, deleting a snapshot will permanently remove it, and it cannot be restored.
+- **Edit**（編集）：スナップショットの名前を変更します。
+- **Delete**（削除）：
+  - **Available** タブでは、スナップショットを削除すると Restorable タブに移動します。
+  - **Restorable** タブでは、スナップショットを削除すると完全に削除され、復元できません。
 
 ![Snapshots list](../../../../../docs/docs-images/p08/01.Snapshots%20list.jpg)
 
-## **Notes**
+## **注意事項**
 
-1. **Deletion and Restoration**:
+1. **削除と復元：**
 
-   - After deleting a snapshot, it will move to the **Restorable** tab, where you can choose to restore or permanently delete it.
+   - スナップショットを削除すると **Restorable** タブに移動します。復元するか、完全に削除するかを選択できます。
 
-2. **Name Modification**:
+2. **名前の変更：**
 
-   - You can modify the snapshot name at any time for easier management and identification.
+   - スナップショットの名前はいつでも変更可能で、管理や識別が容易になります。
 
-3. **Storage Management**:
-   - Regularly cleaning up unnecessary snapshots can free up storage space and ensure effective resource utilization.
+3. **ストレージ管理：**
+   - 不要なスナップショットを定期的に整理することで、ストレージ容量を解放し、リソースを効率的に使用できます。
 
-With these features, you can easily manage and protect your data, ensuring you can quickly restore to a specific state when needed.
+これらの機能を活用することで、データの管理と保護が簡単になり、必要なときに特定の状態に素早く復元することが可能です。
