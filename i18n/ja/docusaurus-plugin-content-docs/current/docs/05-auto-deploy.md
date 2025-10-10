@@ -3,100 +3,101 @@ id: auto-deploy
 sidebar_position: 5
 ---
 
-# 自動デプロイ
+# 自動デプロイ（Auto Deploy）
 
-On the **Auto Deploy** page, you can configure and automate the deployment process to ensure your application runs efficiently and securely. Below is a detailed feature introduction:
-
----
-
-## **Auto Deploy Status**
-
-On the **Auto Deploy** page, there are two deployment statuses:
-
-1. **Activated**: The application is deployed and running.
-2. **Suspended**: The application is paused and not running.
-
-**Each deployment task list includes the following fields:**
-
-- **ID**: A unique identifier for each deployment task.
-- **Name**: The name of the deployment task.
-- **Status**: The current deployment status (Activated, Suspended).
-- **Instance Status**: The current runtime status of the instance (e.g., Standby, Running).
-- **Cost**: The cost of the deployment (e.g., `0.000 Credit`).
-- **Last Running Time**: The most recent time the application was running.
-- **Action**: Available actions for managing the deployment (see the section below).
+**Auto Deploy** ページでは、アプリケーションのデプロイプロセスを設定および自動化できます。 これにより、アプリケーションを効率的かつ安全に実行可能です。 以下は詳細な機能の紹介です。
 
 ---
 
-## **Available Actions in Auto Deploy**
+## **Auto Deploy のステータス**
 
-The **Action** column provides the following operations:
+**Auto Deploy** ページでは、次の 2 種類のデプロイ状態が表示されます：
 
-### **1. Edit**
+1. **Activated**: アプリケーションがデプロイされ、起動中。
+2. **Suspended**: アプリケーションが一時停止中で、実行されていません。
 
-- **Function**: Edit deployment configurations.
-- **Use case**: Modify the deployment name, environment variables, or other settings.
+**各デプロイタスクのリストには以下の項目が含まれます：**
 
-### **2. Suspend**
-
-- **Function**: Pause the deployment and stop the application.
-- **Use case**: Save resources when the application is not needed.
-
-### **3. Deploy**
-
-- **Function**: Start or redeploy the application.
-- **Use case**: Run or restore the application when needed.
-
-### **4. Delete**
-
-- **Function**: Remove the deployment task.
-- **Use case**: Free up resources when the application is no longer needed. **Your deployment cannot be restored after the delete**.
-
-### **5. Resume**
-
-- **Function**: Resumes a suspended application.
-- **Use Case**: When an instance is in the **Suspended** state and needs to be restarted, this action restores it to the **Activated** state. After that, you can click `Deploy` to redeploy the instance.
-
-### **6. Release**
-
-- **Function**: Releases instance resources and changes the instance to the **Released** state.
-- **Use Case**: When an already deployed instance is no longer needed, you can click `Release` to free up resources and stop cost calculation.
+- **ID**: 各デプロイタスクの一意な識別子。
+- **Name**: デプロイタスク名。
+- **Status**: 現在のデプロイ状態（Activated、Suspended）。
+- **Instance Status**: インスタンスの現在の稼働状態（例：Standby、Running）。
+- **Cost**: このデプロイで消費されたリソース費用（例：`0.000 Credit`）。
+- **Last Running Time**: 直近の実行時間。
+- **Action**: デプロイに対して行える操作（下記の操作紹介を参照）。
 
 ---
 
-## **New Deploy Process**
+## **Auto Deploy で実行可能な操作**
 
-### **Step 1: Set Rule Information**
+**Action** 列には以下の操作があります：
 
-When you click the **New Deploy** button, a form will appear where you need to fill in the following details to create a new deployment:
+### **1. Edit（編集）**
 
-1. **Deploy Name**: Enter the deployment name.
-2. **Deploy Description** (optional): Provide a brief description.
-3. **Access Method**: Choose the access method (currently, only `Public` is supported).
-4. **Instance & Image**: Select the instance and image to deploy.
-5. **Instance Type**: Choose the instance type.
-6. **Region**: Select the deployment region.
-7. **Port**: Specify the port to use.
-8. **Start Command** (optional): Set the startup command for the application.
-9. **Maximum Number of Instances**: Define the maximum number of instances for this deployment.
+- **機能**: デプロイ設定の編集。
+- **使用シナリオ**: デプロイ名、環境変数、その他の設定を変更する必要がある場合に操作します。
 
-### **Step 2: Confirm Deployment**
+### **2. Suspend（一時停止）**
 
-1. After completing the form, click `Confirm`.
-2. The system will start deploying the application.
-3. Once deployment is successful, the application status will appear as **Activated**.
+- **機能**: デプロイを一時停止し、アプリケーションの実行を停止。
+- **使用シナリオ**: アプリケーションの実行が不要な場合、デプロイを一時停止してリソースコストを節約できます。
+
+### **3. Deploy（デプロイ）**
+
+- **機能**: アプリケーションを起動または再デプロイ。
+- **使用シナリオ**: アプリケーションを実行または復帰させる必要がある場合に操作します。
+
+### **4. Delete（削除）**
+
+- **機能**: デプロイタスクを削除。
+- **使用シナリオ**: このアプリケーションが不要になった場合、デプロイタスクを削除できます。削除後は復元できません。
+
+### **5. Resume（再開）**
+
+- **機能**: 一時停止されたアプリケーションを復帰。
+- **使用シナリオ**: インスタンスが **Suspended** 状態で再起動が必要な場合、この操作でインスタンスを **Activated** 状態に戻し、その後 `Deploy` をクリックしてインスタンスをデプロイできます。
+
+### **6. Release（リリース）**
+
+- **機能**: インスタンスのリソースを解放し、インスタンスを **Released** 状態に変更。
+- **使用シナリオ**: デプロイ済みのインスタンスを使用しない場合、`Release` をクリックしてリソースを解放し、課金を停止できます。
 
 ---
 
-## **Notes**
+## **New Deploy 操作フロー**
 
-- **Delete is irreversible**: Once an application is deleted, it cannot be restored.
+### **ステップ 1: ルール情報の設定**
 
-- **Suspending saves resources**: Use `Suspend` if the application is not needed temporarily.
+右上の **New Deploy** ボタンをクリックすると、フォームが表示されます。
+ 新しいデプロイを作成するには、以下の情報を入力します：
 
-- **Verify settings before deployment**: Ensure configurations are correct to prevent deployment errors.
+1. **Deploy Name**: デプロイ名を入力。
+2. **Deploy Description（任意）**: 簡単な説明を入力可能。
+3. **Access Method**: アクセス方法を選択（現在は `Public` のみ対応）。
+4. **Instance & Image**: デプロイするインスタンスとイメージを選択。
+5. **Instance Type**: インスタンスの種類を選択。
+6. **Region**: デプロイするリージョンを選択。
+7. **Port**: 使用するポートを入力。
+8. **Start Command（任意）**: アプリケーション起動コマンドを設定。
+9. **Maximum Number of Instances**: このデプロイの最大インスタンス数を入力。
+
+### **ステップ 2: デプロイの確認**
+
+1. フォーム入力が完了したら、`Confirm` をクリックします。
+2. システムはアプリケーションのデプロイを開始します。
+3. 3.デプロイが成功すると、アプリケーションの状態は **Activated** リストに表示されます。
 
 ---
 
-This is a complete guide to Auto Deploy. For more detailed instructions and examples, please refer to the
-[**Glows.ai Auto Deploy User Guide**](https://docs.glows.ai/docs/auto-deploy-usage).
+## **注意事項**
+
+- **アプリ削除は不可逆**: アプリを削除すると復元できません。
+
+- **一時停止でリソース節約**: アプリケーションが一時的に不要な場合、`Suspend` を選択可能。
+
+- **設定を確認してからデプロイ**: 設定が正しいことを確認し、デプロイミスを避けます。
+
+---
+
+以上が Auto Deploy に関する完全ガイドです。
+ より詳細な操作手順や事例については、[**Glows.ai Auto Deploy 使用説明**](https://docs.glows.ai/docs/auto-deploy-usage) を参照してください。
