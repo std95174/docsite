@@ -30,6 +30,6 @@ sidebar_position: 14
 
 ## **請求履歴リスト**
 
-各取引の詳細情報を表示します：**Time, Name, Status, Payment**.
+各取引の詳細情報を表示します： **Time**、**Name**、 **Status**、 **Payment**。
 
 ![Billing history](../../../../../docs/docs-images/p11/03.Billing%20history.jpg)
