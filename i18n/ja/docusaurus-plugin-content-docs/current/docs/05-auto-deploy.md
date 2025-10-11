@@ -100,4 +100,4 @@ sidebar_position: 5
 ---
 
 以上が Auto Deploy に関する完全ガイドです。
- より詳細な操作手順や事例については、[**Glows.ai Auto Deploy 使用説明**](https://docs.glows.ai/docs/auto-deploy-usage) を参照してください。
+ より詳細な操作手順や事例については、[**Glows.ai Auto Deploy 使用説明**](https://docs.glows.ai/ja/docs/auto-deploy-usage) を参照してください。
