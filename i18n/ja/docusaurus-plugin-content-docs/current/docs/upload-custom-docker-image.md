@@ -162,7 +162,7 @@ docker save -o <output_file_path> <image_name_or_id>
 
 **Glows.ai** のご利用中に何かご不明点やご意見がございましたら、Email、Discord、または Line でお気軽にご連絡ください。
 
-**Glows.ai Email:** [support@glows.ai](mailto:support@glows.ai)
+**Email:** [support@glows.ai](mailto:support@glows.ai)
 
 **Discord:** [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
 
