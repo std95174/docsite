@@ -74,8 +74,8 @@ curl -X POST "https://tw-01.sgw.glows.ai:xxxxxx/v1/audio/speech" \
 
 **Glows.ai** のご利用中にご不明な点やご意見がございましたら、以下の方法でお気軽にお問い合わせください。
 
-Glows.ai Email : **support@glows.ai**
+**Email:** [support@glows.ai](mailto:support@glows.ai)
 
 **Discord:** [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
 
-Line : **https://lin.ee/fHcoDgG**
+**Line:** [https://lin.ee/fHcoDgG](https://lin.ee/fHcoDgG)

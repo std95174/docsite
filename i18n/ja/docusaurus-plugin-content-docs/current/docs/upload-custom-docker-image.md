@@ -117,7 +117,7 @@ docker save -o <output_file_path> <image_name_or_id>
 ## Docker イメージ tar パッケージのアップロード
 
 1. Glows.ai の **Images** ページを開き、`Upload Image` をクリックします。
-2. 2.イメージの説明を入力します。**Select Image** をクリックして、先ほど作成した tar パッケージをアップロードします。
+2. イメージの説明を入力します。**Select Image** をクリックして、先ほど作成した tar パッケージをアップロードします。
 
 ![Choose image](../../../../../docs/docs-images/upload-docker-image/04.png)
 

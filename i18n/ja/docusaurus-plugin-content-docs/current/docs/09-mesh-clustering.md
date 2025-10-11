@@ -5,8 +5,8 @@ sidebar_position: 11
 
 # メッシュ クラスタリング(Mesh Clustering)
 
-**Mesh Clustering** ページでは、ネットワークグループ (Network Group)、ロードバランサー (Load Balancer)、および クラスター (Cluster) など、さまざまな種類のネットワークリソースを管理・作成することができます。
-現在は **Network Group** の管理のみ対応しています。
+**Mesh Clustering** ページでは、ネットワークグループ (Network Group)、ロードバランサー (Load Balancer)、および クラスター (Cluster) など、さまざまな種類のネットワークリソースを管理・作成することができます。  
+現在は **Network Group** の管理のみ対応しています。  
 以下は、ページの概要と操作ガイドです。
 
 ---

@@ -5,13 +5,13 @@ sidebar_position: 2
 
 # Get Started
 
-Welcome to **Glows.AI**! Here is a detailed guide to help you navigate the login and registration process, activate your account, and start using the platform with ease.
+Welcome to **Glows.ai**! Here is a detailed guide to help you navigate the login and registration process, activate your account, and start using the platform with ease.
 
 ---
 
 ## **Step 1: Go to the Login Page**
 
-1. Open your browser and visit the [Glows.AI official website](https://glows.ai).
+1. Open your browser and visit the [Glows.ai official website](https://glows.ai).
 2. You can access the **login page** through one of the following methods:
    - Click the `Login` button in the top-right corner of the homepage.
    - Click the `Get Started` button in the middle of the homepage.
@@ -64,4 +64,4 @@ Welcome to **Glows.AI**! Here is a detailed guide to help you navigate the login
 
 ---
 
-By following these steps, you can quickly complete the login and registration process and get ready to use the powerful features of **Glows.AI**! Next, let’s learn how to use the **Create New** feature to set up your first instance.
+By following these steps, you can quickly complete the login and registration process and get ready to use the powerful features of **Glows.ai**! Next, let’s learn how to use the **Create New** feature to set up your first instance.

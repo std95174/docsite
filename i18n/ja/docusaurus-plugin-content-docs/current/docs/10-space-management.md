@@ -21,11 +21,10 @@ sidebar_position: 12
 
 ### **ストレージプランのアップグレード**
 
-Click the `Upgrade` button to enter the **Select Storage Plan** page, where you can choose different capacity plans. Each plan corresponds to the **Credit** required, and all plans are valid for **30 Days**. After selecting a plan, a **Summary** will be displayed below, including:
-
-`Upgrade` ボタンをクリックすると、**Select Storage Plan** ページに移動します。
- ここで異なる容量のプランを選択でき、プランごとに必要な **Credit** が差し引かれます。
- すべてのプランの有効期間は **30日間** です。
+`Upgrade` ボタンをクリックすると、**Select Storage Plan** ページに移動します。  
+ ここで異なる容量のプランを選択でき、プランごとに必要な **Credit** が差し引かれます。  
+ すべてのプランの有効期間は **30日間** です。  
+ 
 プランを選択すると、下部に **Summary** が表示されます：
 
 - **Storage**：選択したストレージプランの詳細
