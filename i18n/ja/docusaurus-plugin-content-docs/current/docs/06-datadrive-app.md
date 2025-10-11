@@ -171,4 +171,6 @@ Datadrive デスクトップ版の使用中にご質問やご提案がある場�
 
 **Email:** [support@glows.ai](mailto:support@glows.ai)
 
+**Discord:** [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
+
 **Line:** [https://lin.ee/fHcoDgG](https://lin.ee/fHcoDgG)
