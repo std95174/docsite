@@ -3,75 +3,72 @@ id: bind-public-ip
 sidebar_position: 13
 ---
 
-# パブリックIPのバインド
+# Bind Public IP（パブリックIP割り当て）
 
-**Bind Public IP** is a newly released feature on Glows.ai, currently in beta testing.
-If you would like to enable this feature, please contact us through the methods listed at the end of this document.
-This guide will walk you through how to use it.
+**Bind Public IP** は **Glows.ai** の最新機能で、現在ベータテスト段階にあります。
+ ご利用希望の場合は、本文末の連絡先を通じて申請してください。
+ 以下では、その使用方法について説明します。
 
 ---
 
-## Using the Feature After Activation
+## 利用開始後の手順
 
-Once the **Bind Public IP** feature is enabled, the instance creation process is almost the same as before — start by selecting the image you need.
+**Bind Public IP** 機能を有効にすると、インスタンスの作成手順はこれまでとほぼ同じです。 まず、使用したいイメージを選択します。
 
 ![image-20250821143651042](../../../../../docs/docs-images/bind-public-ip/01.png)
 
-The difference is that you can now click the **Bind** button to assign a static IP to your instance.
-After clicking, select the static IP allocated to you, then click **Complete Checkout** to finish creating an instance with a fixed IP.
+これまでと異なる点は、`Bind` ボタンをクリックして、インスタンスに固定IPを割り当てられることです。 クリック後、画面の案内に従ってシステムが割り当てた固定IPを選択し、`Complete Checkout` を押すと、固定IP付きのインスタンスを作成できます。
 
 ![image-20250829141252240](../../../../../docs/docs-images/bind-public-ip/02.png)
 
 ---
 
-## Viewing and Modifying Port Bindings
+## ポートマッピングの確認と変更
 
-After the instance is created, the interface will display links to some default services.
-However, because the default HTTP ports are relatively low, directly accessing them via a browser may result in a "failed to load" error.
-(This happens because modern browsers have security restrictions on accessing low ports directly with IP addresses.)
-
-To resolve this, click **New Port Binding** as shown below, and map the instance's port 8888 to the static IP's port 8888.
+インスタンスを作成すると、画面に一部のデフォルトサービスへのアクセスリンクが自動で表示されます。
+ ただし、デフォルトで割り当てられる HTTP ポート番号が低いため、ブラウザで直接アクセスすると「読み込みできません」という警告が出る場合があります。
+ これはブラウザのセキュリティポリシーにより、IPアドレス＋低番号ポートへのアクセスが制限されているためです。
+その場合は、下図のように **New Port Binding** をクリックし、インスタンス内の 8888 ポートを固定IPの 8888 ポートにマッピングします。
 
 ![image-20250821144056702](../../../../../docs/docs-images/bind-public-ip/03.png)
 
-After mapping, you can visit `StaticIP:8888` to access the default **JupyterLab** service running inside the instance.
-Other custom services can be configured and accessed in the same way.
+設定が完了すると、`StaticIP:8888` からインスタンス内でデフォルト起動している **JupyterLab** にアクセスできます。他の独自サービスも同様の手順で設定可能です。
 
 ![image-20250821144246043](../../../../../docs/docs-images/bind-public-ip/04.png)
 
-For example, you can map **ComfyUI**'s port 8188 to the static IP's port 8188 and access the service via that address.
-
+ 例：**ComfyUI** の 8188 ポートを固定IPの 8188 にマッピングすることで、そのアドレスからサービスにアクセスできます。
 ![image-20250821144417955](../../../../../docs/docs-images/bind-public-ip/05.png)
 
 ---
 
-## Adding Custom Ports
+## カスタムポートの追加
 
-In addition to the default services, you can also add new ports to host custom services.
-For example, click **New Port Binding** and create a mapping from port 8080 in the instance to port 8080 on the static IP.
+デフォルトサービス以外にも、独自に構築したサービス用のポートを追加することができます。 画面で **New Port Binding** をクリックし、新たに 8080 ポートを作成し、固定IPの 8080 ポートにマッピングします。
 
 ![image-20250821144534908](../../../../../docs/docs-images/bind-public-ip/06.png)
 
-Next, start a simple HTTP service inside the instance listening on port 8080:
+その後、インスタンス内で 8080 ポートをリッスンするシンプルな HTTP サービスを起動します。
 
 ![image-20250821144708764](../../../../../docs/docs-images/bind-public-ip/07.png)
 
-Once the service is running, you can simply access it in your browser via `StaticIP:8080`, making it very convenient.
+サービスが起動すると、ブラウザから `StaticIP:8080` にアクセスするだけで利用可能になり、非常に便利です。
 
 ![image-20250821144746527](../../../../../docs/docs-images/bind-public-ip/08.png)
 
 ---
 
-## Binding a Custom Domain
+## 独自ドメインのバインド
 
-You can also map the static IP to your own domain name, and then access the services using your custom domain.
+さらに、固定IPを自分のドメインに解決し、独自ドメインを通じて関連サービスに直接アクセスすることも可能です。
 
 ---
 
-## Contact Us
+## お問い合わせ
 
-If you have any questions or suggestions while using **Glows.ai**, feel free to reach out through the following channels:
+**Glows.ai** の利用中に問題が発生した場合やご意見がある場合は、以下の方法でお問い合わせください：
 
 - **Email**: [support@glows.ai](mailto:support@glows.ai)
-- **Line**: [https:/lin.ee/fHcoDgG](https:/lin.ee/fHcoDgG)
+
 - **Discord**: [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
+
+- **Line**: [https:/lin.ee/fHcoDgG](https:/lin.ee/fHcoDgG)

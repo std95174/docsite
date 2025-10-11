@@ -3,185 +3,190 @@ id: my-instance
 sidebar_position: 4
 ---
 
-# インスタンス管理
+# インスタンスの管理
 
-On the **My Instance** page, you can view and manage the status and configuration of all instances. Below is a detailed introduction to the features:
+**My Instance** ページでは、すべてのインスタンスのステータスおよび構成を確認・管理することができます。
+以下に、各機能の詳細を説明します：
 
 ---
 
-## **Instance Status**
+## **インスタンスステータス**
 
-On the **My Instance** page, you can see three instance statuses:
+**My Instance** ページでは、インスタンスには以下の 3 種の状態があります：
 
-1. **Running**: The instance is currently running and accessible for management or use. ⚠️ **Charges apply only when the instance is in this state**, so please manage your usage time carefully.
-2. **Snapshotting**: The instance is in the process of creating a snapshot and temporarily unavailable for other management actions. This state **does not incur additional charges**.
-3. **Released**: The instance has been released and its resources reclaimed. Instances in this state **cannot be restarted and will no longer incur charges**.
+1. **Running（稼働中）**: インスタンスが稼働中の状態です。アクセスや管理操作が可能です。⚠️この状態のときのみ課金が発生します。利用時間を適切に管理してください。
+2. **Snapshotting（スナップショット中）**: インスタンスがスナップショットを実行している状態です。この間、他の管理操作は一時的に行えません。この状態では追加課金は発生しません。
+3. **Released（解放済み）**: インスタンスが解放され、リソースが回収された状態です。この状態のインスタンスは再起動できず、課金も発生しません。
 
-**Each status has an instance list with the following columns:**
+**各状態のインスタンスリストには、以下の項目が表示されます：**
 
-- **ID**: The unique identifier of each instance.
-- **Name**: The name of the instance, which helps users identify it.
-- **Cost**: The billing status and accumulated cost of the current instance.
-- **Action**: The operations that can be performed on the instance (see the operations section below).
+- **ID**: 各インスタンスを識別する一意な識別子。
+- **Name（名前）**: インスタンス名。ユーザーが識別しやすくするための名称です。
+- **Cost（コスト）**: 現在のインスタンスの課金状況および累積料金。
+- **Action（操作）**: インスタンスに対して実行可能な操作（詳細は次節参照）。
 
 ![Instance list](../../../../../docs/docs-images/p04/01.Instance%20list.jpg)
 
-## **Tabs**
+## **タブ（Tabs）**
 
-Click on a row in the instance list to view and manage the corresponding instance through the following tabs:
+インスタンス一覧の任意の行をクリックすると、該当インスタンスの詳細情報を確認し、以下のタブ内容を管理できます：
 
-### **1. Access**
+### **1. Access（アクセス）**
 
-- **SSH Port 22**
+- **SSH Port 22（SSH ポート 22）**
 
-  - View SSH connection details:
+  - SSH 接続に使用する情報を確認できます：
 
-    - **SSH Command**: `ssh -p <Service Port> root@<Access URL>`
-    - **Service Port**: The service port for this instance.
-    - **User**: Default username is `root`.
-    - **Password**: Initial password (masked).
+    - **SSH Command（SSH コマンド）**: `ssh -p <Service Port> root@<Access URL>`
+    - **Service Port（サービスポート）**: インスタンスのサービスポート。
+    - **User（ユーザー）**: デフォルトのユーザー名は `root`。
+    - **Password（パスワード）**: 初期パスワード（暗号化表示）。
 
-- **HTTP Port 8888**
-  This port by default deploys the JupyterLab service. Click **Open** to directly access the instance.
+- **HTTP Port 8888（HTTP ポート 8888）**
+  このポートにはデフォルトで JupyterLab サービスがデプロイされています。**Open** ボタンをクリックすると、直接インスタンスにアクセスできます。
 
-  - Available actions:
+  - 実行可能な操作：
 
-    - **Link**: Quick link to the HTTP address.
-    - **Open**: Open the link in a new browser tab.
-    - **Copy**: Copy the HTTP address.
-    - **Edit**: Edit port settings (if available).
-    - **Delete**: Remove the port configuration.
+    - **Link（リンク）**: HTTP アドレスへ即時ジャンプ。
+    - **Open（開く）**: 新しいタブでリンクを開く。
+    - **Copy（コピー）**: HTTP アドレスをコピー。
+    - **Edit（編集）**: ポート設定を編集（利用可能な場合）。
+    - **Delete（削除）**: ポート設定を削除。
 
-- **New Port Forwarding**: Click this button to add a new port forwarding rule by filling in the following:
+- **New Port Forwarding（新規ポート転送）：**: このボタンをクリックすると、新しいポート転送ルールを追加できます。以下の情報を入力してください。
 
-  - **Service Port**: Set the service port.
-  - **Protocol**: Choose the service protocol type, default is TCP. If forwarding a web service (e.g., JupyterLab, Dashboard), check `HTTPS` to enable encrypted access (HTTPS) for browser connection security.
+  - **Service Port（サービスポート）**: 転送するサービスポートを設定。
+  - **Protocol（プロトコル）**: サービスプロトコルの種類を選択。デフォルトは TCP。Web 系サービス（例：JupyterLab、Dashboard 等）を転送する場合は、`HTTPS` を選択し暗号化アクセスを有効化してください。これによりブラウザ接続の安全性が確保されます。
 
 ![Access](../../../../../docs/docs-images/p04/02.Access.jpg)
 
-### **2. Monitor**
+### **2. モニター（Monitor）**
 
-Real-time performance and resource usage monitoring of the instance.
+インスタンスのパフォーマンスおよびリソース使用状況をリアルタイムで確認します。
 
 ![Monitor](../../../../../docs/docs-images/p04/03.Monitor.jpg)
 
-### **3. Billing**
+### **3. 請求情報（Billing）**
 
-Displays all billing details related to the instance.
+対象インスタンスに関連するすべての課金明細を表示します。
 
 ![Billing](../../../../../docs/docs-images/p04/04.Billing.jpg)
 
-### **4. Config**
+### **4. 設定（Config）**
 
-View instance configuration, such as image-related parameter settings.
+インスタンスの構成情報を確認します。イメージファイルに関するパラメータ設定などが含まれます。
 
 ![Config](../../../../../docs/docs-images/p04/05.Config.jpg)
 
-### **5. Hardware**
+### **5. ハードウェア（Hardware）**
 
-Check hardware configuration of the instance, including GPU/CPU models, memory, and storage.
+インスタンスのハードウェア構成を確認します。GPU または CPU のモデル、メモリ、ストレージなどが含まれます。
 
 ![Hardware](../../../../../docs/docs-images/p04/06.Hardware.jpg)
 
-### **6. Network Group**
+### **6. ネットワークグループ（Network Group）**
 
-View cluster network information of the instance. Glows.ai supports multi-node multi-GPU operations. You can add multiple instances into the same cluster within Mesh, enabling instances to communicate via internal IPs for more efficient collaborative computing.
+インスタンスのクラスターネットワーク情報を確認します。
+ Glows.ai は複数マシン・複数 GPU の運用をサポートしています。Mesh 機能を使用して複数のインスタンスを同じクラスタに追加することで、クラスタ内のインスタンス同士がプライベート IP 経由で接続され、より効率的な計算協調が可能になります。
 
 ![Network Group](../../../../../docs/docs-images/p04/07.Network%20Group.jpg)
 
 ---
 
-## **Actions Available When Instance Status is Running**
+## **Running 状態のインスタンスで実行可能な操作**
 
-In the Action column, you will find two buttons: `Take Snapshot` and `Release`.
+Action 列には `Take Snapshot` と `Release` の 2 つのボタンがあります。
 
-### **1. Take Snapshot**
+### **1. Take Snapshot（スナップショット作成）**
 
-- **Function**: Create a snapshot of the current instance, saving all states and file changes except those in `/datadrive`, including installed packages, system settings, and other directory modifications.
-- **Use Cases**:
+- **Function（機能）**: 現在のインスタンスのスナップショットを作成します。`/datadrive` を除くすべての状態とファイル変更を保存します。インストール済みのパッケージ、システム設定、その他ディレクトリの変更内容も含まれます。
 
-  - When you have made significant customizations (e.g., installed Python packages, Ubuntu software) and want to save the current state for quick restoration.
-  - To serve as a base template for creating new instances later, avoiding repetitive setup.
+- **使用シナリオ**:
 
-#### **Detailed Take Snapshot Procedure**
+  - インスタンス環境に多くのカスタマイズを行った場合（例：Python パッケージや Ubuntu ソフトのインストール）、現在の状態を保存して次回すぐに再現したい場合。
+  - 将来、新しいインスタンスを作成する際のベーステンプレートとして使用し、重複設定を避ける場合。
 
-1. **Click the `Take Snapshot` button in the Action column to open the snapshot creation window.**
+#### **Take Snapshot 詳細操作手順**
+
+1. **Action 列の `Take Snapshot` ボタンをクリックすると、スナップショット作成ウィンドウが表示されます。**
 
 ![Take Snapshot](../../../../../docs/docs-images/p04/08.Take%20Snapshot.jpg)
 
-2. **Fill in snapshot details:**
+2. **スナップショット情報の入力:**
 
-   - **Name**: Enter a name for the snapshot.
-   - **Automatic release of machine after successful saving**:
-     If selected, the instance will be automatically released after snapshot creation;
-     if not selected, the instance will automatically return to the **Running** state and remain available.
+   - **Name（名前）**: スナップショット名を入力します。
+   - **Automatic release of machine after successful saving（保存成功後の自動解放）**:
+     チェックすると、スナップショット作成完了後にインスタンスが自動で解放されます。
+     チェックしない場合、スナップショット完了後、インスタンスは **Running** 状態に自動復帰し、引き続き使用可能です。
+    
+3. **スナップショット進行状況の確認:**
 
-3. **Monitor the snapshot progress:**
+   - 保存中、インスタンスは  **Snapshotting** タブに表示され、以下のステータスが順に表示されます:
 
-   - During saving, the instance will show under the **Snapshotting** tab with status changes:
-
-     - **Suspending** → **Paused** → disappears from the list.
+     - **Suspending** → **Paused** → リストから消える.
 
      ![Snapshotting](../../../../../docs/docs-images/p04/09.Suspending.jpg)
 
      ![Snapshotting](../../../../../docs/docs-images/p04/10.Paused.jpg)
 
-   - After saving completes, the instance will no longer appear on the **My Instance** page and will be stored as a snapshot viewable in the **Snapshots** page.
+   - インスタンスは保存完了後、**My Instance** ページには表示されず、スナップショットとして保存されます。 スナップショットは **Snapshots** ページで確認できます。
 
-4. **Post-snapshot effects:**
+4. **完了後の影響**
 
-   - During snapshot saving, the instance is paused. After completion, it will either automatically resume or be released depending on the auto-release selection.
+   - スナップショット保存中、インスタンスは一時的に停止します。
+     保存完了後は、自動解放 のチェック状況に応じて、インスタンスが自動的に復帰するか解放されます。
 
-#### **Notes**
+#### **注意事項（注意）**
 
-- The instance is temporarily unavailable during snapshot saving and can only be operated again once the connection is restored.
-- Ensure you have sufficient personal storage space before creating snapshots.
+- 保存中、インスタンスは一時的に使用できません。自動的に接続が復帰するまで、再操作は行えません。
+- スナップショット保存には十分な個人ストレージ容量が必要です。事前に確認してください。
 
 ---
 
-### **2. Release**
+### **2. Release（リリース）**
 
-- **Function**: Release the instance resources and change its status to **Released**.
-- **Use Case**: When you no longer need the instance, releasing it will reclaim resources and stop billing.
+- **機能**: インスタンスのリソースを解放し、インスタンスを **Released** 状態に変更します。
+- **使用シナリオ**: インスタンスが不要になった場合、リリースを選択することでリソースを回収し、課金を停止できます。
 
-#### **Detailed Release Procedure**
+#### **Release 詳細操作手順**
 
-1. **Click the `Release` button in the Action column to open a confirmation dialog.**
+1. **Action 列の `Release` ボタンをクリックすると、確認ウィンドウが表示されます。**
 
 ![Release](../../../../../docs/docs-images/p04/11.Release.jpg)
 
-2. **Confirm release:**
+2. **リリース確認**
 
-   - The system will warn about data deletion and irreversibility.
-   - Click `Stop & Release` to confirm.
+   - システムはデータ削除や復元不可など、関連する注意事項を表示します。
+   - `Stop & Release` をクリックして、リリース操作を確認します。
 
-3. **Status updates during release:**
+3. **リリース中のステータス更新**
 
-   - The instance status will change to **Releasing** and eventually to **Released**.
+   - インスタンスの状態は **Releasing** となり、最終的に **Released** に更新されます。
 
-4. **How to launch a new instance from a Snapshot:**
-   Select the Snapshot when creating a new instance, then start the instance.
+4. **Snapshot から新しいインスタンスを起動する方法：**
+   インスタンス作成時に Snapshot を選択し、インスタンスを起動します。
 
-   - After snapshot creation:
-     If you did not select auto-release, the instance remains **Running** in the My Instance page; otherwise, it is automatically released.
+   - インスタンススナップショット作成完了後:
+     保存完了後にインスタンスを解放」をチェックしていない場合、**My Instance** ページの **Running** でインスタンスを確認できます。チェックしている場合、インスタンスは自動的に解放されます。
 
    ![Released](../../../../../docs/docs-images/p04/12.Released%20list.jpg)
 
-#### **Note:** During snapshot creation, the instance is inaccessible and running programs are interrupted. It is generally recommended to create snapshots before releasing the machine after use.
+#### **注意（注意事項）:** スナップショット作成中、インスタンスはアクセスできず、インスタンス内で実行中のプログラムは中断されます。一般的には、マシンを解放する前にスナップショットを作成することを推奨します。
 
 ---
 
-## **Summary of Important Notes**
+## **注意事項まとめ**
 
-1. **Restrictions in Snapshotting and Released States:**
+1. **Snapshotting と Released の制限:**
 
-   - In these states, only the **Config** and **Hardware** tabs are accessible; other operations are disabled.
+   - この 2 つの状態では、**Config** と **Hardware** タブのみ閲覧可能で、他の操作は実行できません。
 
-2. **Recommendations for Release and Snapshots:**
+2. **リリースとスナップショットの推奨:**
 
-   - Confirm if you need to retain data before releasing an instance.
-   - Regularly creating snapshots helps safeguard important data.
+   - リリース操作を行う前に、現在のデータを保持する必要があるか必ず確認してください。
+   - 定期的にスナップショットを作成すると、重要なデータを保存できます。
 
-3. **Impact of Operations:**
+3. **操作の影響:**
 
-   - Some actions (such as snapshotting and releasing) may interrupt normal instance use; please schedule accordingly.
+   - 一部の操作（スナップショットやリリースなど）は、インスタンスの通常使用を中断する可能性があります。時間を考慮して実行してください。
+以上がインスタンス管理に関する完全ガイドです。詳細な説明が必要な場合は、後続の章を参照してください。

@@ -3,102 +3,104 @@ id: create-new
 sidebar_position: 3
 ---
 
-# 新規インスタンスの作成
+# 新しいインスタンスの作成
 
-In this chapter, we will guide you on how to create a new instance on **Glows.AI**. Based on your project requirements, you can select either **GPU** or **CPU** models. Below are the detailed steps.
+本章では、Glows.ai 上で新しいインスタンスを作成する方法をご案内します。
+ 計算ニーズに応じて、**GPU** または **CPU** の種類を選択できます。以下に具体的な操作手順を示します。
 
 ---
 
-## **Step 1: Select Instance Type**
+## **ステップ 1: インスタンスの種類を選択**
 
-After navigating to the **Create New** page, the first step is to select the instance type:
+**Create New** ページにアクセスした後、まずインスタンスの種類を選択します。
 
-- **GPU**: Select this option if you require AI training, large-scale data processing, or graphics-intensive tasks.
-- **CPU**: Select this option if you prefer to debug the code on the CPU before switching to the GPU for training, or if your tasks require robust processing power without the need for GPU acceleration.
+- **GPU**: AI トレーニング、大規模データ処理、またはグラフィック集約型タスクが必要な場合はこちらを選択してください。
+- **CPU**: まず CPU でプログラムをデバッグし、その後 GPU に切り替えてトレーニングしたい場合、または GPU 加速を必要としない高い処理能力が必要なタスクの場合はこちらを選択してください。
 
 ![Instance Type](../../../../../docs/docs-images/p03/01.Instance%20type.jpg)
 
 ---
 
-## **Step 2: Select GPU or CPU Model**
+## **ステップ 2: GPU または CPU モデルの選択**
 
-**GPU Model**:
+**GPU モデル**:
 
-- After selecting **GPU**, detailed specifications will be displayed, including:
+- **GPU** を選択すると、以下の詳細スペックが表示されます:
 
-  - **GPUs**: Number of GPUs available.
-  - **GPU RAM**: Total memory of the GPU.
-  - **CPU Model**: CPU model paired with the GPU.
-  - **Avail Unit**: Number of units available for the selected GPU model.
-  - **vCPUs**: Number of virtual CPUs associated with the GPU.
-  - **RAM**: Total memory of the instance.
-  - **Storage**: Available storage space.
-  - **Price/h**: Hourly cost (in Credits).
+  - **GPUs**: 1 ユニットあたりの GPU 数量。
+  - **GPU RAM**: GPU の総メモリ容量。
+  - **CPU Model**: GPU とペアリングされる CPU モデル。
+  - **Avail Unit**: その GPU モデルで利用可能なユニット数。
+  - **vCPUs**: GPU に関連付けられた仮想 CPU 数。
+  - **RAM**: インスタンスの総メモリ容量。
+  - **Storage**: インスタンスのストレージ容量。
+  - **Price/h**: 1 時間あたりの料金（Credit 単位）。
 
-**CPU Model**:
+**CPU モデル**:
 
-- After selecting **CPU**, you will see CPU-specific options only:
-  - **Avail Unit**: Number of units available for the selected CPU model.
-  - **vCPUs**: Number of virtual CPUs.
-  - **RAM**: Memory of the instance.
-  - **Storage**: Storage space of the instance.
-  - **Price/h**: Hourly cost (in Credits).
+- **CPU** を選択すると、CPU に関連するオプションのみが表示されます：
+  - **Avail Unit**: その CPU モデルで利用可能なユニット数。レンタル時のユニット追加や他のハードウェア設定も自動で反映されます。
+  - **vCPUs**: 1 ユニットあたりの仮想 CPU 数。
+  - **RAM**: インスタンスのメモリ容量。
+  - **Storage**: 1 ユニットあたりのストレージ容量。
+  - **Price/h**: 1 時間あたりの料金（Credit 単位）。
 
 ![GPU Model Options](../../../../../docs/docs-images/p03/02.GPU%20options.jpg)
 
 ---
 
-## **Step 3: Select Official Image or Snapshot**
+## **ステップ 3: Official Image または Snapshot の選択**
 
-1. After selecting the GPU or CPU model, you can choose either `Official Image` or `Snapshot`:
+1. GPU または CPU モデルを選択した後、`Official Image` または `Snapshot` を選択できます：
 
-   - **Official Image**: Provides a preconfigured environment for your instance.
-   - **Snapshot**: Displays previously created instances saved as snapshots. Selecting a snapshot allows you to resume prior work environments and configurations, saving time on reconfiguration.
+   - **Official Image**: インスタンスに対してデフォルトの構成環境を提供します。
+   - **Snapshot**: 以前に作成したインスタンスをスナップショットとして保存した場合、その一覧がここに表示されます。スナップショットを選択することで、以前の作業環境や設定をそのまま引き継ぎ、再設定の時間を節約できます。
 
-2. Once selected, the information of the chosen item will be displayed on the right:
-   - **Selected Snapshot**: For example, `img-6np5vq2x - DeepSeek-R1 70B_Q4`.
+2. 選択後、右側に選択した項目の情報が表示されます：
+   - **Selected Snapshot**: 例 `img-6np5vq2x - DeepSeek-R1 70B_Q4`.
 
 ![Official Image](../../../../../docs/docs-images/p03/03.Selected%20Image.jpg)
 
 ---
 
-## **Step 4: Set Unit Quantity**
+## **ステップ 4: ユニット数の設定**
 
-**Unit Quantity**: Specifies the number of units required for the selected model. In our configuration, the "unit" represents a multiplier of the basic resources. One unit includes a set of predefined hardware parameters, such as GPU and VRAM. When users set the unit quantity, the system expands the resources based on the number of units. For example, setting it to 2 units will double the GPU and VRAM configuration of the base unit.
+**Unit Quantity（ユニット数）：**: 選択したモデルに必要なユニット数を指定します。本システムにおいて「ユニット」とは、基本リソースの倍率を意味します。1 ユニットには GPU や VRAM などの標準ハードウェア構成が含まれています。ユーザーがユニット数を設定すると、システムはその数に応じてリソースを自動的に加算します。たとえば、2 ユニットを設定した場合、GPU や vCPU の数が倍になります。
 
-> Different parameters have their unit limits. Please adjust within the allowable range to ensure reasonable configurations.
+> 注意事項：CPU 構成（メモリ、vCPU 数、ストレージ容量）は直接的に加算されますが、GPU を複数台活用するにはプログラム側でマルチ GPU（マルチノード）に対応している必要があります。
 
+各パラメータには上限が設定されていますので、許容範囲内で調整し、最適な構成を維持してください。
 ![Unit Qty](../../../../../docs/docs-images/p03/04.Unit%20Qty.jpg)
 
 ---
 
-## **Step 5: Mount Data Drive (Optional)**
+## **ステップ 5: データドライブのマウント（省略可能）**
 
-1. If you need to mount a data drive, click the `Mount Data Drive` button and configure the following:
+1. データドライブをマウントする必要がある場合は、`Mount Data Drive` ボタンをクリックし、以下の設定を行います。
 
-   - **Data Drive List**: Displays available drive options, including:
-     - **Region** (e.g., 1).
-     - **Usage**: Shows used and total capacity, e.g., **0/2GB**.
-   - **Mount Path**: Default is **/datadrive** (currently not editable).
-   - **Permissions**: Choose the drive's access permissions:
-     - **Read only**.
-     - **Read & write**.
+   - **データドライブ一覧**: マウント可能なドライブのオプションが表示され、以下の項目が含まれます：
+     - **Region**: 例：「1」
+     - **Usage**: ドライブの使用容量と総容量を表示（例：「0/2GB」）
+   - **Mount Path**: デフォルトは「/datadrive」（現在変更不可）
+   - **Permissions**: ドライブのアクセス権限を選択：
+     - **Read only**（読み取り専用）
+     - **Read & write**（読み書き）
 
-2. After selection, the data drive mounting setup will be complete.
+2. 選択が完了すると、データドライブのマウント設定が完了します。
 
 ![Mount Data Drive](../../../../../docs/docs-images/p03/05.Mount%20Data%20Drive.jpg)
 
 ---
 
-## **Step 6: Review Pricing and Instance Details**
+## **ステップ 6: 価格とインスタンスの詳細を確認する**
 
-After completing your configuration, a summary of your selections will be displayed at the bottom of the page:
+設定を完了すると、ページ下部に選択内容のサマリーが表示されます。
 
-- **Price/h**: Hourly cost of the selected instance.
-- **Instance Ordered**: Number of instances you have ordered.
-- **Show Detail**: Click this button to view detailed specifications of the selected instance.
+- **Price/h**: 選択したインスタンスの1時間あたりの料金。
+- **Instance Ordered**: 注文したインスタンスの数量。
+- **Show Detail**: このボタンをクリックすると、選択したモデルの詳細仕様を確認できます。
 
-Example:
+例：
 
 - **Price/h**: 1.600 Credits
 - **Instance Ordered**: 1
@@ -107,26 +109,26 @@ Example:
 
 ---
 
-## **Step 7: Create Instance**
+## **ステップ 7: インスタンスを作成する**
 
-After confirming the instance details and pricing, click `Complete Checkout` to finalize the order and create the instance.
+インスタンスの詳細および価格を確認し、問題がなければ `Complete Checkout` をクリックして、注文を確定しインスタンスを作成します。
 
 ![Confirmation](../../../../../docs/docs-images/p03/07.Confirmation.jpg)
 
 ---
 
-## **Notes**
+## **注意事項（ご注意）**
 
-- **Mount Data Drive (Optional):**
-  If you have a large amount of local data or code that needs to be used in the cloud, we recommend setting up **Datadrive** first and uploading your files there. This allows you to avoid the time-consuming process of transferring data after launching an instance.
+- **データドライブのマウント（任意）:**
+  ローカルに大量のデータやコードをクラウド上で使用する場合は、事前に Datadrive を有効化し、データをアップロードしておくことを推奨します。これにより、インスタンス起動後のデータ転送を避け、待機時間を短縮できます。
 
-  👉 [Click here to view the Datadrive user guide](https://docs.glows.ai/zh-TW/docs/datadrive)
+  👉 [Datadrive の使用方法を見る](https://docs.glows.ai/zh-TW/docs/datadrive)
 
-  It's recommended to store data-related files such as **models, datasets, and source code** in Datadrive. It supports **offline uploading and downloading**, so you can manage your files without launching any instance.
+  モデル、データ、コードなどのファイル類は Datadrive に保存することを推奨します。オフラインでのアップロードおよびダウンロードに対応しており、インスタンスを起動しなくても操作が可能です。
 
-- **Snapshot Selection Restrictions:**
-  Only options successfully stored in the snapshot area will be displayed. If no snapshots are available, ensure you have completed the storage configuration on the "Storage Configuration" page and saved previously created instances as snapshots on the "My Instances" page.
+- **スナップショットの選択制限:**
+  システムには、スナップショット領域に正常に保存された項目のみが表示されます。選択可能なスナップショットが表示されない場合は、`Storage Configuration` ページでスナップショットの保存設定を完了しているか、また `My Instances` ページで作成済みインスタンスをスナップショットとして保存しているかをご確認ください。
 
 ---
 
-Following the above steps, you will successfully create a new instance on **Glows.AI** and configure it according to your requirements. Next, we will guide you on how to manage and monitor your instances.
+上記の手順を完了すると、Glows.ai 上で新しいインスタンスを作成し、ニーズに応じて構成を行うことができます。次の章では、インスタンスの管理および監視方法について説明します。

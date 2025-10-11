@@ -160,7 +160,7 @@ docker save -o 保存文件路徑 鏡像名稱/鏡像id
 
 如果你在使用 Glows.ai 過程中有任何問題或建議，歡迎透過 Email、Discord 或 Line 與我們聯絡。
 
-**Glows.ai Email:** [support@glows.ai](mailto:support@glows.ai)
+**Email:** [support@glows.ai](mailto:support@glows.ai)
 
 **Discord:** [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
 

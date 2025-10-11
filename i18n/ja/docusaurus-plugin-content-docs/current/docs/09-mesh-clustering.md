@@ -3,73 +3,75 @@ id: mesh-clustering
 sidebar_position: 11
 ---
 
-# メッシュクラスタリング
+# メッシュ クラスタリング(Mesh Clustering)
 
-On the **Mesh Clustering** page, you can manage and create different types of network resources, including Network Groups, Load Balancers, and Clusters. Currently, only **Network Groups** are supported for management. Below is an introduction to the page and the operation guide:
+**Mesh Clustering** ページでは、ネットワークグループ (Network Group)、ロードバランサー (Load Balancer)、および クラスター (Cluster) など、さまざまな種類のネットワークリソースを管理・作成することができます。
+現在は **Network Group** の管理のみ対応しています。
+以下は、ページの概要と操作ガイドです。
 
 ---
 
-## **Tab Overview**
+## **タブの説明**
 
-- **Network Group**: The list of all network groups.
-- **Load Balancer**: The list of load balancers (currently not available).
-- **Cluster**: The list of clusters (currently not available).
+- **Network Group**: すべてのネットワークグループの一覧が表示されます。
+- **Load Balancer**: 今後、ロードバランサーの一覧が表示される予定です（現在は未対応）。
+- **Cluster**: 今後、クラスターの一覧が表示される予定です（現在は未対応）。
 
-### **List Columns**
+### **リスト項目**
 
-- **ID**: The unique identifier for the network resource.
-- **Name**: The name of the network resource.
-- **Capacity**: The current number of instances in use and the total capacity, e.g., 0/5.
-- **Action**: Actions that can be performed, including **Edit** and **Delete**.
+- **ID**: ネットワークリソースの一意の識別子。
+- **Name**: ネットワークリソースの名称。
+- **Capacity**: 現在使用中のインスタンス数と総容量を表示します（例：0/5）。
+- **Action**: 実行可能な操作。**Edit**（編集）および **Delete**（削除）が含まれます。
   ![Mesh list](../../../../../docs/docs-images/p09/01.Mesh%20list.jpg)
 
 ---
 
-## **Create New Mesh**
+## **新しい Mesh の作成**
 
-Click the `Create New` button in the top right corner to enter the page for creating a new Mesh:
+右上の `Create New` ボタンをクリックし、新しい Mesh 作成画面に移動します。
 
-1. **Select Mesh Type**: Currently, only **Network Group** is supported.
-2. **Enter Name**: Provide a name for the new Mesh.
-
+1. **Select Mesh Type**(Mesh Type の選択)：現在は Network Group のみ対応しています。
+2. **Enter Name**(Name の入力)：新しい Mesh に名前を指定します。
+   
 ![Create New Mesh](../../../../../docs/docs-images/p09/02.Create%20Mesh.jpg)
 
 ---
 
-## **Add Instance to Mesh**
+## **Instance を Mesh に追加**
 
-After creating a Mesh, you can add instances to it:
+Mesh を作成した後、インスタンスを Mesh に追加することができます：
 
-1. Click on the newly created Mesh in the list to go to its details page.
-2. Click the `Add Instance` button to open the add instance page.
-3. The left-side list shows all instances that are currently in the **Running** state.
-4. Select the instances you want to add and click the arrow button to add them to the Mesh.
-5. The added instances will appear in the right-side list.
+1. 一覧から先ほど作成した Mesh をクリックし、詳細ページに移動します。
+2. `Add Instance` ボタンをクリックし、インスタンス追加画面を表示します。
+3. 左側のリストには、現在 **Running** 状態のインスタンスがすべて表示されます。
+4. 追加したいインスタンスにチェックを入れ、矢印ボタンをクリックして Mesh に追加します。
+5. 追加されたインスタンスは右側のリストに表示されます。
 
 ![Add Instance](../../../../../docs/docs-images/p09/03.Add%20Instance.jpg)
 
-### **Remove Instance**
+### **Instance の削除**
 
-- In the right-side list, select the instances you want to remove, and click the `Remove Selected` button.
-- Alternatively, click the trash icon in the **Action** column for the instance you wish to remove, and it will return to the left-side list.
+- 右側のリストで削除したいインスタンスにチェックを入れ、`Remove Selected` ボタンをクリックします。
+- または、インスタンスの **Action** 欄にあるゴミ箱アイコンをクリックすると、そのインスタンスは左側のリストに戻ります。
 
 ![Remove Instance](../../../../../docs/docs-images/p09/04.Remove%20Instance.jpg)
 
 ---
 
-## **View Added Instance Information**
+## **追加された Instance 情報の確認**
 
-After successfully adding instances to a Mesh, click on the Mesh to view the added instance information, including:
+Mesh にインスタンスを追加した後、その Mesh をクリックすると、追加されたインスタンスの情報が表示されます。内容は以下の通りです：
 
-- **IP CIDR**: Represents the IP address range of the instance, such as **192.168.3.2/24**, which defines the available IP addresses and subnet mask for the instance.
-- **ID**: The unique identifier for the instance.
-- **Name**: The name of the instance.
-- **Bandwidth**: The bandwidth of the instance, e.g., **100 Mbps**.
-- **Status**: The current status of the instance.
-- **Action**: Includes the **Disconnect** action for removing the instance.
+- **IP CIDR**：インスタンスの IP アドレス範囲を示します。例：**192.168.3.2/24**。この範囲は、利用可能な IP アドレスとサブネットマスクを定義します。
+- **ID**：インスタンスの一意な識別子。
+- **Name**：インスタンス名。
+- **Bandwidth**：インスタンスの帯域幅（例：**100 Mbps**）。
+- **Status**：インスタンスの現在の状態。
+- **Action**：**Disconnect** 操作を含み、該当インスタンスを削除する際に使用します。
 
 ![Mesh Instance Info](../../../../../docs/docs-images/p09/05.Mesh%20Instance%20Info.jpg)
 
 ---
 
-This setup allows you to flexibly manage network resources and adjust network configurations according to your needs.
+この設定により、ネットワークリソースを柔軟に管理し、ニーズに応じてネットワーク構成を調整できます。

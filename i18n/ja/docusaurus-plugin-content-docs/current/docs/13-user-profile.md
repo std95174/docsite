@@ -3,39 +3,39 @@ id: user-profile
 sidebar_position: 15
 ---
 
-# ユーザー情報
+# ユーザープロファイル
 
-On the **User Profile** page, you can view and manage your account information.
+**User Profile** ページで、アカウント情報を確認および管理できます。
 
 ---
 
-## **Account Information**
+## **アカウント情報**
 
-- **Account**: Your account name.
-- **Email**: Your email address.
+- **Account**：アカウント名を表示します。
+- **Email**：メールアドレスを表示します。
 
-## **Account Settings**
+## **アカウント設定**
 
-In **Account Setting**, you can configure **Verify Education Status**.
+**Account Setting** では、**Verify Education Status** を設定できます。
 
-**Verify Education Status** (apply for student status and enjoy student discounts):
+**Verify Education Status** （教育ステータスを申請し、学生割引を受ける）：
 
-- Click the `Verify` button to open the **Verify Education Status** screen.
+- `Verify`ボタンをクリックすると、**Verify Education Status** の画面が開きます。
   ![Verify education status](../../../../../docs/docs-images/p12/01.Verify%20education%20status.jpg)
 
-- On this screen, you need to fill in the following information:
-  - **Your Name**: Your full name.
-  - **School Name**: The name of your school.
-  - **Degree**: Your degree.
-  - **Enrollment Date**: Select your enrollment date.
-  - **Expected Graduation Date**: Select your expected graduation date.
+- この画面では、以下の情報を入力する必要があります：
+  - **Your Name**：お名前
+  - **School Name**：学校名
+  - **Degree**：学位
+  - **Enrollment Date**：入学日を選択
+  - **Expected Graduation Date**：卒業予定日を選択
     ![Verify form](../../../../../docs/docs-images/p12/02.Verify%20form.jpg)
-- Choose the **Get Verified By** method:
+- **Get Verified By** の方法を選択：
 
-  - **Student ID**: Verification through student ID.
-  - **School Email**: Verification through school email.
+  - **Student ID**：学生証による認証
+  - **School Email**：学校のメールによる認証
 
-    > If you choose **School Email**, enter your **Educational E-Mail Verification** and click the `Send` button on the right.
+    > **School Email** を選択した場合は、**Educational E-Mail Verification** を入力し、右側の `Send` ボタンを押してください。
 
-  - After receiving the verification code, enter it in **Verification Code** to complete the verification.
+  - 認証コードを受け取ったら、**Verification Code** に入力して認証を完了します。
     ![Verify form](../../../../../docs/docs-images/p12/03.Verify%20form.jpg)

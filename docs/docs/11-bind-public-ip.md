@@ -72,6 +72,8 @@ You can also map the static IP to your own domain name, and then access the serv
 
 If you have any questions or suggestions while using **Glows.ai**, feel free to reach out through the following channels:
 
-- **Email**: [support@glows.ai](mailto:support@glows.ai)
-- **Line**: [https:/lin.ee/fHcoDgG](https:/lin.ee/fHcoDgG)
-- **Discord**: [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
+**Email:** [support@glows.ai](mailto:support@glows.ai)
+
+**Discord:** [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
+
+**Line:** [https://lin.ee/fHcoDgG](https://lin.ee/fHcoDgG)

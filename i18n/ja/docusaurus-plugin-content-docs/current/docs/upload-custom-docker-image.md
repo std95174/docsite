@@ -1,25 +1,25 @@
 ---
 id: upload-custom-docker-image
-title: 'Glows.ai カスタムDockerイメージアップロードチュートリアル'
+title: 'Glows.ai へのカスタム Docker イメージのアップロード'
 date: '2025-09-28 19:00'
 sidebar_position: 8
-description: '本チュートリアルでは、ローカルDockerイメージをGlows.aiにアップロードして使用する方法を示します。イメージの作成、tar パッケージング、アップロード、インスタンス作成などの手順を含みます。'
+description: '本チュートリアルでは、ローカルの Docker イメージを Glows.ai にアップロードして使用する方法をステップごとに解説します。イメージの準備、パッケージ化、アップロード、インスタンス作成までを一通り実演します。'
 ---
 
-# Glows.aiでカスタムDockerイメージをアップロード
+# Glows.ai へのカスタム Docker イメージのアップロード
 
-This tutorial will guide you step by step on how to upload a local Docker image to Glows.ai, covering image preparation, packaging, uploading, and instance creation.
+本チュートリアルでは、ローカルの Docker イメージを Glows.ai にアップロードして使用する方法をステップごとに解説します。イメージの準備、パッケージ化、アップロード、インスタンス作成までを一通り実演します。
 
-## Creating a Docker Image Tar Package
+## Docker イメージ tar パッケージの作成
 
-To ensure your image runs properly on Glows.ai, pay attention to the following:
+Glows.ai で正常にイメージを動作させるには、以下の点に注意してください：
 
-- The image **ENTRYPOINT** must keep running (otherwise the container will exit automatically).
-- Install and start the SSH service (for convenient instance access).
+- イメージの **ENTRYPOINT** は常に実行状態を維持する必要があります（コンテナが自動で終了しないようにするため）
+- SSH サービス をインストールして起動する（インスタンスへのアクセスを容易にするため）
+  
+### 設定の説明
 
-### Setup Instructions
-
-It is recommended to create a separate `.sh` script as the ENTRYPOINT, for example `run_glowsai.sh`, containing startup commands for the container (SSH service or custom services). Example:
+ENTRYPOINT として独立した `.sh` スクリプトを作成することを推奨します。例えば `run_glowsai.sh` のようにし、コンテナ起動時に自動で実行したいコマンド（SSH サービスやカスタムサービスなど）を記述します。以下は例です：
 
 ```bash
 #!/bin/bash
@@ -35,7 +35,7 @@ echo "Container running..."
 tail -f /dev/null
 ```
 
-Also, in your Dockerfile, include SSH installation and configuration, and set the ENTRYPOINT:
+同時に、Dockerfile に SSH のインストールと設定、ENTRYPOINT の指定を追加します：
 
 ```bash
 # Install and configure SSH server
@@ -53,13 +53,13 @@ EXPOSE 22
 ENTRYPOINT ["/usr/bin/run_glowsai.sh"]
 ```
 
-### Practical Steps
+### ローカル操作手順例
 
-Before uploading your local image, ensure SSH is installed and running inside the image and that the ENTRYPOINT keeps running. Otherwise, follow these steps.
+ローカルの Docker イメージを Glows.ai にアップロードする場合、イメージ内に SSH がインストールされ起動しており、ENTRYPOINT が常時実行される設定になっていることを確認してください。未設定の場合は、以下の手順で操作します：
 
 ![set run_glowsai.sh](../../../../../docs/docs-images/upload-docker-image/01.png)
 
-1. Create a directory `new_images` and inside it, create `run_glowsai.sh` with the following content:
+1. `new_images` というディレクトリを新規作成し、そのディレクトリ内に `run_glowsai.sh` を作成します。内容は以下の通りです：
 
 ```bash
 #!/bin/bash
@@ -75,9 +75,9 @@ echo "Container running..."
 tail -f /dev/null
 ```
 
-> Note: The `# Custom Command` section is where you can add any commands to run on container startup. Do not modify other parts to avoid startup failure.
+> 注意：`# Custom Command` には、自動起動させたいコマンドを記入できます。その他の部分は変更しないでください。変更するとコンテナが正常に起動しなくなる可能性があります。
 
-2. Create a `Dockerfile` with the following content:
+2. `Dockerfile` を作成し、以下の内容を入力します：
 
 ```bash
 # Set the base image
@@ -98,7 +98,7 @@ EXPOSE 22
 ENTRYPOINT ["/usr/bin/run_glowsai.sh"]
 ```
 
-3. Build the new image in the directory:
+3. ディレクトリ内で以下のコマンドを実行し、新しいイメージをビルドします：
 
 ```bash
 docker build -t new_images:huggingface-text-embeddings-inference_1_8 .
@@ -106,7 +106,7 @@ docker build -t new_images:huggingface-text-embeddings-inference_1_8 .
 
 ![Build successfully](../../../../../docs/docs-images/upload-docker-image/02.png)
 
-4. After a successful build, use `docker save` to package the image as a tar file:
+4. ビルドに成功したら、`docker save` を使用してイメージを tar ファイルとして保存します：
 
 ```bash
 docker save -o <output_file_path> <image_name_or_id>
@@ -114,55 +114,55 @@ docker save -o <output_file_path> <image_name_or_id>
 
 ![Pack tar ](../../../../../docs/docs-images/upload-docker-image/03.png)
 
-## Uploading the Docker Image Tar Package
+## Docker イメージ tar パッケージのアップロード
 
-1. Open Glows.ai's **Images** interface and click `Upload Image`.
-2. Enter an image description and click **Select Image** to upload the tar package.
+1. Glows.ai の **Images** ページを開き、`Upload Image` をクリックします。
+2. 2.イメージの説明を入力します。**Select Image** をクリックして、先ほど作成した tar パッケージをアップロードします。
 
 ![Choose image](../../../../../docs/docs-images/upload-docker-image/04.png)
 
-3. During upload, progress will be displayed. Once completed, the image can be used in Glows.ai.
+3. アップロード中は進捗が表示され、アップロード完了後に Glows.ai 上で使用できるようになります。
 
 ![Upload successfully](../../../../../docs/docs-images/upload-docker-image/05.png)
 
-## Creating an Instance
+## インスタンスの作成
 
-1. When creating an instance, select **My Images**. You will see the uploaded image. Choose it, and if a Datadrive Mount is needed, complete the instance creation process.
+1. インスタンスを作成する際に **My Images**を選択すると、先ほどアップロードしたイメージが表示されます。選択後、必要に応じて Datadrive をマウントしてからインスタンスの作成を完了してください。
 
 ![Create instance](../../../../../docs/docs-images/upload-docker-image/06.png)
 
-2. After the instance starts, manually set the ports you want to expose, e.g., SSH on port 22:
+2. インスタンス起動後、エクスポートする必要のあるポートを手動で設定します。例として、SSHサービスはポート22：
 
-   - Click `New Port Forwarding`
-   - Set **Service Port** to 22
-   - **Do not check HTTPS**
-   - Click `Create` to finish port forwarding
+   - `New Port Forwarding` をクリック
+   - **Service Port** を 22 に設定
+   - **HTTPS はチェックしない**
+   - `Create` をクリックしてポートのエクスポートを完了します
 
 ![Set port](../../../../../docs/docs-images/upload-docker-image/07.png)
 
-3. After about 10–20 seconds, port mapping will be established. The interface will show SSH connection info and password for local access.
+3. 設定完了後、約10～20秒でポートマッピングが完了します。インターフェースにSSH接続情報とパスワードが表示されるので、ローカルからログインして操作できます。
 
 ![SSH connection](../../../../../docs/docs-images/upload-docker-image/08.png)
 
-4. If the instance runs other services that need public access, you can add additional port mappings. For HTTP services, check **HTTPS**.
+4. もしインスタンスで他のサービスを運行しており、パブリックネットワークからアクセスする必要がある場合は、ポートマッピングを追加できます。HTTPサービスの場合は、HTTPSにチェックを入れる必要があります。
 
 ![Public port](../../../../../docs/docs-images/upload-docker-image/09.png)
 
-5. For example, to run an HTTP service on port 8080, use the corresponding link from the instance interface to access it.
+5. HTTPサービスを例として、サービスをポート8080で起動すると、インスタンスのインターフェース上の対応するリンクからサービスにアクセスできます。
 
 ![Run an HTTP service](../../../../../docs/docs-images/upload-docker-image/10.png)
 
-6. After modifying the environment or files, you can create a **Snapshot** or release the instance when no longer needed.
+6. 環境やファイルの変更が完了したら、スナップショットを作成するか、不要になった場合はインスタンスを直接リリースできます。
 
 ![Create a Snapshot or Release](../../../../../docs/docs-images/upload-docker-image/11.png)
 
 ---
 
-# Contact Us
+# お問い合わせ
 
-If you have any questions or suggestions while using **Glows.ai**, feel free to reach out to us via email or Line.
+**Glows.ai** のご利用中に何かご不明点やご意見がございましたら、Email、Discord、または Line でお気軽にご連絡ください。
 
-**Glows.ai Email:** [support@glows.ai](mailto:support@glows.ai)
+**Email:** [support@glows.ai](mailto:support@glows.ai)
 
 **Discord:** [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
 

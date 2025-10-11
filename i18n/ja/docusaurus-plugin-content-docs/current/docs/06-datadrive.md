@@ -3,94 +3,94 @@ id: datadrive
 sidebar_position: 7
 ---
 
-# Data Drive
+# Data Drive （ データドライブ）
 
-On the **Data Drive** page, you can manage your data files through an intuitive interface. The page displays different tabs for various areas, such as:
+**Data Drive** ページでは、直感的な操作画面を通じてデータファイルを管理できます。ページには異なるリージョンのタブが表示されます：
 
 1. **TW-01**
 2. **TW-02**
 
-Each tab shows the files and folders associated with it and offers various operational features.
+各タブには関連するファイルやフォルダが表示され、さまざまな操作機能が提供されます。
 
 ![Data drive list](../../../../../docs/docs-images/p06/01.Data%20drive%20list.jpg)
 
 ---
 
-## **File and Folder List**
+## **ファイルとフォルダ一覧（File and Folder List）**
 
-Within each tab, you'll find a list of all files and folders, including the following columns:
+タブ内では、すべてのファイルとフォルダを一覧表示し、以下の列があります：
 
-- **Name**: The name of the file or folder.
-- **Size**: The size of the file or folder.
-- **Time**: The last modification time of the file or folder.
-- **Action**: Action buttons available for execution.
+- **Name**: ファイルまたはフォルダの名前
+- **Size**: ファイルまたはフォルダのサイズ
+- **Time**: ファイルまたはフォルダの最終更新日時
+- **Action**: 実行可能な操作ボタン
 
-### **Action Buttons**
+### **操作ボタン（Actions）**
 
-Each file or folder row provides the following operation options:
+各ファイルまたはフォルダの行には、以下の操作オプションがあります：
 
-- **Download**: Download the selected file.
+- **Download**: 指定したファイルをダウンロード
 
-  > **Note**: This feature is only available for files; folders cannot be downloaded directly.
+  > **Note**: この機能はファイルのみ対応しており、フォルダは直接ダウンロードできません。
 
-- **Move**: Move the file or folder to another location.
+- **Move**: ファイルまたはフォルダを別の場所に移動
 
-- **Edit**: Rename the file or folder.
+- **Edit**: 名前を変更
 
-- **Delete**: Delete the selected file or folder.
+- **Delete**: 指定したファイルまたはフォルダを削除
 
 ![Actions](../../../../../docs/docs-images/p06/02.Actions.jpg)
 
 ---
 
-## **Toolbar Actions**
+## **右側ツールバーの操作（Toolbar Actions）**
 
-On the right side of the tab's toolbar, you can use the following buttons:
+タブの右側ツールバーでは、以下のボタンを使用できます：
 
 ### **1. Delete**
 
-- **Function**: Delete the selected files or folders.
-- **Usage condition**: At least one file or folder must be selected, otherwise, the button is disabled.
+- **機能**: 選択したファイルまたはフォルダを削除
+- **使用条件**: 少なくとも1つのファイルまたはフォルダを選択する必要があります。選択していない場合、ボタンはクリックできません。
 
 ### **2. Move**
 
-- **Function**: Move the selected files or folders to another location.
-- **Usage ondition**: At least one file or folder must be selected, otherwise, the button is disabled.
+- **機能**: 選択したファイルまたはフォルダを別の場所に移動
+- **使用条件**: 少なくとも1つのファイルまたはフォルダを選択する必要があります。選択していない場合、ボタンはクリックできません。
 
 ### **3. Refresh**
 
-- **Function**: Refresh the list to display the latest file and folder statuses.
+- **機能**: リストを更新し、最新のファイル・フォルダ状態を表示
 
 ### **4. New Folder**
 
-- **Function**: Create a new folder.
+- **機能**: 新しいフォルダを作成
 - **Procedure**:
-  1. Click the **New Folder** button.
-  2. Enter the folder name in the pop-up dialog.
-  3. After confirmation, the new folder will appear in the list.
+  1. **New Folder** ボタンをクリック
+  2. 表示されたダイアログでフォルダ名を入力
+  3. 確認をクリックすると、新しいフォルダがリストに表示されます
 
 ### **5. Upload**
 
-- **Function**: Upload files to the current tab location.
+- **機能**: 現在のタブの場所にファイルをアップロード
 - **Procedure**:
-  1. Click the **Upload** button.
-  2. Select the files to upload.
-  3. Once uploaded, the files will appear in the list.
+  1. **Upload** ボタンをクリック
+  2. アップロードするファイルを選択
+  3. アップロード完了後、ファイルがリストに表示されます
 
 ---
 
-## **Notes**
+## **注意事項**
 
-1. **File and Folder Operations**:
+1. **ファイルとフォルダの操作**:
 
-   - Please note that folders cannot be downloaded directly.
-   - All delete or move operations require selecting the target items first.
+   - フォルダは直接ダウンロードできませんのでご注意ください。
+   - 削除または移動操作を行う場合は、必ず対象の項目を選択してください。
 
-2. **Naming Rules**:
+2. **命名規則**:
 
-   - Avoid using special characters or duplicate names when editing names.
+   - 名前を編集する際は、特殊文字や重複した名前を使用しないでください。
 
-3. **File Size Limitations**:
-   - Ensure the file size complies with the system's allowed maximum when uploading files.
+3. **ファイルサイズの制限**:
+   - ファイルをアップロードする際は、システムで許可されている最大サイズを超えていないか確認してください。
 
-This is the complete feature description of the **Data Drive** page. For further assistance, please refer to the relevant user guide.
+以上が **Data Drive** ページの機能説明です。さらにサポートが必要な場合は、関連操作マニュアルをご参照ください。
