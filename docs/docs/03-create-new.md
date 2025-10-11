@@ -129,4 +129,4 @@ After confirming the instance details and pricing, click `Complete Checkout` to 
 
 ---
 
-Following the above steps, you will successfully create a new instance on **Glows.AI** and configure it according to your requirements. Next, we will guide you on how to manage and monitor your instances.
+Following the above steps, you will successfully create a new instance on **Glows.ai** and configure it according to your requirements. Next, we will guide you on how to manage and monitor your instances.
