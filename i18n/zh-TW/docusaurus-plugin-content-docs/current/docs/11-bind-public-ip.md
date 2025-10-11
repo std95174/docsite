@@ -71,6 +71,7 @@ sidebar_position: 13
 
 - **Email**: [support@glows.ai](mailto:support@glows.ai)
 
+- **Discord**: [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
+
 - **Line**: [https:/lin.ee/fHcoDgG](https:/lin.ee/fHcoDgG)
 
-- **Discord**: [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
