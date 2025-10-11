@@ -68,5 +68,7 @@ sidebar_position: 13
 **Glows.ai** の利用中に問題が発生した場合やご意見がある場合は、以下の方法でお問い合わせください：
 
 - **Email**: [support@glows.ai](mailto:support@glows.ai)
-- **Line**: [https:/lin.ee/fHcoDgG](https:/lin.ee/fHcoDgG)
+
 - **Discord**: [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
+
+- **Line**: [https:/lin.ee/fHcoDgG](https:/lin.ee/fHcoDgG)
