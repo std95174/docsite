@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Overview
 
-Welcome to [**Glows.AI**](https://glows.ai/), a one-click AI platform designed to help you tackle AI training & inference, large-scale data processing, and multi-node collaboration. This tutorial will guide you through the platform’s core functionalities and advanced features, enabling you to make the most of its tools and services.
+Welcome to [**Glows.ai**](https://glows.ai/), a one-click AI platform designed to help you tackle AI training & inference, large-scale data processing, and multi-node collaboration. This tutorial will guide you through the platform’s core functionalities and advanced features, enabling you to make the most of its tools and services.
 
 ## **Platform Highlights**
 
@@ -34,4 +34,4 @@ Through this guide, you’ll explore the following key areas:
 
 ## **Learning Outcomes**
 
-By the end of this guide, you’ll confidently navigate [**Glows.AI**](https://glows.ai/), independently create and manage resources, safeguard your data, and optimize your workflow, whether you’re a developer, business manager, or educator.
+By the end of this guide, you’ll confidently navigate [**Glows.ai**](https://glows.ai/), independently create and manage resources, safeguard your data, and optimize your workflow, whether you’re a developer, business manager, or educator.
