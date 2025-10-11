@@ -76,4 +76,6 @@ curl -X POST "https://tw-01.sgw.glows.ai:xxxxxx/v1/audio/speech" \
 
 Glows.ai Email : **support@glows.ai**
 
+**Discord:** [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
+
 Line : **https://lin.ee/fHcoDgG**
