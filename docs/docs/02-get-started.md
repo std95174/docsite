@@ -64,4 +64,4 @@ Welcome to **Glows.ai**! Here is a detailed guide to help you navigate the login
 
 ---
 
-By following these steps, you can quickly complete the login and registration process and get ready to use the powerful features of **Glows.AI**! Next, let’s learn how to use the **Create New** feature to set up your first instance.
+By following these steps, you can quickly complete the login and registration process and get ready to use the powerful features of **Glows.ai**! Next, let’s learn how to use the **Create New** feature to set up your first instance.
