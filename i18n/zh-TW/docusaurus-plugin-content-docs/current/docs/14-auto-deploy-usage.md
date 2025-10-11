@@ -70,6 +70,8 @@ curl -X POST "https://tw-01.sgw.glows.ai:xxxxxx/v1/audio/speech" \
 
 如果您在使用 **Glows.ai** 的過程中有任何疑問或者建議，歡迎通過郵件或者 Line 聯繫我們。
 
-**Email**: **support@glows.ai**
-**Discord**： https://discord.com/invite/glowsai
-**Line**: **https://lin.ee/fHcoDgG**
+**Email:** [support@glows.ai](mailto:support@glows.ai)
+
+**Discord:** [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
+
+**Line:** [https://lin.ee/fHcoDgG](https://lin.ee/fHcoDgG)
