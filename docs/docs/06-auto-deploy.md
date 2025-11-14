@@ -1,6 +1,6 @@
 ---
 id: auto-deploy
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 # Auto Deploy
