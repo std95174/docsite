@@ -1,6 +1,6 @@
 ---
 id: mesh-clustering
-sidebar_position: 11
+sidebar_position: 12
 ---
 
 # Mesh Clustering
