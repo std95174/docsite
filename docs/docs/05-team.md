@@ -1,8 +1,10 @@
-# Glows.ai Team Edition User Guide
+# Glows.ai Team User Guide
 
-The **Team Edition** of the Glows.ai Platform enables team collaboration, centralized resource management, flexible quota allocation, and secure sharing mechanisms—designed to meet enterprise-level requirements for shared cloud resource utilization.
+**Glows.ai Team** enables team collaboration, centralized resource management, flexible quota allocation, and secure sharing mechanisms—designed to meet enterprise-level requirements for shared cloud resource utilization.
 
-This guide is divided into three parts:
+Glows.ai Team brings teams together with unified resource management, dynamic quota control, and secure data sharing. It is built for effortless collaboration across shared cloud environments.
+
+This guide includes:
 
 - [Creator Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37#creator-guide)
 - [Administrator Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37#administrator-guide)
@@ -14,11 +16,13 @@ This guide is divided into three parts:
 
 ### Create a Team
 
-After logging in to the Glows.ai platform, click on your profile at the top right corner. In the dropdown, select **`Teams`**, then click **`Create Teams`** to start the team creation process.
+After logging in, click your profile icon in the top-right corner.
+
+Select **`Teams`**, then click **`Create Teams`** to start creating your team.
 
 ![image-20251106105639587](../docs-images/p05team/01.png)
 
-First, enter the team name and description, then click **`Next`** to proceed.
+- Enter the team name and description, then click **`Next`** to proceed.
 
 ![image-20251106105804030](../docs-images/p05team/02.png)
 
