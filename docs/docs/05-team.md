@@ -20,7 +20,7 @@ Detailed Table of Contents:
 
 After logging in to the Glows.ai platform, click on your profile at the top right corner. In the dropdown, select **`Teams`**, then click **`Create Teams`** to start the team creation process.
 
-![image-20251106105639587](../img/01.png)
+![image-20251106105639587](../docs-images/p05team/01.png)
 
 First, enter the team name and description, then click **`Next`** to proceed.
 
