@@ -18,7 +18,7 @@ Glows.ai Platform 的團隊版功能，將構建團隊協作體系，實現資�
 
 登錄 Glows.ai 平台後，點擊右上角個人信息，在彈框中點擊`Teams`，然後點擊`Create Teams`進入團隊創建流程。
 
-![image-20251106105639587](../img/01.png)
+![image-20251106105639587](../../../../../docs/docs-images/p06team/01.png)
 
 首先輸入團隊名稱和簡介，然後點擊`Next`進入下一步。
 
