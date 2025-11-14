@@ -8,10 +8,6 @@ This guide is divided into three parts:
 - [Administrator Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37#administrator-guide)
 - [Member Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37#member-guide)
 
-Detailed Table of Contents:
-
-[toc]
-
 ------
 
 ## Creator Guide
@@ -178,8 +174,13 @@ When creating a new instance, team snapshots appear under **Snapshot**, marked w
 
 #### Manage Team Snapshots
 
-Go to **`Team Shared Snapshots → Manage`** to delete unneeded team snapshots.
- **Warning:** Deleted snapshots are permanently removed and cannot be recovered.
+After selecting `Admin View` in the `Snapshots` interface, click the `Manage` button in the upper right corner of the `Team Shared Snapshots` module to access the team Snapshot management interface.
+
+![image-20251111184459744](../docs-images/p05team/27.png)
+
+This interface displays all team Snapshots. Currently, only deletion is supported. Select the unwanted Snapshot and click the "Delete" button in the Action menu to delete it.
+
+**Note:** Deleting a team Snapshot is permanent and cannot be recovered. Please operate with caution.
 
 ![image-20251111183957286](../docs-images/p05team/28.png)
 
