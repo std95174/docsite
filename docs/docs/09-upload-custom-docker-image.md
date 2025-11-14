@@ -2,7 +2,7 @@
 id: upload-custom-docker-image
 title: 'Images'
 date: '2025-09-28 19:00'
-sidebar_position: 8
+sidebar_position: 9
 description: 'This tutorial demonstrates how to upload a local Docker image to Glows.ai, including image creation, tar packaging, uploading, and instance setup.'
 ---
 
