@@ -6,13 +6,13 @@ Glows.ai Team brings teams together with unified resource management, dynamic qu
 
 This guide includes:
 
-- [Creator Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37#creator-guide)
-- [Administrator Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37#administrator-guide)
+- [Owner Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37#creator-guide)
+- [Admin Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37#administrator-guide)
 - [Member Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37#member-guide)
 
 ------
 
-## Creator Guide
+## Owner Guide
 
 ### Create a Team
 
@@ -30,14 +30,14 @@ During the beta phase, the default team **Storage** is set to **0**. After creat
 
 ![image-20251106140945551](../docs-images/p05team/03.png)
 
-After clicking **`Confirm`**, you will see the team’s basic information. A **team creator account** will be assigned by default. Send this account info to our assistant to configure a suitable **Storage plan**.
+After clicking **`Confirm`**, you will see the team’s basic information. **Owner** will be assigned by default. You can send this account info to our assistant to configure a suitable **Storage plan**.
 
 ![image-20251106110316717](../docs-images/p05team/04.png)
 
 ### Switch to Team View
 
-As the team creator, you can switch from your Glows.ai main account to the team version.
- Click your profile at the top right, select **`Teams`**, and then click on the team you wish to enter.
+As a team owner, you can switch from your Glows.ai main account to the team view.
+Click your profile at the top right, select **`Teams`**, and then click on the team you wish to enter.
 
 ![image-20251106110954183](../docs-images/p05team/05.png)
 
