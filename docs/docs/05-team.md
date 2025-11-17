@@ -18,11 +18,11 @@ This guide includes:
 
 After logging in, click your profile icon in the top-right corner.
 
-Select **`Teams`**, then click **`Create Teams`** to start creating your team.
+Select `Teams`, then click `Create Teams` to start creating your team.
 
 ![image-20251106105639587](../docs-images/p05team/01.png)
 
-- Enter the team name and description, then click **`Next`** to proceed.
+- Enter the team name and description, then click `Next` to proceed.
 
 ![image-20251106105804030](../docs-images/p05team/02.png)
 
@@ -30,25 +30,25 @@ During the beta phase, the default team **Storage** is set to **0**. After creat
 
 ![image-20251106140945551](../docs-images/p05team/03.png)
 
-After clicking **`Confirm`**, you will see the team’s basic information. **Owner** will be assigned by default. You can send this account info to our assistant to configure a suitable **Storage plan**.
+After clicking `Confirm`, you will see the team’s basic information. **Owner** will be assigned by default. You can send this account info to our assistant to configure a suitable **Storage plan**.
 
 ![image-20251106110316717](../docs-images/p05team/04.png)
 
 ### Switch to Team Workspace
 
 As a team owner, you can switch from your Glows.ai main account to the team workspace.
-Click your profile at the top right, select **`Teams`**, and then click on the team you wish to enter.
+Click your profile at the top right, select `Teams`, and then click on the team you wish to enter.
 
 ![image-20251106110954183](../docs-images/p05team/05.png)
 
 ### Member Management
 
-Owners or administrators can access the **`Member`** tab in the sidebar to manage team members.
+Owners or administrators can access the `Member` tab in the sidebar to manage team members.
 Supported features include: Add Members, Assign credits, Permission & Quota, editing member info, and managing instances.
 
 #### Add Members
 
-Click **`Add Members`** in the **`Member`** section to start adding team members.
+Click `Add Members` in the `Member` section to start adding team members.
 
 ![image-20251106163030537](../docs-images/p05team/06.png)
 
@@ -61,30 +61,30 @@ For each new member, you can define:
 - **Alias**
 - **Note**
 
-After configuration, click **`Add Member`** to create the account.  
+After configuration, click `Add Member` to create the account.  
 The Role field currently supports two options: Admin (administrator) and Member (standard member).  
 **Assign Credits** allows you to give members initial credits for platform usage. These credits can be used to rent machines or buy storage, and you can also adjust or allocate them after the member is created.
 
 ![image-20251106220229850](../docs-images/p05team/07.png)
 
-After creation, click **`Copy Login Details`** to retrieve the new member’s credentials and share them with them.
+After creation, click `Copy Login Details` to retrieve the new member’s credentials and share them with them.
 Refer to [Member Login Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37) for login instructions.
 
 ![image-20251106163746546](../docs-images/p05team/08.png)
 
 #### Assign Credits
 
-In **`Member`**, click the **Action** button next to a member and choose **`Assign Credits`**.
+In `Member`, click the `Action` button next to a member and choose `Assign Credits`.
 
 ![image-20251107101615294](../docs-images/p05team/09.png)
 
-Enter the credit amount and click **`Assign`** to confirm.
+Enter the credit amount and click `Assign` to confirm.
 
 ![image-20251107114242664](../docs-images/p05team/10.png)
 
 #### Permission & Quota
 
-In **`Permissions & Quota`**, you can define what team members are allowed to see, including available GPUs, images, total instances, and total storage.
+In `Permissions & Quota`, you can define what team members are allowed to see, including available GPUs, images, total instances, and total storage.
 
 By clicking `Permissions & Quota`, you can access the permissions settings interface, where you control the compute resources visible to team members—such as `Region Permission`, `Instance Type`, and `Accelerator Permission`.
 
@@ -101,101 +101,99 @@ You can also configure members’ `Snapshots Quota`, `Network Group Quota`, and 
 
 ![image-20251111112632184](../docs-images/p05team/13.png)
 
-Click **`Save`** at the top right to apply settings. Members will only be able to select predefined hardware and environments in the **Create New** interface.
+Click `Save` at the top right to apply settings. Members will only be able to select predefined hardware and environments in the **Create New** interface.
 
 ![image-20251111134625409](../docs-images/p05team/14.png)
 
-#### Edit Member Info
+#### Modify Member Info
 
-Click **`Details`** beside a member to open their detail panel.
+Click `Details` beside a member to modify information related to the team member.
 
 ![image-20251111105908372](../docs-images/p05team/15.png)
 
 You can modify **Name**, **Role**, **Account Balance**, **Note**, and **Login Password**.
- The panel also shows usage details—remaining credits, total spending, instance count, and storage usage.
+You can also view usage details, including Balance, Total Spending, Instance count, and Storage Space.
 
 ![image-20251111105834255](../docs-images/p05team/16.png)
 
-Click **`Edit Permission`** to customize resource visibility for individual members, allowing each to see different GPU or image resources.
+Click `Edit Permission` to customize resource visibility for individual members, allowing each to see GPU or image resources differently.
 
-#### Manage Member Instances
+#### Manage Instances for Team Member
 
-In the **`Instances`** interface, select **`Admin View`** to monitor all members’ running instances.
+In `Instances`, select `Admin View` to monitor all members’ instances and status.
 
 ![image-20251111135707737](../docs-images/p05team/17.png)
 
-Click **Action → Release** to directly terminate a member’s instance.
+Click `Action` and then `Release` to release a member’s instance.
 
 ![image-20251111135835939](../docs-images/p05team/18.png)
 
 ### Storage Management
 
-In **`Storage Space`**, switch to **`Admin View`** to see overall and per-member storage usage.
+In `Storage Space`, select `Admin View`, you can view both the team’s total storage usage and the personal storage usage of each member.
 
 ![image-20251111164737613](../docs-images/p05team/19.png)
 
-Click **Manage** under **Team Storage Space** to modify **Datadrive** and **Snapshot** quotas, then click **`Update`** to save.
+In `Team Storage Space`, click `Manage` to access the storage allocation page. Click `Modify` to set **Datadrive** and **Snapshot** quotas, then click `Update` to save the settings.
 
 ![image-20251106161942160](../docs-images/p05team/20.png)
 
 ### Datadrive Management
 
-In **`Datadrive` → `Admin View`**, you can view and manage Datadrive usage for the entire team and each member.
+In `Datadrive` select `Admin View`, you can view and manage Datadrive usage for the entire team and each member.
 
 ![image-20251111174340574](../docs-images/p05team/21.png)
 
-Only creators and admins can upload or delete data in the **Team Datadrive**.
+In `Team Datadrive`, click `Manage` to manage team Datadrive. Only the owner and admins can upload or delete data in the **Team Datadrive**.
 
 ![image-20251106165005102](../docs-images/p05team/22.png)
 
-When creating instances, members automatically mount the team drive at `/team_data`.
- Standard members have **read-only** access, while creators and admins have **read/write** permissions.
+When creating instances, members automatically mount the team drive at `/team_data`.  
+Members have **read-only** access, while owner and admins have **read/write** permissions.
 
 ![image-20251111183708701](../docs-images/p05team/23.png)
 
 ### Snapshot Management
 
-In **`Snapshots` → `Admin View`**, you can view all team and individual snapshots.
+In `Snapshots`, select `Admin View`, you can view all team and individual snapshots.
 
 ![image-20251111181927368](../docs-images/p05team/24.png)
 
 #### Share Team Snapshots
 
-Click **Action → Share to Team** to convert a member’s snapshot into a shared team snapshot.
+To make a member-created snapshot available to the team, select `Detail` for the target snapshot and then choose `Share to Team`.
 
 ![image-20251111182221888](../docs-images/p05team/25.png)
 
 #### Use Team Snapshots
 
-When creating a new instance, team snapshots appear under **Snapshot**, marked with a **Team** label.
+When creating a new instance, you can find team snapshots under **Snapshot**, marked with a **Team** label.
 
 ![image-20251111182908522](../docs-images/p05team/26.png)
 
 #### Manage Team Snapshots
 
-After selecting `Admin View` in the `Snapshots` interface, click the `Manage` button in the upper right corner of the `Team Shared Snapshots` module to access the team Snapshot management interface.
+In `Snapshots`, after selecting `Admin View`, click `Manage` in the upper right corner of the `Team Shared Snapshots` module to access the team Snapshot management.
 
 ![image-20251111184459744](../docs-images/p05team/27.png)
 
-This interface displays all team Snapshots. Currently, only deletion is supported. Select the unwanted Snapshot and click the "Delete" button in the Action menu to delete it.
+All team snapshots are listed in this interface. Currently, the only supported operation is deletion. To delete a snapshot, select the item and choose `Delete` from the Action menu.
 
-**Note:** Deleting a team Snapshot is permanent and cannot be recovered. Please operate with caution.
+**Note**: Deleting a team snapshot is a permanent action and cannot be restored. Please operate with caution.
 
 ![image-20251111183957286](../docs-images/p05team/28.png)
 
 ### Billing Management
 
-In **`Billing → Admin View`**, you can review all members’ billing data.
- Bills can be filtered by member or type.
-
+In `Billing`, select `Admin View`, and you can review all members’ billing information. You can filter the records by member or by type.
 ![image-20251111185112362](../docs-images/p05team/29.png)
 
-You can also click **`Recharge`** to top up credits.
- **Note:** Only the team creator can perform recharges. Credits must then be distributed to admins and members.
+You can also click `Recharge` to top up credits.
+ **Note:** Only the team owner is allowed to recharge credits. After recharging, the owner can then distribute credits to admins and members.
 
-### Edit Team Info
+### Edit Team Information
 
-Go to **`Team Setting`** and click **`Edit`** to modify the team name and description.
+Go to `Team Setting` and click `Edit` to modify the team name and description.
 
 ![image-20251112102613576](../docs-images/p05team/30.png)
 
@@ -203,8 +201,8 @@ Go to **`Team Setting`** and click **`Edit`** to modify the team name and descri
 
 ## Administrator Guide
 
-Administrators have the same permissions as creators, except they **cannot create teams or perform recharges**.
- Please refer to the **Creator Guide** for detailed instructions.
+Administrators have the same permissions as the owner, except they **cannot create teams or perform recharges**.
+For more detailed instructions, please refer to the **Owner Guide**.
 
 ------
 
