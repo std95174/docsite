@@ -34,25 +34,25 @@ After clicking **`Confirm`**, you will see the team’s basic information. **Own
 
 ![image-20251106110316717](../docs-images/p05team/04.png)
 
-### Switch to Team View
+### Switch to Team Workspace
 
-As a team owner, you can switch from your Glows.ai main account to the team view.
+As a team owner, you can switch from your Glows.ai main account to the team workspace.
 Click your profile at the top right, select **`Teams`**, and then click on the team you wish to enter.
 
 ![image-20251106110954183](../docs-images/p05team/05.png)
 
 ### Member Management
 
-Creators or administrators can access the **`Member`** tab in the sidebar to manage team members.
- Supported features include: adding members, assigning credits, controlling resource visibility, editing member info, and managing instances.
+Owners or administrators can access the **`Member`** tab in the sidebar to manage team members.
+Supported features include: Add Members, Assign credits, Permission & Quota, editing member info, and managing instances.
 
 #### Add Members
 
-Click **`Add Members`** in the **`Member`** section to start adding new members.
+Click **`Add Members`** in the **`Member`** section to start adding team members.
 
 ![image-20251106163030537](../docs-images/p05team/06.png)
 
-You can set up the following for each new member:
+For each new member, you can define:
 
 - **Login Account**
 - **Login Password**
@@ -61,21 +61,20 @@ You can set up the following for each new member:
 - **Alias**
 - **Note**
 
-After configuration, click **`Add Member`** to create the account.
- Roles currently supported: **Admin (administrator)** and **Member (standard member)**.
-
-**Assign Credits** refers to the initial balance allocated to a member for renting machines or purchasing storage. It can also be assigned later.
+After configuration, click **`Add Member`** to create the account.  
+The Role field currently supports two options: Admin (administrator) and Member (standard member).  
+**Assign Credits** allows you to give members initial credits for platform usage. These credits can be used to rent machines or buy storage, and you can also adjust or allocate them after the member is created.
 
 ![image-20251106220229850](../docs-images/p05team/07.png)
 
 After creation, click **`Copy Login Details`** to retrieve the new member’s credentials and share them with them.
- Refer to [Member Login Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37) for login instructions.
+Refer to [Member Login Guide](../c/69154d5c-b6b0-832c-97ca-44b21e415e37) for login instructions.
 
 ![image-20251106163746546](../docs-images/p05team/08.png)
 
 #### Assign Credits
 
-In the **`Member`** interface, click the **Action** button next to a member and choose **`Assign Credits`**.
+In **`Member`**, click the **Action** button next to a member and choose **`Assign Credits`**.
 
 ![image-20251107101615294](../docs-images/p05team/09.png)
 
@@ -83,26 +82,22 @@ Enter the credit amount and click **`Assign`** to confirm.
 
 ![image-20251107114242664](../docs-images/p05team/10.png)
 
-#### Resource Visibility Control
+#### Permission & Quota
 
-In **`Permissions & Quota`**, you can define which GPUs, images, total instances, and storage space members can access.
+In **`Permissions & Quota`**, you can define what team members are allowed to see, including available GPUs, images, total instances, and total storage.
 
-You can control:
-
-- **Machine Region**
-- **Machine Type**
-- **Machine Model**
+By clicking `Permissions & Quota`, you can access the permissions settings interface, where you control the compute resources visible to team members—such as `Region Permission`, `Instance Type`, and `Accelerator Permission`.
 
 For example, in the screenshot below, team members can only use **NVIDIA GeForce RTX 4090** in the **TW-03 region**.
 
 ![image-20251111112042995](../docs-images/p05team/11.png)
 
 Scroll down to configure visible base images.
- For instance, members may be restricted to use **CUDA12.8 Torch2.7.1 Base** only.
+For instance, you can limit members to use **CUDA12.8 Torch2.7.1 Base** only.
 
 ![image-20251111112450861](../docs-images/p05team/12.png)
 
-You can also define limits for instance data, snapshot count, and available storage space.
+You can also configure members’ `Snapshots Quota`, `Network Group Quota`, and `Storage Space Quota`.
 
 ![image-20251111112632184](../docs-images/p05team/13.png)
 
