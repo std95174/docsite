@@ -50,7 +50,7 @@ Glows.ai Platform 的團隊版功能，將構建團隊協作體系，實現資�
 
 角色(Role) 目前支援設置為 Admin(管理員)或者Member(普通成員)。
 
-分配額度(Assign Credits)是給成員的平台初始點數，可以用於租用機器或者購買Storage，也可以創建後再分配。
+分配額度(Assign Credits)是給成員用於使用平台初始點數，可以用於租用機器或者購買Storage，也可以創建後再分配。
 
 ![image-20251106220229850](../../../../../docs/docs-images/p05team/07.png)
 
@@ -130,19 +130,19 @@ Glows.ai Platform 的團隊版功能，將構建團隊協作體系，實現資�
 
 ![image-20251106165005102](../../../../../docs/docs-images/p05team/22.png)
 
-其他成員在創建實例的時候會默認掛載團隊雲端硬碟到實例中的`/team_data`，普通成員只有可 讀權限，團隊創建者和管理員有讀寫權限。
+其他成員在創建實例的時候會默認掛載團隊雲端硬碟到實例中的`/team_data`，普通成員只有可讀權限，團隊創建者和管理員有讀寫權限。
 
 ![image-20251111183708701](../../../../../docs/docs-images/p05team/23.png)
 
 ### Snapshots 管理
 
-在`Snapshots`介面選擇`Admin View`，可以看到團隊Snapshot 數量，還有每個團隊成員個人創建的 Snapshot。
+在`Snapshots`介面選擇`Admin View`，可以看到團隊和每個團隊成員個人創建的 Snapshot。
 
 ![image-20251111181927368](../../../../../docs/docs-images/p05team/24.png)
 
 #### 設置團隊 Snapshot
 
-只需要點擊想要轉變到團隊共享的 Snapshot 後的Action，然後再選擇`Share to team`即可將成員創建的 Snapshot 變成團隊共享 Snapshot。
+只需要點擊想要轉變到團隊共享的 Snapshot 後的 `Details`，然後再選擇`Share to team`即可將成員創建的 Snapshot 變成團隊共享 Snapshot。
 
 ![image-20251111182221888](../../../../../docs/docs-images/p05team/25.png)
 
