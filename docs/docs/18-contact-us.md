@@ -5,7 +5,7 @@ sidebar_position: 18
 
 # Contact Us
 
-If you have any questions or feedback while using **Glows.ai**, please reach out via email, Discord, or Line.
+If you have any questions or suggestions while using **Glows.ai**, please reach out via email, Discord, or Line.
 
 **Email:** [support@glows.ai](mailto:support@glows.ai)
 
