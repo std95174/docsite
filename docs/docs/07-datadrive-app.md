@@ -172,7 +172,7 @@ Click your avatar icon in the top-right corner and select `Settings` to configur
 
 ## Contact Us
 
-If you have any questions or suggestions while using the Datadrive Desktop App, feel free to reach out to us:
+If you have any questions or suggestions while using **Glows.ai**, please reach out via email, Discord, or Line.
 
 **Email:** [support@glows.ai](mailto:support@glows.ai)
 
