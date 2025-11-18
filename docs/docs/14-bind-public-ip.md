@@ -70,8 +70,7 @@ You can also map the static IP to your own domain name, and then access the serv
 
 ## Contact Us
 
-If you have any questions or suggestions while using **Glows.ai**, feel free to reach out through the following channels:
-
+If you have any questions or suggestions while using **Glows.ai**, please reach out via email, Discord, or Line.
 **Email:** [support@glows.ai](mailto:support@glows.ai)
 
 **Discord:** [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
