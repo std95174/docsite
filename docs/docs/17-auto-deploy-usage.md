@@ -76,7 +76,7 @@ curl -X POST "https://tw-01.sgw.glows.ai:xxxxxx/v1/audio/speech" \
 
 ## Contact Us
 
-If you have any questions or suggestions while using **Glows.ai**, feel free to reach out to us via email or Line.
+If you have any questions or suggestions while using **Glows.ai**, please reach out via email, Discord, or Line.
 
 **Email:** [support@glows.ai](mailto:support@glows.ai)
 
