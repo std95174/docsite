@@ -112,7 +112,7 @@ Click `Details` beside a member to modify information related to the team member
 ![image-20251111105908372](../docs-images/p05team/15.png)
 
 You can modify **Name**, **Role**, **Account Balance**, **Note**, and **Login Password**.
-You can also view usage details, including Balance, Total Spending, Instance count, and Storage Space.
+You can also view usage details, including **Balance**, **Total Spending**, **Instance** count, and **Storage Space**.
 
 ![image-20251111105834255](../docs-images/p05team/16.png)
 
@@ -208,28 +208,19 @@ For more detailed instructions, please refer to the **Owner Guide**.
 
 ## Member Guide
 
-Members can access the following functions:
+Members can access the following functions: Create Instance (Create New), Instance Management (Instances), Datadrive Management (Datadrive), Snapshot Management (Snapshots), Storage Management (Storage Space), Billing (Billing), Profile Editing (Profile).
 
-- **Create Instance (Create New)**
-- **Instance Management (Instances)**
-- **Datadrive Management (Datadrive)**
-- **Snapshot Management (Snapshots)**
-- **Storage Management (Storage Space)**
-- **Billing (Billing)**
-- **Profile Editing (Profile)**
-
-All operations are identical to the Glows.ai main platform.
- See: [Glows.ai User Manual](https://docs.glows.ai/docs/create-new)
+All actions work the same as on the main Glows.ai platform. For more details, please refer to the [Glows.ai User Guide](https://docs.glows.ai/docs/create-new)
 
 ![image-20251112112106430](../docs-images/p05team/31.png)
 
 ### Join a Team
 
-Members can join via two methods after receiving credentials from the team creator.
+After receiving credentials from the team owner or admin, members can join a team via the following methods.
 
-#### 1. Team Account Login
+#### 1. Login via Direct Team Link
 
-Open the following URL and enter your team credentials:
+Visit the team login page in your browser, then enter your team account and password.
 
 ```bash
 https://platform.glows.ai/team/login
@@ -237,37 +228,36 @@ https://platform.glows.ai/team/login
 
 ![image-20251112103024351](../docs-images/p05team/32.png)
 
-#### 2. Join via Glows.ai Main Site
+#### 2. Join via Main Glows.ai Site
 
-Log into the main site → click your avatar → **`Teams → Join Team`**.
+Log into the main Glows.ai site, click your avatar, and select **`Teams → Join Team`**.
 
 ![image-20251112103513271](../docs-images/p05team/33.png)
 
-Enter the team account and password to link your main account with the team.
- You can later switch between them directly.
+Enter the team account and password to link your main account with the team. You can later switch between the main account and the team account directly.
 
 ![image-20251104150357896](../docs-images/p05team/34.png)
 
-First login requires a password reset.
+Whichever login method you choose, a password reset is required upon your initial login.
 
 ![image-20251106165855089](../docs-images/p05team/35.png)
 
 ### Request Credits
 
-Members who need credits must apply to the creator or administrator.
+Members who need credits need to apply to the owner or administrator.
 
 ### Create an Instance
 
-Click **`Create New`**, select the GPU type and environment.
+Click `Create New`, select the GPU type and environment.
 
 ![image-20251112130821272](../docs-images/p05team/36.png)
 
-Scroll down to configure **Datadrive** settings, then click **`Complete Checkout`**.
+Scroll down to configure `Datadrive` settings, then click `Complete Checkout`.
 
-- **Unit Qty:** Number of GPUs to rent (e.g., `2` means two GPUs)
-- **Mount Personal Datadrive:** Optional
-- **Mount Team Datadrive:** Automatically mounts to `/team_data` (read-only for members)
-- **Bind Public IP Address:** Contact Glows.ai support if needed
+- **Unit Qty:** Number of GPUs to rent (e.g., `2` means two GPUs).
+- **Mount Personal Datadrive:** (Optional) You can choose whether to mount your personal Datadrive.
+- **Mount Team Datadrive:** （Default) The team Datadrive is automatically mounted to `/team_data` directory in the instance, and members have read-only access.
+- **Bind Public IP Address:** Contact Glows.ai support if you need to bind public IP address.
 
 ![image-20251112131149657](../docs-images/p05team/37.png)
 
@@ -275,31 +265,28 @@ Scroll down to configure **Datadrive** settings, then click **`Complete Checkout
 
 After launching, view instance details in **Instances**.
 
-- **Access:** SSH (Port 22) / JupyterLab (Port 8888)
-- **Monitor:** CPU/GPU metrics
-- **Billing:** Cost breakdown
-- **Config:** Environment details
-- **Hardware:** Hardware specifications
+- **Access:** Instance configuration details, commonly used options include SSH (Port 22) / JupyterLab (Port 8888).
+- **Monitor:** CPU/GPU metrics for the instance.
+- **Billing:** Detailed billing information for the instance.
+- **Config:** Instance configuration details, including software information for the startup image.
+- **Hardware:** Hardware specifications of the instance.
 
-Use **Action → Release** to terminate or **Take Snapshot** to create an image.
+After you finish using the instance, you can choose `Release` in the `Action` menu to release the instance, or select `Take Snapshot` to create a snapshot.
 
 ![image-20251112135257508](../docs-images/p05team/38.png)
 
-### Other Functions
+### Other Features
 
-Management of **Datadrive**, **Snapshots**, **Storage**, **Billing**, and **Profile** are identical to the main platform.
- See [Glows.ai User Manual](https://docs.glows.ai/docs/create-new)
+Management of **Datadrive**, **Snapshots**, **Storage Space**, **Billing**, and **Profile** is identical to the main Glows.ai site, please refer to the [Glows.ai User Guide](https://docs.glows.ai/docs/create-new)
 
 ------
 
 ## Contact Us
 
-If you have any questions or feedback while using **Glows.ai**, please reach out via email, Discord, or Line.
+If you have any questions or suggestions while using **Glows.ai**, please reach out via email, Discord, or Line.
 
-- **Email:** [support@glows.ai](mailto:support@glows.ai)
-- **Discord:** https://discord.com/invite/Glows.ai
-- **Line:** https://lin.ee/fHcoDgG
+**Email:** [support@glows.ai](mailto:support@glows.ai)
 
-------
+**Discord:** [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
 
-Would you like me to format this into a **clean, styled Markdown file (with proper headers and English TOC)** for publishing or documentation upload?
+**Line:** [https://lin.ee/fHcoDgG](https://lin.ee/fHcoDgG)
