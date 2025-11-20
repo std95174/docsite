@@ -16,7 +16,7 @@ This guide includes:
 
 ### Create a Team
 
-After logging in, click your profile icon in the top-right corner.
+After logging in Glows.ai platform, click your profile icon in the top-right corner.
 
 Select `Teams`, then click `Create Teams` to start creating your team.
 
@@ -34,16 +34,16 @@ After clicking `Confirm`, you will see the team’s basic information. **Owner**
 
 ![image-20251106110316717](../docs-images/p05team/04.png)
 
-### Switch to Team Workspace
+### Switch to Glows.ai Team Workspace
 
-As a team owner, you can switch from your Glows.ai main account to the team workspace.
+As a team owner, you can switch from your Glows.ai account to Glows.ai team workspace.
 Click your profile at the top right, select `Teams`, and then click on the team you wish to enter.
 
 ![image-20251106110954183](../docs-images/p05team/05.png)
 
 ### Member Management
 
-Owners or administrators can access the `Member` tab in the sidebar to manage team members.
+Owners or administrators can access the `Member` in the sidebar to manage team members.
 Supported features include: Add Members, Assign credits, Permission & Quota, editing member info, and managing instances.
 
 #### Add Members
@@ -210,7 +210,7 @@ For more detailed instructions, please refer to the **Owner Guide**.
 
 Members can access the following functions: Create Instance (Create New), Instance Management (Instances), Datadrive Management (Datadrive), Snapshot Management (Snapshots), Storage Management (Storage Space), Billing (Billing), Profile Editing (Profile).
 
-All actions work the same as on the main Glows.ai platform. For more details, please refer to the [Glows.ai User Guide](https://docs.glows.ai/docs/create-new)
+All actions work the same as on the Glows.ai platform. For more details, please refer to [Glows.ai User Guide](https://docs.glows.ai/docs/create-new)
 
 ![image-20251112112106430](../docs-images/p05team/31.png)
 
@@ -218,9 +218,9 @@ All actions work the same as on the main Glows.ai platform. For more details, pl
 
 After receiving credentials from the team owner or admin, members can join a team via the following methods.
 
-#### 1. Login via Direct Team Link
+#### 1. Login via Team Link
 
-Visit the team login page in your browser, then enter your team account and password.
+Visit the Glows.ai team workspace login page in your browser, then enter your team account and password.
 
 ```bash
 https://platform.glows.ai/team/login
@@ -228,13 +228,13 @@ https://platform.glows.ai/team/login
 
 ![image-20251112103024351](../docs-images/p05team/32.png)
 
-#### 2. Join via Main Glows.ai Site
+#### 2. Join via Glows.ai Platform
 
-Log into the main Glows.ai site, click your avatar, and select **`Teams → Join Team`**.
+Log in Glows.ai platform, click your avatar, and select **`Teams → Join Team`**.
 
 ![image-20251112103513271](../docs-images/p05team/33.png)
 
-Enter the team account and password to link your main account with the team. You can later switch between the main account and the team account directly.
+Enter the team account and password to link your main account with the team. You can later switch between the Glows.ai platform account and Glows.ai team account directly.
 
 ![image-20251104150357896](../docs-images/p05team/34.png)
 
