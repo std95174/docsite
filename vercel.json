@@ -1,6 +1,21 @@
 {
     "redirects": [
         {
+            "source": "/api",
+            "destination": "https://sdkdoc.glows.ai",
+            "permanent": false
+        },
+        {
+            "source": "/solution",
+            "destination": "https://glows.ai",
+            "permanent": false
+        },
+        {
+            "source": "/product",
+            "destination": "https://glows.ai",
+            "permanent": false
+        },
+        {
             "source": "/docs/:slug*",
             "destination": "/docs/:slug*",
             "permanent": true
