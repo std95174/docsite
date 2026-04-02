@@ -16,11 +16,6 @@
             "permanent": false
         },
         {
-            "source": "/docs/:slug*",
-            "destination": "/docs/:slug*",
-            "permanent": true
-        },
-        {
             "source": "/zh-TW/docs/Get started",
             "destination": "/zh-TW/docs/get-started",
             "permanent": true
