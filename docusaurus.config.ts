@@ -75,6 +75,10 @@ const config: Config = {
         createRedirects(existingPath) {
           // Derive the "old format" path from the current path for redirection
           // e.g. /zh-TW/docs/get-started → old path is /zh-TW/docs/Get started
+          // Only create redirects for paths that contain hyphens (the old format used spaces)
+          if (!existingPath.includes('-')) {
+            return undefined;
+          }
           const oldPath = existingPath
             .replace(/-/g, ' ')           // Convert hyphens back to spaces
             .replace(/\/(\w)/g, (match, char) => '/' + char.toUpperCase()); // Capitalize first letter
