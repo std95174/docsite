@@ -69,6 +69,23 @@ const config: Config = {
     //     includeCurrentVersion: true,
     //   },
     // ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath) {
+          // Derive the "old format" path from the current path for redirection
+          // e.g. /zh-TW/docs/get-started → old path is /zh-TW/docs/Get started
+          const oldPath = existingPath
+            .replace(/-/g, ' ')           // Convert hyphens back to spaces
+            .replace(/\/(\w)/g, (match, char) => '/' + char.toUpperCase()); // Capitalize first letter
+
+          if (oldPath !== existingPath) {
+            return [oldPath]; // Redirect old path to the current path
+          }
+          return undefined;
+        },
+      },
+    ],
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",

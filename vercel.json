@@ -1,0 +1,124 @@
+{
+    "redirects": [
+        {
+            "source": "/docs/:slug*",
+            "destination": "/docs/:slug*",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/docs/Get started",
+            "destination": "/zh-TW/docs/get-started",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/docs/Get started/",
+            "destination": "/zh-TW/docs/get-started",
+            "permanent": true
+        },
+        {
+            "source": "/docs/Billing",
+            "destination": "/docs/billing",
+            "permanent": true
+        },
+        {
+            "source": "/docs/Billing/",
+            "destination": "/docs/billing",
+            "permanent": true
+        },
+        {
+            "source": "/docs/Overview",
+            "destination": "/docs/overview",
+            "permanent": true
+        },
+        {
+            "source": "/docs/Overview/",
+            "destination": "/docs/overview",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/docs/Create New",
+            "destination": "/zh-TW/docs/create-new",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/docs/Mesh Clustering",
+            "destination": "/zh-TW/docs/mesh-clustering",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/docs/User Profile",
+            "destination": "/zh-TW/docs/user-profile",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/docs/Billing",
+            "destination": "/zh-TW/docs/billing",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/docs/Billing/",
+            "destination": "/zh-TW/docs/billing",
+            "permanent": true
+        },
+        {
+            "source": "/docs/Create New",
+            "destination": "/docs/create-new",
+            "permanent": true
+        },
+        {
+            "source": "/docs/Create New/",
+            "destination": "/docs/create-new",
+            "permanent": true
+        },
+        {
+            "source": "/docs/Auto Deploy",
+            "destination": "/docs/auto-deploy",
+            "permanent": true
+        },
+        {
+            "source": "/docs/Auto Deploy/",
+            "destination": "/docs/auto-deploy",
+            "permanent": true
+        },
+        {
+            "source": "/docs/Auto Scaling",
+            "destination": "/docs/auto-scaling",
+            "permanent": true
+        },
+        {
+            "source": "/docs/Auto Scaling/",
+            "destination": "/docs/auto-scaling",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/docs/Snapshots",
+            "destination": "/zh-TW/docs/snapshots",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/docs/Snapshots/",
+            "destination": "/zh-TW/docs/snapshots",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/tutorials/vscode",
+            "destination": "https://glows.ai/article/vscode",
+            "permanent": true
+        },
+        {
+            "source": "/tutorials/dsr1",
+            "destination": "https://glows.ai/article/deepseek_r1",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/tutorials/pycharm",
+            "destination": "https://glows.ai/article/pycharm",
+            "permanent": true
+        },
+        {
+            "source": "/tutorials/vnc",
+            "destination": "https://glows.ai/article/vnc",
+            "permanent": true
+        }
+    ]
+}
