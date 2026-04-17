@@ -1,11 +1,11 @@
 ---
 id: contact-us
-sidebar_position: 18
+sidebar_position: 19
 ---
 
-# Contact Us
+# 聯繫我們
 
-If you have any questions or suggestions while using **Glows.ai**, please reach out via email, Discord, or Line.
+若您在使用 **Glows.ai** 的過程中有任何疑問或建議，歡迎透過以下方式聯繫我們：
 
 **Email:** [support@glows.ai](mailto:support@glows.ai)
 
