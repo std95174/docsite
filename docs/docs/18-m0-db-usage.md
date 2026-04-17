@@ -41,7 +41,7 @@ You can configure `Unit Qty` (number of GPUs) and `Mount Datadrive` (Glowsai clo
 
 ![ ](../docs-images/p18/002.png)
 
-After the instance is started, send the instance ID (ins-xxxx) to [glows assistant](../c/69e1af93-1f10-8330-a72c-a5b1705349ba#聯繫我們). Our engineers to configure it for you and then provide the internal database connection method.
+After the instance is started, send the instance ID (ins-xxxx) to [glows assistant](https://sass-ai.chatshare.biz/c/69e1af93-1f10-8330-a72c-a5b1705349ba#聯繫我們). Our engineers to configure it for you and then provide the internal database connection method.
 
 You will receive the following information:
 
