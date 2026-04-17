@@ -2,7 +2,8 @@
 id: m0-db-usage
 sidebar_position: 18
 ---
-## Glows.ai Remote PostgreSQL Database M0 Usage Guide
+
+# Glows.ai Remote PostgreSQL Database M0 Usage Guide
 
 ## Feature Overview
 
@@ -10,13 +11,13 @@ sidebar_position: 18
 
 Glows.ai provides a managed PostgreSQL database service with the following features:
 
-| Feature                | Description                                                  |
-| ---------------------- | ------------------------------------------------------------ |
+| Feature                | Description                                                                   |
+| ---------------------- | ----------------------------------------------------------------------------- |
 | **Relational Storage** | Standard PostgreSQL functionality for storing user data, configurations, etc. |
-| **Vector Storage**     | Built-in pgvector extension supporting storage and retrieval of vector data |
-| **Maintenance-Free**   | No need to install, configure, or maintain the database      |
-| **High Performance**   | Dedicated instances with low latency and high throughput     |
-| **Automatic Backup**   | Data is automatically backed up, ensuring safety and reliability |
+| **Vector Storage**     | Built-in pgvector extension supporting storage and retrieval of vector data   |
+| **Maintenance-Free**   | No need to install, configure, or maintain the database                       |
+| **High Performance**   | Dedicated instances with low latency and high throughput                      |
+| **Automatic Backup**   | Data is automatically backed up, ensuring safety and reliability              |
 
 ### Applicable Scenarios
 
@@ -148,8 +149,8 @@ LIMIT 2;
 
 ```sql
 -- Update vector of a specific record
-UPDATE embeddings 
-SET embedding = array_fill(0.5, ARRAY[4])::vector 
+UPDATE embeddings
+SET embedding = array_fill(0.5, ARRAY[4])::vector
 WHERE id = 1;
 
 -- Verify update
@@ -173,7 +174,7 @@ DELETE FROM embeddings;
 
 ### Python Connection Example
 
- You can use system tools for direct connection, or configure it in a Python program. First, run the following command to install the connection library.
+You can use system tools for direct connection, or configure it in a Python program. First, run the following command to install the connection library.
 
 ```bash
 pip install psycopg2-binary
@@ -186,7 +187,7 @@ import psycopg2
 
 conn = psycopg2.connect(
     host="172.172.1.1",
-    port=3306,  
+    port=3306,
     user="glowsai",
     password="xxxxx",
     dbname="my_project_db"
@@ -328,9 +329,10 @@ By default, LiteLLM runs on port 4001 within your instance. To access the WebUI 
 Go to the instance interface
 Click New Port Binding
 Enter:
-  - Instance Service Port (e.g., 4001)
-  - Public IP Port
-Click `Create`. Once configured, you can access the service within the instance via Glows.ai Public IP + Public IP Port from the public network.
+
+- Instance Service Port (e.g., 4001)
+- Public IP Port
+  Click `Create`. Once configured, you can access the service within the instance via Glows.ai Public IP + Public IP Port from the public network.
 
 If you have any questions or suggestions while using Glows.ai, feel free to contact us via email, Discord, or Line.
 
