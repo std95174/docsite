@@ -3,7 +3,7 @@ id:  m0-db-usage
 sidebar_position: 18
 ---
 
-## Glows.ai 遠端 PostgreSQL 資料庫 M0 使用教學
+## Glows.ai 遠端 PostgreSQL 資料庫 Matrix0 使用教學
 
 ## 功能介紹
 
@@ -206,7 +206,7 @@ conn.close()
 
 ![ ](../../../../../docs/docs-images/p18/009.png)
 
-## 項目實戰：LiteLLM + Glows M0 db
+## 項目實戰：LiteLLM + Glows Matrix0 db
 
 LiteLLM 是一個統一呼叫多種大型模型（如 OpenAI、Anthropic 等）的代理與工具層，提供相容 OpenAI 的介面，方便在不同模型之間切換與管理。在實際部署中，LiteLLM 通常搭配 PostgreSQL 作為資料庫，因其穩定可靠、支援高併發與複雜查詢，並可擴展向量（如 pgvector）能力，適合儲存日誌與 embeddings，便於後續分析與檢索。
 
