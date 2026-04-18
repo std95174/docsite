@@ -206,7 +206,7 @@ conn.close()
 
 ![ ](../docs-images/p18/009.png)
 
-## Project Practice: LiteLLM + Glows Matrix0 db
+## Project Practice: LiteLLM + Glows.ai Matrix0 db
 
 LiteLLM is a unified proxy and tool layer for interacting with multiple large models (such as OpenAI, Anthropic, etc.), all through OpenAI-compatible APIs for seamless switching and management.
 
