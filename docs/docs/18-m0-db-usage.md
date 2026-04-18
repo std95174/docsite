@@ -3,7 +3,7 @@ id: m0-db-usage
 sidebar_position: 18
 ---
 
-# Glows.ai Remote PostgreSQL Database M0 Usage Guide
+# Glows.ai Remote PostgreSQL Database Matrix0 Usage Guide
 
 ## Feature Overview
 
@@ -206,7 +206,7 @@ conn.close()
 
 ![ ](../docs-images/p18/009.png)
 
-## Project Practice: LiteLLM + Glows M0 db
+## Project Practice: LiteLLM + Glows Matrix0 db
 
 LiteLLM is a unified proxy and tool layer for interacting with multiple large models (such as OpenAI, Anthropic, etc.), all through OpenAI-compatible APIs for seamless switching and management.
 
@@ -305,11 +305,11 @@ After the service is started, you can also log in normally to view LiteLLM backe
 
 ## FAQs
 
-**1、How do I use the M0 DB service on Glows.ai？**
+**1、How do I use the Matrix0 DB service on Glows.ai？**
 
-To use the M0 DB service on Glows.ai, follow these steps:
+To use the Matrix0 DB service on Glows.ai, follow these steps:
 
-Contact us to enable M0 DB access (requires a Glows.ai Public IP)
+Contact us to enable Matrix0 DB access (requires a Glows.ai Public IP)
 Start an instance
 Configure Bind Public IP based on the tutorial
 Provide your instance ID to our team
