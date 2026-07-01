@@ -104,6 +104,8 @@ const config: Config = {
     },
   ],
 
+  clientModules: [require.resolve("./src/i18n/localeRedirect.ts")],
+
   themeConfig: {
     // Replace with your project's social card
     image: "img/logo_text.svg",
