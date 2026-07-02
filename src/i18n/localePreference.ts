@@ -1,7 +1,10 @@
+import Cookies from "js-cookie";
+
 export const DEFAULT_LOCALE = "en";
 export const SUPPORTED_LOCALES = ["en", "zh-TW", "ja"] as const;
-export const EXPLICIT_PATH_LOCALES = ["zh-TW", "ja"] as const;
+export const EXPLICIT_PATH_LOCALES = SUPPORTED_LOCALES;
 export const LOCALE_STORAGE_KEY = "glowsai.sdkdoc.locale";
+export const LOCALE_COOKIE_KEY = LOCALE_STORAGE_KEY;
 
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 
@@ -33,7 +36,16 @@ export function getExplicitLocaleFromPathname(
 export function getStoredLocale(): SupportedLocale | null {
   try {
     const locale = window.localStorage.getItem(LOCALE_STORAGE_KEY);
-    return locale && isSupportedLocale(locale) ? locale : null;
+    if (locale && isSupportedLocale(locale)) {
+      return locale;
+    }
+  } catch {
+    // Ignore browsers where localStorage is unavailable.
+  }
+
+  try {
+    const cookieLocale = Cookies.get(LOCALE_COOKIE_KEY);
+    return cookieLocale && isSupportedLocale(cookieLocale) ? cookieLocale : null;
   } catch {
     return null;
   }
@@ -44,6 +56,16 @@ export function setStoredLocale(locale: SupportedLocale): void {
     window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
   } catch {
     // Ignore browsers where localStorage is unavailable.
+  }
+
+  try {
+    Cookies.set(LOCALE_COOKIE_KEY, locale, {
+      expires: 365,
+      path: "/",
+      sameSite: "Lax",
+    });
+  } catch {
+    // Ignore browsers where cookies are unavailable.
   }
 }
 
@@ -68,7 +90,11 @@ function normalizeBrowserLocale(locale: string): SupportedLocale | null {
   return null;
 }
 
-export function getBrowserLocale(): SupportedLocale {
+export function getBrowserLocale(): SupportedLocale | null {
+  if (typeof navigator === "undefined") {
+    return null;
+  }
+
   const languages =
     navigator.languages && navigator.languages.length > 0
       ? navigator.languages
@@ -82,11 +108,19 @@ export function getBrowserLocale(): SupportedLocale {
     }
   }
 
-  return DEFAULT_LOCALE;
+  return null;
 }
 
-export function getPreferredLocale(): SupportedLocale {
-  return getStoredLocale() ?? getBrowserLocale();
+export function getPreferredLocale(pathname?: string): SupportedLocale {
+  const explicitPathLocale =
+    pathname === undefined ? null : getExplicitLocaleFromPathname(pathname);
+
+  return (
+    explicitPathLocale ??
+    getStoredLocale() ??
+    getBrowserLocale() ??
+    DEFAULT_LOCALE
+  );
 }
 
 export function getLocalizedPathname(
@@ -107,7 +141,7 @@ export function getPreferredLocaleRedirectPathname(
     return null;
   }
 
-  const preferredLocale = getPreferredLocale();
+  const preferredLocale = getPreferredLocale(pathname);
 
   if (preferredLocale === DEFAULT_LOCALE) {
     return null;
