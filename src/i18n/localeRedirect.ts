@@ -1,4 +1,8 @@
-import { getPreferredLocaleRedirectPathname } from "./localePreference";
+import {
+  getExplicitLocaleFromPathname,
+  getPreferredLocaleRedirectPathname,
+  setStoredLocale,
+} from "./localePreference";
 
 function redirectToPreferredLocale(): void {
   if (typeof window === "undefined") {
@@ -6,6 +10,12 @@ function redirectToPreferredLocale(): void {
   }
 
   const { pathname, search, hash } = window.location;
+  const explicitLocale = getExplicitLocaleFromPathname(pathname);
+
+  if (explicitLocale) {
+    setStoredLocale(explicitLocale);
+  }
+
   const redirectPathname = getPreferredLocaleRedirectPathname(pathname);
 
   if (!redirectPathname || redirectPathname === pathname) {

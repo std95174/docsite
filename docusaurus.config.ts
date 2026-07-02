@@ -1,6 +1,102 @@
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
 import { themes as prismThemes } from "prism-react-renderer";
-import type { Config } from "@docusaurus/types";
+import type { Config, LoadContext, Plugin } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+
+const DEFAULT_LOCALE = "en";
+const LOCALE_STORAGE_KEY = "glowsai.sdkdoc.locale";
+const EXPLICIT_PATH_LOCALES = ["en", "zh-TW", "ja"] as const;
+
+function getExplicitLocaleFromPathname(pathname: string): string | null {
+  const firstSegment = pathname.split("/").filter(Boolean)[0];
+
+  return firstSegment &&
+    EXPLICIT_PATH_LOCALES.includes(
+      firstSegment as (typeof EXPLICIT_PATH_LOCALES)[number]
+    )
+    ? firstSegment
+    : null;
+}
+
+function getEnglishAliasPathname(pathname: string): string {
+  return pathname === "/"
+    ? `/${DEFAULT_LOCALE}/`
+    : `/${DEFAULT_LOCALE}${pathname}`;
+}
+
+function getAliasFilePath(outDir: string, pathname: string): string {
+  return path.join(outDir, pathname.replace(/^\/+/, ""), "index.html");
+}
+
+function escapeHtmlAttribute(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function createEnglishAliasRedirectHtml(targetPathname: string): string {
+  const locale = JSON.stringify(DEFAULT_LOCALE);
+  const storageKey = JSON.stringify(LOCALE_STORAGE_KEY);
+  const target = JSON.stringify(targetPathname);
+  const cookie = JSON.stringify(
+    `${LOCALE_STORAGE_KEY}=${DEFAULT_LOCALE}; Max-Age=31536000; Path=/; SameSite=Lax`
+  );
+
+  return `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="${escapeHtmlAttribute(targetPathname)}" />
+  </head>
+  <script>
+    try {
+      window.localStorage.setItem(${storageKey}, ${locale});
+    } catch (e) {}
+
+    try {
+      document.cookie = ${cookie};
+    } catch (e) {}
+
+    window.location.replace(${target} + window.location.search + window.location.hash);
+  </script>
+</html>`;
+}
+
+function englishLocaleAliasRedirectsPlugin(context: LoadContext): Plugin {
+  return {
+    name: "english-locale-alias-redirects",
+    async postBuild({ routesPaths, outDir }) {
+      if (context.i18n.currentLocale !== context.i18n.defaultLocale) {
+        return;
+      }
+
+      await Promise.all(
+        routesPaths
+          .filter(
+            (routePath) =>
+              routePath.startsWith("/") &&
+              routePath !== "/404.html" &&
+              !routePath.includes(":") &&
+              getExplicitLocaleFromPathname(routePath) === null
+          )
+          .map(async (routePath) => {
+            const aliasPathname = getEnglishAliasPathname(routePath);
+            const aliasFilePath = getAliasFilePath(outDir, aliasPathname);
+
+            await mkdir(path.dirname(aliasFilePath), { recursive: true });
+            await writeFile(
+              aliasFilePath,
+              createEnglishAliasRedirectHtml(routePath),
+              { flag: "wx" }
+            );
+          })
+      );
+    },
+  };
+}
 
 const config: Config = {
   title: "Glows.ai",
@@ -91,6 +187,7 @@ const config: Config = {
         },
       },
     ],
+    englishLocaleAliasRedirectsPlugin,
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",

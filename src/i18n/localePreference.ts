@@ -33,6 +33,21 @@ export function getExplicitLocaleFromPathname(
   return null;
 }
 
+export function getPathnameWithoutExplicitLocale(
+  pathname: string,
+  locale: SupportedLocale
+): string {
+  const localePrefix = `/${locale}`;
+
+  if (pathname === localePrefix || pathname === `${localePrefix}/`) {
+    return "/";
+  }
+
+  return pathname.startsWith(`${localePrefix}/`)
+    ? pathname.slice(localePrefix.length)
+    : pathname;
+}
+
 export function getStoredLocale(): SupportedLocale | null {
   try {
     const locale = window.localStorage.getItem(LOCALE_STORAGE_KEY);
@@ -137,7 +152,13 @@ export function getLocalizedPathname(
 export function getPreferredLocaleRedirectPathname(
   pathname: string
 ): string | null {
-  if (getExplicitLocaleFromPathname(pathname)) {
+  const explicitLocale = getExplicitLocaleFromPathname(pathname);
+
+  if (explicitLocale === DEFAULT_LOCALE) {
+    return getPathnameWithoutExplicitLocale(pathname, explicitLocale);
+  }
+
+  if (explicitLocale) {
     return null;
   }
 
