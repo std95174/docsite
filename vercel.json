@@ -116,7 +116,17 @@
             "permanent": true
         },
         {
+            "source": "/zh-TW/tutorials/vscode/",
+            "destination": "https://glows.ai/article/vscode",
+            "permanent": true
+        },
+        {
             "source": "/tutorials/dsr1",
+            "destination": "https://glows.ai/article/deepseek_r1",
+            "permanent": true
+        },
+        {
+            "source": "/tutorials/dsr1/",
             "destination": "https://glows.ai/article/deepseek_r1",
             "permanent": true
         },
@@ -126,8 +136,28 @@
             "permanent": true
         },
         {
+            "source": "/zh-TW/tutorials/pycharm/",
+            "destination": "https://glows.ai/article/pycharm",
+            "permanent": true
+        },
+        {
             "source": "/tutorials/vnc",
             "destination": "https://glows.ai/article/vnc",
+            "permanent": true
+        },
+        {
+            "source": "/tutorials/vnc/",
+            "destination": "https://glows.ai/article/vnc",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/tutorials/vnc",
+            "destination": "https://glows.ai/zh-TW/article/vnc",
+            "permanent": true
+        },
+        {
+            "source": "/zh-TW/tutorials/vnc/",
+            "destination": "https://glows.ai/zh-TW/article/vnc",
             "permanent": true
         }
     ]

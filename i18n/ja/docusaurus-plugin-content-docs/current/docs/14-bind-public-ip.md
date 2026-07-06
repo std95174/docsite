@@ -72,4 +72,4 @@ sidebar_position: 14
 
 - **Discord**: [https://discord.com/invite/glowsai](https://discord.com/invite/glowsai)
 
-- **Line**: [https:/lin.ee/fHcoDgG](https:/lin.ee/fHcoDgG)
+- **Line**: [https://lin.ee/fHcoDgG](https://lin.ee/fHcoDgG)
